@@ -1,8 +1,8 @@
 """
-Script principal de génération des picks.
+Script principal de génération des picks - DBX PRONOS
 Tourne dans GitHub Actions chaque matin à 6h.
-Source des matchs + cotes : The-Odds-API (gratuit 500 req/mois)
-Couvre : Europe, Japon, Chine, Amérique du Sud, MLS, etc.
+Source : The-Odds-API (gratuit 500 req/mois)
+Couvre : Europe, Amériques, Asie, Coupes, Compétitions internationales
 """
 import json
 import os
@@ -13,41 +13,116 @@ from scipy.stats import poisson
 
 TODAY = date.today().isoformat()
 NOW = datetime.utcnow().strftime("%H:%M")
-
 API_KEY = os.environ.get("ODDS_API_KEY", "e5862a0c1bf391a7894ca024ddff0a6b")
 
 SPORTS = [
+    # Ligues Europe
     "soccer_france_ligue_one","soccer_france_ligue_two",
-    "soccer_epl","soccer_england_championship",
+    "soccer_epl","soccer_england_championship","soccer_england_league1","soccer_england_league2",
     "soccer_spain_la_liga","soccer_spain_segunda_division",
     "soccer_italy_serie_a","soccer_italy_serie_b",
     "soccer_germany_bundesliga","soccer_germany_bundesliga2",
     "soccer_netherlands_eredivisie","soccer_portugal_primeira_liga",
     "soccer_turkey_super_league","soccer_belgium_first_div",
-    "soccer_scotland_premiership","soccer_japan_j_league",
-    "soccer_china_superleague","soccer_brazil_campeonato",
-    "soccer_argentina_primera_division","soccer_chile_campeonato",
-    "soccer_mexico_ligamx","soccer_usa_mls",
-    "soccer_colombia_primera_a","soccer_ecuador_primera_a",
-    "soccer_conmebol_copa_libertadores",
+    "soccer_scotland_premiership","soccer_sweden_allsvenskan",
+    "soccer_switzerland_superleague","soccer_bulgaria_first_league",
+    "soccer_greece_super_league","soccer_austria_bundesliga",
+    "soccer_czech_liga","soccer_poland_ekstraklasa",
+    "soccer_romania_liga1","soccer_croatia_hnl",
+    "soccer_denmark_superliga","soccer_norway_eliteserien",
+    "soccer_finland_veikkausliiga","soccer_russia_premier_league",
+    "soccer_serbia_superliga","soccer_slovakia_superliga",
+    "soccer_slovenia_prvaliga","soccer_ukraine_premier_league",
+    "soccer_hungary_nb1","soccer_israel_premier_league",
+    "soccer_cyprus_first_division","soccer_kazakhstan_premier_league",
+    # Coupes Europe + Nationales
     "soccer_uefa_champs_league","soccer_uefa_europa_league",
+    "soccer_uefa_europa_conference_league",
+    "soccer_france_coupe_de_france",
+    "soccer_england_fa_cup","soccer_england_efl_cup",
+    "soccer_spain_copa_del_rey",
+    "soccer_italy_coppa_italia",
+    "soccer_germany_dfb_pokal",
+    "soccer_netherlands_knvb_cup",
+    "soccer_portugal_taca_de_portugal",
+    "soccer_turkey_cup",
+    "soccer_scotland_fa_cup",
+    "soccer_belgium_cup",
+    # Compétitions internationales
+    "soccer_fifa_world_cup",
+    "soccer_conmebol_copa_america",
+    "soccer_concacaf_gold_cup",
+    "soccer_africa_cup_of_nations",
+    "soccer_uefa_nations_league",
+    "soccer_concacaf_nations_league",
+    "soccer_afc_asian_cup",
+    # Amériques
+    "soccer_brazil_campeonato","soccer_brazil_serie_b",
+    "soccer_argentina_primera_division","soccer_argentina_primera_b",
+    "soccer_chile_campeonato",
+    "soccer_mexico_ligamx","soccer_mexico_ascenso_mx",
+    "soccer_usa_mls","soccer_usa_usl_championship",
+    "soccer_colombia_primera_a","soccer_ecuador_primera_a",
+    "soccer_peru_primera_division","soccer_uruguay_primera_division",
+    "soccer_venezuela_primera","soccer_paraguay_primera_division",
+    "soccer_bolivia_primera_division","soccer_costa_rica_primera_division",
+    "soccer_conmebol_copa_libertadores","soccer_conmebol_copa_sudamericana",
+    # Asie / Moyen-Orient / Océanie
+    "soccer_japan_j_league","soccer_japan_j_league_2",
+    "soccer_china_superleague","soccer_south_korea_k_league1",
+    "soccer_australia_aleague","soccer_india_super_league",
+    "soccer_saudi_arabian_premier_league","soccer_uae_pro_league",
 ]
 
 LEAGUE_LABELS = {
     "soccer_france_ligue_one":"FRA-Ligue 1","soccer_france_ligue_two":"FRA-Ligue 2",
     "soccer_epl":"ENG-Premier League","soccer_england_championship":"ENG-Championship",
+    "soccer_england_league1":"ENG-League One","soccer_england_league2":"ENG-League Two",
     "soccer_spain_la_liga":"ESP-La Liga","soccer_spain_segunda_division":"ESP-La Liga 2",
     "soccer_italy_serie_a":"ITA-Serie A","soccer_italy_serie_b":"ITA-Serie B",
     "soccer_germany_bundesliga":"GER-Bundesliga","soccer_germany_bundesliga2":"GER-2.Bundesliga",
     "soccer_netherlands_eredivisie":"NED-Eredivisie","soccer_portugal_primeira_liga":"POR-Primeira Liga",
     "soccer_turkey_super_league":"TUR-Süper Lig","soccer_belgium_first_div":"BEL-Pro League",
-    "soccer_scotland_premiership":"SCO-Premiership","soccer_japan_j_league":"JPN-J1 League",
-    "soccer_china_superleague":"CHN-Super League","soccer_brazil_campeonato":"BRA-Brasileirao",
-    "soccer_argentina_primera_division":"ARG-Primera División","soccer_chile_campeonato":"CHI-Primera División",
-    "soccer_mexico_ligamx":"MEX-Liga MX","soccer_usa_mls":"USA-MLS",
-    "soccer_colombia_primera_a":"COL-Liga BetPlay","soccer_ecuador_primera_a":"ECU-Liga Pro",
-    "soccer_conmebol_copa_libertadores":"Copa Libertadores",
+    "soccer_scotland_premiership":"SCO-Premiership","soccer_sweden_allsvenskan":"SWE-Allsvenskan",
+    "soccer_switzerland_superleague":"SUI-Super League","soccer_bulgaria_first_league":"BUL-First League",
+    "soccer_greece_super_league":"GRE-Super League","soccer_austria_bundesliga":"AUT-Bundesliga",
+    "soccer_czech_liga":"CZE-First League","soccer_poland_ekstraklasa":"POL-Ekstraklasa",
+    "soccer_romania_liga1":"ROU-Liga 1","soccer_croatia_hnl":"CRO-HNL",
+    "soccer_denmark_superliga":"DEN-Superliga","soccer_norway_eliteserien":"NOR-Eliteserien",
+    "soccer_finland_veikkausliiga":"FIN-Veikkausliiga","soccer_russia_premier_league":"RUS-Premier League",
+    "soccer_serbia_superliga":"SRB-SuperLiga","soccer_slovakia_superliga":"SVK-SuperLiga",
+    "soccer_slovenia_prvaliga":"SVN-PrvaLiga","soccer_ukraine_premier_league":"UKR-Premier League",
+    "soccer_hungary_nb1":"HUN-NB I","soccer_israel_premier_league":"ISR-Premier League",
+    "soccer_cyprus_first_division":"CYP-First Division","soccer_kazakhstan_premier_league":"KAZ-Premier League",
     "soccer_uefa_champs_league":"UEFA Champions League","soccer_uefa_europa_league":"UEFA Europa League",
+    "soccer_uefa_europa_conference_league":"UEFA Conference League",
+    "soccer_france_coupe_de_france":"Coupe de France",
+    "soccer_england_fa_cup":"FA Cup","soccer_england_efl_cup":"EFL Cup",
+    "soccer_spain_copa_del_rey":"Copa del Rey","soccer_italy_coppa_italia":"Coppa Italia",
+    "soccer_germany_dfb_pokal":"DFB Pokal","soccer_netherlands_knvb_cup":"KNVB Cup",
+    "soccer_portugal_taca_de_portugal":"Taça de Portugal","soccer_turkey_cup":"Coupe Turquie",
+    "soccer_scotland_fa_cup":"Scottish FA Cup","soccer_belgium_cup":"Coupe Belgique",
+    "soccer_fifa_world_cup":"Coupe du Monde FIFA","soccer_conmebol_copa_america":"Copa América",
+    "soccer_concacaf_gold_cup":"Gold Cup","soccer_africa_cup_of_nations":"CAN",
+    "soccer_uefa_nations_league":"UEFA Nations League",
+    "soccer_concacaf_nations_league":"CONCACAF Nations League",
+    "soccer_afc_asian_cup":"AFC Asian Cup",
+    "soccer_brazil_campeonato":"BRA-Brasileirao","soccer_brazil_serie_b":"BRA-Série B",
+    "soccer_argentina_primera_division":"ARG-Primera División","soccer_argentina_primera_b":"ARG-Primera B",
+    "soccer_chile_campeonato":"CHI-Primera División",
+    "soccer_mexico_ligamx":"MEX-Liga MX","soccer_mexico_ascenso_mx":"MEX-Ascenso MX",
+    "soccer_usa_mls":"USA-MLS","soccer_usa_usl_championship":"USA-USL Championship",
+    "soccer_colombia_primera_a":"COL-Liga BetPlay","soccer_ecuador_primera_a":"ECU-Liga Pro",
+    "soccer_peru_primera_division":"PER-Liga 1","soccer_uruguay_primera_division":"URU-Primera División",
+    "soccer_venezuela_primera":"VEN-Primera División","soccer_paraguay_primera_division":"PAR-Primera División",
+    "soccer_bolivia_primera_division":"BOL-Primera División",
+    "soccer_costa_rica_primera_division":"CRC-Primera División",
+    "soccer_conmebol_copa_libertadores":"Copa Libertadores",
+    "soccer_conmebol_copa_sudamericana":"Copa Sudamericana",
+    "soccer_japan_j_league":"JPN-J1 League","soccer_japan_j_league_2":"JPN-J2 League",
+    "soccer_china_superleague":"CHN-Super League","soccer_south_korea_k_league1":"KOR-K League 1",
+    "soccer_australia_aleague":"AUS-A-League","soccer_india_super_league":"IND-Super League",
+    "soccer_saudi_arabian_premier_league":"SAU-Pro League","soccer_uae_pro_league":"UAE-Pro League",
 }
 
 def score_matrix(lam_h, lam_a, n=10):
@@ -107,7 +182,7 @@ def fetch_all_matches():
             for ev in r.json():
                 if not ev.get("commence_time","").startswith(TODAY): continue
                 home=ev.get("home_team",""); away=ev.get("away_team","")
-                league=LEAGUE_LABELS.get(sport,sport)
+                league=LEAGUE_LABELS.get(sport, sport)
                 try:
                     dt=datetime.fromisoformat(ev["commence_time"].replace("Z","+00:00"))
                     time_str=dt.strftime("%Hh%M")
@@ -154,6 +229,7 @@ def process_match(m):
     tags=[]; flags=m.get("context_flags",[])
     pick_type="grid"; selection=None; market=None; odd_taken=None; model_prob=None
     odd_1=m.get("odd_1"); odd_over=m.get("odd_over_25")
+
     if probs["1"]>=0.80 and score>=6.0 and odd_1 and odd_1>=1.20 and m.get("blessures_home",0)<2 and "derby" not in flags:
         pick_type="safe"; selection=f"{home} gagne"; market="1X2 — 1"; odd_taken=odd_1; model_prob=probs["1"]
         tags.append(f"🛡️ Safe VIP · {round(probs['1']*100)}%")
@@ -170,12 +246,15 @@ def process_match(m):
         if is_val:
             pick_type="value"; selection="Over 2.5 buts"; market="Over/Under 2.5"; odd_taken=odd_over; model_prob=probs["Over_2.5"]
             tags.append(f"🔥 Value Over 2.5 · +{edge}pp")
+
     if m.get("blessures_away",0)>=2: tags.append(f"🚑 {m['blessures_away']} blessés clés {away}")
     if "derby" in flags: tags.append("⚠️ Derby — volatilité haute")
     if "low_stakes_favorite" in flags: tags.append("⚠️ Piège — enjeu faible")
     if "post_european_fatigue" in flags: tags.append("⚠️ Fatigue européenne")
+
     if score<6.0:
         pick_type="skip"; tags=["⚠️ Sous seuil DBX 6/10"]; selection=None; odd_taken=None
+
     stake=0.03 if(pick_type in("safe","value") and score>=8.0) else 0.02 if pick_type in("safe","value","grid") else 0.0
     return {
         "home_team":home,"away_team":away,"league":league,"time":time_,
