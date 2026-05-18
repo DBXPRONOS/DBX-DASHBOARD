@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DBX Pronos</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f0f0f; color: #f0f0f0; min-height: 100vh; }
+  .header { background: #1a1a1a; border-bottom: 1px solid #2a2a2a; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 10; }
+  .header-logo { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
+  .header-logo span { color: #22c55e; }
+  .header-date { font-size: 12px; color: #666; }
+  .live-dot { display: inline-block; width: 7px; height: 7px; background: #22c55e; border-radius: 50%; margin-right: 6px; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  .stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #2a2a2a; border-bottom: 1px solid #2a2a2a; }
+  .stat-item { background: #1a1a1a; padding: 14px 16px; text-align: center; }
+  .stat-num { font-size: 22px; font-weight: 700; }
+  .stat-label { font-size: 11px; color: #666; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .section-title { padding: 20px 16px 10px; font-size: 11px; color: #555; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+  .pick-card { background: #1a1a1a; border: 1px solid #2a2a2a; margin: 0 12px 10px; border-radius: 12px; overflow: hidden; }
+  .pick-card.safe { border-color: #166534; }
+  .pick-card.value { border-color: #854d0e; }
+  .pick-card.skip { opacity: 0.45; }
+  .pick-header { padding: 14px 16px 10px; display: flex; justify-content: space-between; align-items: flex-start; }
+  .pick-match { font-size: 15px; font-weight: 600; line-height: 1.3; }
+  .pick-league { font-size: 11px; color: #666; margin-top: 3px; }
+  .pick-score { text-align: right; }
+  .score-num { font-size: 24px; font-weight: 700; line-height: 1; }
+  .score-num.high { color: #22c55e; }
+  .score-num.mid { color: #f59e0b; }
+  .score-num.low { color: #555; }
+  .score-stake { font-size: 10px; color: #666; margin-top: 3px; }
+  .pick-tags { padding: 0 16px 14px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag { font-size: 11px; padding: 4px 10px; border-radius: 20px; font-weight: 500; }
+  .tag-safe { background: #14532d; color: #4ade80; }
+  .tag-value { background: #431407; color: #fb923c; }
+  .tag-alert { background: #450a0a; color: #f87171; }
+  .tag-info { background: #1e293b; color: #94a3b8; }
+  .tag-warn { background: #1c1917; color: #78716c; }
+  .pick-detail { background: #141414; border-top: 1px solid #222; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; }
+  .pick-bet { font-size: 13px; font-weight: 600; color: #f0f0f0; }
+  .pick-odd { font-size: 13px; color: #22c55e; font-weight: 700; }
+  .pick-prob { font-size: 11px; color: #555; }
+  .empty-state { text-align: center; padding: 60px 20px; color: #444; }
+  .empty-state p { margin-top: 8px; font-size: 13px; }
+  .footer { text-align: center; padding: 24px 16px; font-size: 11px; color: #333; }
+  .prob-bar-wrap { padding: 0 16px 12px; }
+  .prob-bar-label { display: flex; justify-content: space-between; font-size: 11px; color: #555; margin-bottom: 4px; }
+  .prob-bar { height: 4px; background: #2a2a2a; border-radius: 2px; overflow: hidden; }
+  .prob-bar-fill { height: 100%; border-radius: 2px; background: #22c55e; transition: width 0.5s ease; }
+  .prob-bar-fill.orange { background: #f59e0b; }
+  @media (max-width: 480px) { .stats-bar { grid-template-columns: repeat(2, 1fr); } }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="header-logo">DBX<span>PRONOS</span></div>
+  <div class="header-date"><span class="live-dot"></span><span id="header-date">Chargement...</span></div>
+</div>
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-num" id="stat-picks">—</div><div class="stat-label">Picks</div></div>
+  <div class="stat-item"><div class="stat-num" style="color:#22c55e" id="stat-safes">—</div><div class="stat-label">Safes VIP</div></div>
+  <div class="stat-item"><div class="stat-num" style="color:#fb923c" id="stat-values">—</div><div class="stat-label">Value bets</div></div>
+  <div class="stat-item"><div class="stat-num" id="stat-score">—</div><div class="stat-label">Score moy.</div></div>
+</div>
+<div id="picks-container"></div>
+<div class="footer">DBX Pronos · Usage personnel · Pas de garantie de résultat<br><span id="footer-updated"></span></div>
+<script>
+async function loadPicks() {
+  try {
+    const r = await fetch('picks.json?v=' + Date.now());
+    const data = await r.json();
+    render(data);
+  } catch(e) {
+    document.getElementById('picks-container').innerHTML = '<div class="empty-state"><div style="font-size:32px">⚠️</div><p>Impossible de charger les picks.<br>Relance la page dans quelques instants.</p></div>';
+  }
+}
+function render(data) {
+  const d = new Date(data.date + 'T06:00:00');
+  document.getElementById('header-date').textContent = d.toLocaleDateString('fr-FR', { weekday:'long', day:'numeric', month:'long' });
+  document.getElementById('stat-picks').textContent = data.stats.total_picks;
+  document.getElementById('stat-safes').textContent = data.stats.safes_vip;
+  document.getElementById('stat-values').textContent = data.stats.value_bets;
+  document.getElementById('stat-score').textContent = data.stats.score_moyen > 0 ? data.stats.score_moyen.toFixed(1) : '—';
+  document.getElementById('footer-updated').textContent = 'Mis à jour le ' + data.date + ' à ' + data.updated_at;
+  const container = document.getElementById('picks-container');
+  if (!data.picks || data.picks.length === 0) {
+    container.innerHTML = '<div class="empty-state"><div style="font-size:40px">☕</div><p>Aucun pick aujourd\'hui.<br>Prochain update demain à 06h00.</p></div>';
+    return;
+  }
+  const safes = data.picks.filter(p => p.type === 'safe');
+  const values = data.picks.filter(p => p.type === 'value');
+  const others = data.picks.filter(p => p.type === 'grid');
+  const skips  = data.picks.filter(p => p.type === 'skip');
+  let html = '';
+  if (safes.length)  { html += '<div class="section-title">🛡️ Safes VIP</div>';      safes.forEach(p  => { html += pickCard(p); }); }
+  if (values.length) { html += '<div class="section-title">🔥 Value Bets</div>';      values.forEach(p => { html += pickCard(p); }); }
+  if (others.length) { html += '<div class="section-title">📋 Picks grille</div>';    others.forEach(p => { html += pickCard(p); }); }
+  if (skips.length)  { html += '<div class="section-title">⚠️ Matchs écartés</div>'; skips.forEach(p  => { html += pickCard(p); }); }
+  container.innerHTML = html;
+}
+function pickCard(p) {
+  const scoreClass = p.score >= 8 ? 'high' : p.score >= 6 ? 'mid' : 'low';
+  const cardClass  = p.type === 'safe' ? 'safe' : p.type === 'value' ? 'value' : p.type === 'skip' ? 'skip' : '';
+  const stakeLabel = p.stake_pct ? (p.stake_pct * 100).toFixed(0) + '% BK' : 'pas de stake';
+  const prob = p.model_prob ? Math.round(p.model_prob * 100) : null;
+  const tagsHtml = (p.tags || []).map(t => {
+    if (t.includes('Safe') || t.includes('🛡')) return `<span class="tag tag-safe">${t}</span>`;
+    if (t.includes('Value') || t.includes('🔥')) return `<span class="tag tag-value">${t}</span>`;
+    if (t.includes('🚑') || t.includes('blessé')) return `<span class="tag tag-alert">${t}</span>`;
+    if (t.includes('⚠') || t.includes('Piège'))  return `<span class="tag tag-warn">${t}</span>`;
+    return `<span class="tag tag-info">${t}</span>`;
+  }).join('');
+  const probBar = prob ? `<div class="prob-bar-wrap"><div class="prob-bar-label"><span>Proba modèle</span><span>${prob}%</span></div><div class="prob-bar"><div class="prob-bar-fill ${prob < 70 ? 'orange' : ''}" style="width:${prob}%"></div></div></div>` : '';
+  const detailHtml = p.selection ? `<div class="pick-detail"><div><div class="pick-bet">${p.selection}</div>${p.market ? `<div class="pick-prob">${p.market}</div>` : ''}</div>${p.odd ? `<div class="pick-odd">@ ${p.odd.toFixed(2)}</div>` : ''}</div>` : '';
+  return `<div class="pick-card ${cardClass}"><div class="pick-header"><div><div class="pick-match">${p.home_team} vs ${p.away_team}</div><div class="pick-league">${p.league}${p.time ? ' · ' + p.time : ''}</div></div><div class="pick-score"><div class="score-num ${scoreClass}">${p.score > 0 ? p.score.toFixed(1) : '—'}</div><div class="score-stake">${stakeLabel}</div></div></div>${probBar}${tagsHtml ? `<div class="pick-tags">${tagsHtml}</div>` : ''}${detailHtml}</div>`;
+}
+loadPicks();
+</script>
+</body>
+</html>
