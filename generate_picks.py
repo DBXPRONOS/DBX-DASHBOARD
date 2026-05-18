@@ -77,6 +77,25 @@ def fetch_fixtures_today():
         return []
 
 MANUAL_PICKS = [
+    {
+        "home": "Leganes",
+        "away": "Huesca",
+        "league": "ESP-La Liga 2",
+        "time": "20h30",
+        "lam_home": 1.3,
+        "lam_away": 1.1,
+        "forme_home": "LLLLD",
+        "forme_away": "LLLWL",
+        "h2h_home": "WWDWL",
+        "motivation": 8,
+        "fatigue": 4,
+        "blessures_home": 0,
+        "blessures_away": 0,
+        "odd_1": 1.89,
+        "odd_x": 3.70,
+        "odd_over_25": 2.05,
+        "context_flags": ["low_stakes_favorite"],
+    },
 ]
 
 def process_match(m):
