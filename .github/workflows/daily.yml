@@ -23,7 +23,7 @@ jobs:
         run: pip install requests pandas numpy scipy soccerdata beautifulsoup4 lxml
 
       - name: Generate picks
-        run: python generate_picks.py
+        run: python $GITHUB_WORKSPACE/generate_picks.py
 
       - name: Commit picks.json
         run: |
