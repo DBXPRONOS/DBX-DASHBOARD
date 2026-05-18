@@ -1,6 +1,6 @@
 {
   "date": "2026-05-18",
-  "updated_at": "13:32",
+  "updated_at": "13:45",
   "stats": {
     "total_picks": 0,
     "safes_vip": 0,
@@ -29,6 +29,86 @@
       "away_team": "SD Huesca",
       "league": "ESP-La Liga 2",
       "time": "18h30",
+      "type": "skip",
+      "score": 2.55,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.0,
+      "tags": [
+        "⚠️ Sous seuil DBX 6/10"
+      ]
+    },
+    {
+      "home_team": "Djurgardens IF",
+      "away_team": "IK Sirius",
+      "league": "SWE-Allsvenskan",
+      "time": "17h00",
+      "type": "skip",
+      "score": 2.55,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.0,
+      "tags": [
+        "⚠️ Sous seuil DBX 6/10"
+      ]
+    },
+    {
+      "home_team": "Örgryte IS",
+      "away_team": "IFK Goteborg",
+      "league": "SWE-Allsvenskan",
+      "time": "17h00",
+      "type": "skip",
+      "score": 2.55,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.0,
+      "tags": [
+        "⚠️ Sous seuil DBX 6/10"
+      ]
+    },
+    {
+      "home_team": "Arka Gdynia",
+      "away_team": "Nieciecza",
+      "league": "POL-Ekstraklasa",
+      "time": "17h00",
+      "type": "skip",
+      "score": 2.55,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.0,
+      "tags": [
+        "⚠️ Sous seuil DBX 6/10"
+      ]
+    },
+    {
+      "home_team": "FC Lahti",
+      "away_team": "VPS Vaasa",
+      "league": "FIN-Veikkausliiga",
+      "time": "15h00",
+      "type": "skip",
+      "score": 2.55,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.0,
+      "tags": [
+        "⚠️ Sous seuil DBX 6/10"
+      ]
+    },
+    {
+      "home_team": "Ponte Preta",
+      "away_team": "Londrina",
+      "league": "BRA-Série B",
+      "time": "22h00",
       "type": "skip",
       "score": 2.55,
       "selection": null,
