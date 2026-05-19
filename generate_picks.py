@@ -230,18 +230,18 @@ def process_match(m):
     pick_type="grid"; selection=None; market=None; odd_taken=None; model_prob=None
     odd_1=m.get("odd_1"); odd_over=m.get("odd_over_25")
 
-    if probs["1"]>=0.80 and score>=6.0 and odd_1 and odd_1>=1.20 and m.get("blessures_home",0)<2 and "derby" not in flags:
+    if probs["1"]>=0.80 and score>=5.0 and odd_1 and odd_1>=1.20 and m.get("blessures_home",0)<2 and "derby" not in flags:
         pick_type="safe"; selection=f"{home} gagne"; market="1X2 — 1"; odd_taken=odd_1; model_prob=probs["1"]
         tags.append(f"🛡️ Safe VIP · {round(probs['1']*100)}%")
-    elif probs["Over_2.5"]>=0.80 and score>=6.0 and odd_over:
+    elif probs["Over_2.5"]>=0.80 and score>=5.0 and odd_over:
         pick_type="safe"; selection="Over 2.5 buts"; market="Over/Under 2.5"; odd_taken=odd_over; model_prob=probs["Over_2.5"]
         tags.append(f"🛡️ Safe VIP · Over 2.5 · {round(probs['Over_2.5']*100)}%")
-    elif odd_1 and score>=6.0:
+    elif odd_1 and score>=5.0:
         is_val,edge=detect_value(probs["1"],odd_1)
         if is_val:
             pick_type="value"; selection=f"{home} gagne"; market="1X2 — 1"; odd_taken=odd_1; model_prob=probs["1"]
             tags.append(f"🔥 Value +{edge}pp edge")
-    elif odd_over and score>=6.0:
+    elif odd_over and score>=5.0:
         is_val,edge=detect_value(probs["Over_2.5"],odd_over)
         if is_val:
             pick_type="value"; selection="Over 2.5 buts"; market="Over/Under 2.5"; odd_taken=odd_over; model_prob=probs["Over_2.5"]
@@ -252,7 +252,7 @@ def process_match(m):
     if "low_stakes_favorite" in flags: tags.append("⚠️ Piège — enjeu faible")
     if "post_european_fatigue" in flags: tags.append("⚠️ Fatigue européenne")
 
-    if score<6.0:
+    if score<5.0:
         pick_type="skip"; tags=["⚠️ Sous seuil DBX 6/10"]; selection=None; odd_taken=None
 
     stake=0.03 if(pick_type in("safe","value") and score>=8.0) else 0.02 if pick_type in("safe","value","grid") else 0.0
