@@ -31,7 +31,7 @@
   .score-num.mid { color: #f59e0b; }
   .score-num.low { color: #555; }
   .score-stake { font-size: 10px; color: #666; margin-top: 3px; }
-  .pick-tags { padding: 0 16px 14px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .pick-tags { padding: 0 16px 10px; display: flex; gap: 6px; flex-wrap: wrap; }
   .tag { font-size: 11px; padding: 4px 10px; border-radius: 20px; font-weight: 500; }
   .tag-safe { background: #14532d; color: #4ade80; }
   .tag-value { background: #431407; color: #fb923c; }
@@ -42,14 +42,17 @@
   .pick-bet { font-size: 13px; font-weight: 600; color: #f0f0f0; }
   .pick-odd { font-size: 13px; color: #22c55e; font-weight: 700; }
   .pick-prob { font-size: 11px; color: #555; }
+  .proba-row { display: flex; gap: 6px; padding: 0 16px 12px; }
+  .proba-box { flex: 1; background: #141414; border: 1px solid #2a2a2a; border-radius: 8px; padding: 8px 6px; text-align: center; }
+  .proba-box.best { border-color: #22c55e; background: #0d2018; }
+  .proba-label { font-size: 11px; color: #666; margin-bottom: 3px; }
+  .proba-pct { font-size: 15px; font-weight: 700; }
+  .proba-pct.high { color: #22c55e; }
+  .proba-pct.mid { color: #f59e0b; }
+  .proba-pct.low { color: #ef4444; }
+  .proba-odd { font-size: 10px; color: #555; margin-top: 2px; }
   .empty-state { text-align: center; padding: 60px 20px; color: #444; }
-  .empty-state p { margin-top: 8px; font-size: 13px; }
   .footer { text-align: center; padding: 24px 16px; font-size: 11px; color: #333; }
-  .prob-bar-wrap { padding: 0 16px 12px; }
-  .prob-bar-label { display: flex; justify-content: space-between; font-size: 11px; color: #555; margin-bottom: 4px; }
-  .prob-bar { height: 4px; background: #2a2a2a; border-radius: 2px; overflow: hidden; }
-  .prob-bar-fill { height: 100%; border-radius: 2px; background: #22c55e; transition: width 0.5s ease; }
-  .prob-bar-fill.orange { background: #f59e0b; }
   @media (max-width: 480px) { .stats-bar { grid-template-columns: repeat(2, 1fr); } }
 </style>
 </head>
@@ -73,12 +76,12 @@ async function loadPicks() {
     const data = await r.json();
     render(data);
   } catch(e) {
-    document.getElementById('picks-container').innerHTML = '<div class="empty-state"><div style="font-size:32px">⚠️</div><p>Impossible de charger les picks.<br>Relance la page dans quelques instants.</p></div>';
+    document.getElementById('picks-container').innerHTML = '<div class="empty-state"><div style="font-size:32px">⚠️</div><p>Impossible de charger les picks.</p></div>';
   }
 }
 function render(data) {
   const d = new Date(data.date + 'T06:00:00');
-  document.getElementById('header-date').textContent = d.toLocaleDateString('fr-FR', { weekday:'long', day:'numeric', month:'long' });
+  document.getElementById('header-date').textContent = d.toLocaleDateString('fr-FR', {weekday:'long',day:'numeric',month:'long'});
   document.getElementById('stat-picks').textContent = data.stats.total_picks;
   document.getElementById('stat-safes').textContent = data.stats.safes_vip;
   document.getElementById('stat-values').textContent = data.stats.value_bets;
@@ -89,32 +92,57 @@ function render(data) {
     container.innerHTML = '<div class="empty-state"><div style="font-size:40px">☕</div><p>Aucun pick aujourd\'hui.<br>Prochain update demain à 06h00.</p></div>';
     return;
   }
-  const safes = data.picks.filter(p => p.type === 'safe');
-  const values = data.picks.filter(p => p.type === 'value');
-  const others = data.picks.filter(p => p.type === 'grid');
-  const skips  = data.picks.filter(p => p.type === 'skip');
-  let html = '';
-  if (safes.length)  { html += '<div class="section-title">🛡️ Safes VIP</div>';      safes.forEach(p  => { html += pickCard(p); }); }
-  if (values.length) { html += '<div class="section-title">🔥 Value Bets</div>';      values.forEach(p => { html += pickCard(p); }); }
-  if (others.length) { html += '<div class="section-title">📋 Picks grille</div>';    others.forEach(p => { html += pickCard(p); }); }
-  if (skips.length)  { html += '<div class="section-title">⚠️ Matchs écartés</div>'; skips.forEach(p  => { html += pickCard(p); }); }
-  container.innerHTML = html;
+  const safes=data.picks.filter(p=>p.type==='safe');
+  const values=data.picks.filter(p=>p.type==='value');
+  const others=data.picks.filter(p=>p.type==='grid');
+  const skips=data.picks.filter(p=>p.type==='skip');
+  let html='';
+  if(safes.length){html+='<div class="section-title">🛡️ Safes VIP</div>';safes.forEach(p=>{html+=pickCard(p);});}
+  if(values.length){html+='<div class="section-title">🔥 Value Bets</div>';values.forEach(p=>{html+=pickCard(p);});}
+  if(others.length){html+='<div class="section-title">📋 Picks grille</div>';others.forEach(p=>{html+=pickCard(p);});}
+  if(skips.length){html+='<div class="section-title">⚠️ Matchs écartés</div>';skips.forEach(p=>{html+=pickCard(p);});}
+  container.innerHTML=html;
 }
+function pctClass(p){return p>=55?'high':p>=40?'mid':'low';}
 function pickCard(p) {
-  const scoreClass = p.score >= 8 ? 'high' : p.score >= 6 ? 'mid' : 'low';
-  const cardClass  = p.type === 'safe' ? 'safe' : p.type === 'value' ? 'value' : p.type === 'skip' ? 'skip' : '';
-  const stakeLabel = p.stake_pct ? (p.stake_pct * 100).toFixed(0) + '% BK' : 'pas de stake';
-  const prob = p.model_prob ? Math.round(p.model_prob * 100) : null;
-  const tagsHtml = (p.tags || []).map(t => {
-    if (t.includes('Safe') || t.includes('🛡')) return `<span class="tag tag-safe">${t}</span>`;
-    if (t.includes('Value') || t.includes('🔥')) return `<span class="tag tag-value">${t}</span>`;
-    if (t.includes('🚑') || t.includes('blessé')) return `<span class="tag tag-alert">${t}</span>`;
-    if (t.includes('⚠') || t.includes('Piège'))  return `<span class="tag tag-warn">${t}</span>`;
-    return `<span class="tag tag-info">${t}</span>`;
+  const scoreClass=p.score>=7?'high':p.score>=5?'mid':'low';
+  const cardClass=p.type==='safe'?'safe':p.type==='value'?'value':p.type==='skip'?'skip':'';
+  const stakeLabel=p.stake_pct?(p.stake_pct*100).toFixed(0)+'% BK':'pas de stake';
+  const tagsHtml=(p.tags||[]).map(t=>{
+    if(t.includes('Safe')||t.includes('🛡'))return`<span class="tag tag-safe">${t}</span>`;
+    if(t.includes('Value')||t.includes('🔥'))return`<span class="tag tag-value">${t}</span>`;
+    if(t.includes('🚑'))return`<span class="tag tag-alert">${t}</span>`;
+    if(t.includes('⚠'))return`<span class="tag tag-warn">${t}</span>`;
+    return`<span class="tag tag-info">${t}</span>`;
   }).join('');
-  const probBar = prob ? `<div class="prob-bar-wrap"><div class="prob-bar-label"><span>Proba modèle</span><span>${prob}%</span></div><div class="prob-bar"><div class="prob-bar-fill ${prob < 70 ? 'orange' : ''}" style="width:${prob}%"></div></div></div>` : '';
-  const detailHtml = p.selection ? `<div class="pick-detail"><div><div class="pick-bet">${p.selection}</div>${p.market ? `<div class="pick-prob">${p.market}</div>` : ''}</div>${p.odd ? `<div class="pick-odd">@ ${p.odd.toFixed(2)}</div>` : ''}</div>` : '';
-  return `<div class="pick-card ${cardClass}"><div class="pick-header"><div><div class="pick-match">${p.home_team} vs ${p.away_team}</div><div class="pick-league">${p.league}${p.time ? ' · ' + p.time : ''}</div></div><div class="pick-score"><div class="score-num ${scoreClass}">${p.score > 0 ? p.score.toFixed(1) : '—'}</div><div class="score-stake">${stakeLabel}</div></div></div>${probBar}${tagsHtml ? `<div class="pick-tags">${tagsHtml}</div>` : ''}${detailHtml}</div>`;
+  const p1=p.prob_1!=null?Math.round(p.prob_1*100):null;
+  const px=p.prob_x!=null?Math.round(p.prob_x*100):null;
+  const p2=p.prob_2!=null?Math.round(p.prob_2*100):null;
+  const po=p.prob_over!=null?Math.round(p.prob_over*100):null;
+  let probaHtml='';
+  if(p1!=null&&px!=null&&p2!=null){
+    const best=Math.max(p1,px,p2);
+    probaHtml=`<div class="proba-row">
+      <div class="proba-box ${p1===best?'best':''}">
+        <div class="proba-label">1 — ${p.home_team.split(' ')[0]}</div>
+        <div class="proba-pct ${pctClass(p1)}">${p1}%</div>
+        ${p.odd_1?`<div class="proba-odd">@ ${p.odd_1.toFixed(2)}</div>`:''}
+      </div>
+      <div class="proba-box ${px===best?'best':''}">
+        <div class="proba-label">X — Nul</div>
+        <div class="proba-pct ${pctClass(px)}">${px}%</div>
+        ${p.odd_x?`<div class="proba-odd">@ ${p.odd_x.toFixed(2)}</div>`:''}
+      </div>
+      <div class="proba-box ${p2===best?'best':''}">
+        <div class="proba-label">2 — ${p.away_team.split(' ')[0]}</div>
+        <div class="proba-pct ${pctClass(p2)}">${p2}%</div>
+        ${p.odd_2?`<div class="proba-odd">@ ${p.odd_2.toFixed(2)}</div>`:''}
+      </div>
+      ${po!=null?`<div class="proba-box"><div class="proba-label">O2.5</div><div class="proba-pct ${pctClass(po)}">${po}%</div>${p.odd_over_25?`<div class="proba-odd">@ ${p.odd_over_25.toFixed(2)}</div>`:''}</div>`:''}
+    </div>`;
+  }
+  const detailHtml=p.selection?`<div class="pick-detail"><div><div class="pick-bet">${p.selection}</div>${p.market?`<div class="pick-prob">${p.market}</div>`:''}</div>${p.odd?`<div class="pick-odd">@ ${p.odd.toFixed(2)}</div>`:''}</div>`:'';
+  return`<div class="pick-card ${cardClass}"><div class="pick-header"><div><div class="pick-match">${p.home_team} vs ${p.away_team}</div><div class="pick-league">${p.league}${p.time?' · '+p.time:''}</div></div><div class="pick-score"><div class="score-num ${scoreClass}">${p.score>0?p.score.toFixed(1):'—'}</div><div class="score-stake">${stakeLabel}</div></div></div>${tagsHtml?`<div class="pick-tags">${tagsHtml}</div>`:''}${probaHtml}${detailHtml}</div>`;
 }
 loadPicks();
 </script>
