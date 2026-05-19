@@ -176,10 +176,8 @@ def process_match(m):
     probs=market_probs(mat)
     odd_1=m.get("odd_1"); odd_over=m.get("odd_over_25")
     tags=[]; pick_type="grid"; selection=None; market=None; odd_taken=None; model_prob=None
-
-    # Score basé uniquement sur les probas Poisson (pas de grille DBX sans données)
     p1=probs["1"]; po=probs["Over_2.5"]
-    score=round(max(p1,po)*10,1)  # score = proba max * 10
+    score=round(max(p1,po)*10,1)
 
     if p1>=0.75 and odd_1 and odd_1>=1.15:
         pick_type="safe"; selection=f"{home} gagne"; market="1X2 — 1"; odd_taken=odd_1; model_prob=p1
@@ -204,6 +202,10 @@ def process_match(m):
         "type":pick_type,"score":score,"selection":selection,"market":market,
         "odd":odd_taken,"model_prob":round(model_prob,4) if model_prob else None,
         "stake_pct":stake,"tags":tags,
+        "prob_1":round(probs["1"],4),"prob_x":round(probs["X"],4),
+        "prob_2":round(probs["2"],4),"prob_over":round(probs["Over_2.5"],4),
+        "odd_1":m.get("odd_1"),"odd_x":m.get("odd_x"),
+        "odd_2":m.get("odd_2"),"odd_over_25":m.get("odd_over_25"),
     }
 
 def main():
@@ -219,13 +221,4 @@ def main():
             "total_picks":len(active),
             "safes_vip":sum(1 for p in active if p["type"]=="safe"),
             "value_bets":sum(1 for p in active if p["type"]=="value"),
-            "score_moyen":round(sum(p["score"] for p in active)/len(active),1) if active else 0,
-        },
-        "picks":picks,
-    }
-    with open("picks.json","w",encoding="utf-8") as f:
-        json.dump(output,f,ensure_ascii=False,indent=2)
-    print(f"OK — {len(active)} picks actifs / {len(picks)} matchs analysés pour {TODAY}")
-
-if __name__=="__main__":
-    main()
+            "score_moyen":round(sum(p["score"] fo
