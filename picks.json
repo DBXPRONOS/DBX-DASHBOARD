@@ -1,6 +1,6 @@
 {
-  "date": "2026-05-18",
-  "updated_at": "16:50",
+  "date": "2026-05-19",
+  "updated_at": "11:18",
   "stats": {
     "total_picks": 0,
     "safes_vip": 0,
@@ -9,25 +9,9 @@
   },
   "picks": [
     {
-      "home_team": "Arsenal",
-      "away_team": "Burnley",
+      "home_team": "Bournemouth",
+      "away_team": "Manchester City",
       "league": "ENG-Premier League",
-      "time": "19h00",
-      "type": "skip",
-      "score": 2.55,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.0,
-      "tags": [
-        "⚠️ Sous seuil DBX 6/10"
-      ]
-    },
-    {
-      "home_team": "Leganés",
-      "away_team": "SD Huesca",
-      "league": "ESP-La Liga 2",
       "time": "18h30",
       "type": "skip",
       "score": 2.55,
@@ -41,10 +25,10 @@
       ]
     },
     {
-      "home_team": "Djurgardens IF",
-      "away_team": "IK Sirius",
-      "league": "SWE-Allsvenskan",
-      "time": "17h00",
+      "home_team": "Chelsea",
+      "away_team": "Tottenham Hotspur",
+      "league": "ENG-Premier League",
+      "time": "19h15",
       "type": "skip",
       "score": 2.55,
       "selection": null,
@@ -57,10 +41,10 @@
       ]
     },
     {
-      "home_team": "Örgryte IS",
-      "away_team": "IFK Goteborg",
-      "league": "SWE-Allsvenskan",
-      "time": "17h00",
+      "home_team": "Monza",
+      "away_team": "Juve Stabia",
+      "league": "ITA-Serie B",
+      "time": "18h00",
       "type": "skip",
       "score": 2.55,
       "selection": null,
@@ -73,10 +57,10 @@
       ]
     },
     {
-      "home_team": "Arka Gdynia",
-      "away_team": "Nieciecza",
-      "league": "POL-Ekstraklasa",
-      "time": "17h00",
+      "home_team": "Charleroi",
+      "away_team": "Leuven",
+      "league": "BEL-Pro League",
+      "time": "18h30",
       "type": "skip",
       "score": 2.55,
       "selection": null,
@@ -89,10 +73,10 @@
       ]
     },
     {
-      "home_team": "FC Lahti",
-      "away_team": "VPS Vaasa",
-      "league": "FIN-Veikkausliiga",
-      "time": "15h02",
+      "home_team": "Genk",
+      "away_team": "Royal Antwerp",
+      "league": "BEL-Pro League",
+      "time": "18h30",
       "type": "skip",
       "score": 2.55,
       "selection": null,
@@ -105,10 +89,170 @@
       ]
     },
     {
-      "home_team": "Ponte Preta",
-      "away_team": "Londrina",
-      "league": "BRA-Série B",
+      "home_team": "Westerlo",
+      "away_team": "Standard Liege",
+      "league": "BEL-Pro League",
+      "time": "18h30",
+      "type": "skip",
+      "score": 2.55,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.0,
+      "tags": [
+        "⚠️ Sous seuil DBX 6/10"
+      ]
+    },
+    {
+      "home_team": "Ried",
+      "away_team": "Wolfsberger AC",
+      "league": "AUT-Bundesliga",
+      "time": "16h30",
+      "type": "skip",
+      "score": 2.55,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.0,
+      "tags": [
+        "⚠️ Sous seuil DBX 6/10"
+      ]
+    },
+    {
+      "home_team": "Fluminense-RJ",
+      "away_team": "Club Bolívar",
+      "league": "Copa Libertadores",
       "time": "22h00",
+      "type": "skip",
+      "score": 2.55,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.0,
+      "tags": [
+        "⚠️ Sous seuil DBX 6/10"
+      ]
+    },
+    {
+      "home_team": "Coquimbo Unido",
+      "away_team": "Deportes Tolima",
+      "league": "Copa Libertadores",
+      "time": "22h00",
+      "type": "skip",
+      "score": 2.55,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.0,
+      "tags": [
+        "⚠️ Sous seuil DBX 6/10"
+      ]
+    },
+    {
+      "home_team": "Rosario Central",
+      "away_team": "UCV FC",
+      "league": "Copa Libertadores",
+      "time": "22h00",
+      "type": "skip",
+      "score": 2.55,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.0,
+      "tags": [
+        "⚠️ Sous seuil DBX 6/10"
+      ]
+    },
+    {
+      "home_team": "Audax Italiano",
+      "away_team": "Barracas Central",
+      "league": "Copa Sudamericana",
+      "time": "22h00",
+      "type": "skip",
+      "score": 2.55,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.0,
+      "tags": [
+        "⚠️ Sous seuil DBX 6/10"
+      ]
+    },
+    {
+      "home_team": "Montevideo City Torque",
+      "away_team": "Deportivo Riestra",
+      "league": "Copa Sudamericana",
+      "time": "22h00",
+      "type": "skip",
+      "score": 2.55,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.0,
+      "tags": [
+        "⚠️ Sous seuil DBX 6/10"
+      ]
+    },
+    {
+      "home_team": "Shenzhen Peng City FC",
+      "away_team": "Dalian Yingbo",
+      "league": "CHN-Super League",
+      "time": "11h35",
+      "type": "skip",
+      "score": 2.55,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.0,
+      "tags": [
+        "⚠️ Sous seuil DBX 6/10"
+      ]
+    },
+    {
+      "home_team": "Tianjin Jinmen Tiger FC",
+      "away_team": "Henan FC",
+      "league": "CHN-Super League",
+      "time": "11h35",
+      "type": "skip",
+      "score": 2.55,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.0,
+      "tags": [
+        "⚠️ Sous seuil DBX 6/10"
+      ]
+    },
+    {
+      "home_team": "Qingdao West Coast FC",
+      "away_team": "Beijing FC",
+      "league": "CHN-Super League",
+      "time": "12h00",
+      "type": "skip",
+      "score": 2.55,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.0,
+      "tags": [
+        "⚠️ Sous seuil DBX 6/10"
+      ]
+    },
+    {
+      "home_team": "Chengdu Rongcheng FC",
+      "away_team": "Shanghai SIPG FC",
+      "league": "CHN-Super League",
+      "time": "12h00",
       "type": "skip",
       "score": 2.55,
       "selection": null,
