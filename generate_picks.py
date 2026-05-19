@@ -1,13 +1,4 @@
-"""
-Script principal de génération des picks - DBX PRONOS
-Tourne dans GitHub Actions chaque matin à 6h.
-Source : The-Odds-API (gratuit 500 req/mois)
-Couvre : Europe, Amériques, Asie, Coupes, Compétitions internationales
-"""
-import json
-import os
-import requests
-import numpy as np
+import json, os, requests, numpy as np
 from datetime import datetime, date
 from scipy.stats import poisson
 
@@ -16,7 +7,6 @@ NOW = datetime.utcnow().strftime("%H:%M")
 API_KEY = os.environ.get("ODDS_API_KEY", "e5862a0c1bf391a7894ca024ddff0a6b")
 
 SPORTS = [
-    # Ligues Europe
     "soccer_france_ligue_one","soccer_france_ligue_two",
     "soccer_epl","soccer_england_championship","soccer_england_league1","soccer_england_league2",
     "soccer_spain_la_liga","soccer_spain_segunda_division",
@@ -35,39 +25,24 @@ SPORTS = [
     "soccer_slovenia_prvaliga","soccer_ukraine_premier_league",
     "soccer_hungary_nb1","soccer_israel_premier_league",
     "soccer_cyprus_first_division","soccer_kazakhstan_premier_league",
-    # Coupes Europe + Nationales
     "soccer_uefa_champs_league","soccer_uefa_europa_league",
     "soccer_uefa_europa_conference_league",
-    "soccer_france_coupe_de_france",
-    "soccer_england_fa_cup","soccer_england_efl_cup",
-    "soccer_spain_copa_del_rey",
-    "soccer_italy_coppa_italia",
-    "soccer_germany_dfb_pokal",
-    "soccer_netherlands_knvb_cup",
-    "soccer_portugal_taca_de_portugal",
-    "soccer_turkey_cup",
-    "soccer_scotland_fa_cup",
-    "soccer_belgium_cup",
-    # Compétitions internationales
-    "soccer_fifa_world_cup",
-    "soccer_conmebol_copa_america",
-    "soccer_concacaf_gold_cup",
-    "soccer_africa_cup_of_nations",
-    "soccer_uefa_nations_league",
-    "soccer_concacaf_nations_league",
-    "soccer_afc_asian_cup",
-    # Amériques
+    "soccer_france_coupe_de_france","soccer_england_fa_cup","soccer_england_efl_cup",
+    "soccer_spain_copa_del_rey","soccer_italy_coppa_italia","soccer_germany_dfb_pokal",
+    "soccer_netherlands_knvb_cup","soccer_portugal_taca_de_portugal",
+    "soccer_turkey_cup","soccer_scotland_fa_cup","soccer_belgium_cup",
+    "soccer_fifa_world_cup","soccer_conmebol_copa_america","soccer_concacaf_gold_cup",
+    "soccer_africa_cup_of_nations","soccer_uefa_nations_league",
+    "soccer_concacaf_nations_league","soccer_afc_asian_cup",
     "soccer_brazil_campeonato","soccer_brazil_serie_b",
     "soccer_argentina_primera_division","soccer_argentina_primera_b",
-    "soccer_chile_campeonato",
-    "soccer_mexico_ligamx","soccer_mexico_ascenso_mx",
+    "soccer_chile_campeonato","soccer_mexico_ligamx","soccer_mexico_ascenso_mx",
     "soccer_usa_mls","soccer_usa_usl_championship",
     "soccer_colombia_primera_a","soccer_ecuador_primera_a",
     "soccer_peru_primera_division","soccer_uruguay_primera_division",
     "soccer_venezuela_primera","soccer_paraguay_primera_division",
     "soccer_bolivia_primera_division","soccer_costa_rica_primera_division",
     "soccer_conmebol_copa_libertadores","soccer_conmebol_copa_sudamericana",
-    # Asie / Moyen-Orient / Océanie
     "soccer_japan_j_league","soccer_japan_j_league_2",
     "soccer_china_superleague","soccer_south_korea_k_league1",
     "soccer_australia_aleague","soccer_india_super_league",
@@ -96,29 +71,25 @@ LEAGUE_LABELS = {
     "soccer_cyprus_first_division":"CYP-First Division","soccer_kazakhstan_premier_league":"KAZ-Premier League",
     "soccer_uefa_champs_league":"UEFA Champions League","soccer_uefa_europa_league":"UEFA Europa League",
     "soccer_uefa_europa_conference_league":"UEFA Conference League",
-    "soccer_france_coupe_de_france":"Coupe de France",
-    "soccer_england_fa_cup":"FA Cup","soccer_england_efl_cup":"EFL Cup",
-    "soccer_spain_copa_del_rey":"Copa del Rey","soccer_italy_coppa_italia":"Coppa Italia",
-    "soccer_germany_dfb_pokal":"DFB Pokal","soccer_netherlands_knvb_cup":"KNVB Cup",
-    "soccer_portugal_taca_de_portugal":"Taça de Portugal","soccer_turkey_cup":"Coupe Turquie",
-    "soccer_scotland_fa_cup":"Scottish FA Cup","soccer_belgium_cup":"Coupe Belgique",
-    "soccer_fifa_world_cup":"Coupe du Monde FIFA","soccer_conmebol_copa_america":"Copa América",
-    "soccer_concacaf_gold_cup":"Gold Cup","soccer_africa_cup_of_nations":"CAN",
-    "soccer_uefa_nations_league":"UEFA Nations League",
-    "soccer_concacaf_nations_league":"CONCACAF Nations League",
-    "soccer_afc_asian_cup":"AFC Asian Cup",
+    "soccer_france_coupe_de_france":"Coupe de France","soccer_england_fa_cup":"FA Cup",
+    "soccer_england_efl_cup":"EFL Cup","soccer_spain_copa_del_rey":"Copa del Rey",
+    "soccer_italy_coppa_italia":"Coppa Italia","soccer_germany_dfb_pokal":"DFB Pokal",
+    "soccer_netherlands_knvb_cup":"KNVB Cup","soccer_portugal_taca_de_portugal":"Taça de Portugal",
+    "soccer_turkey_cup":"Coupe Turquie","soccer_scotland_fa_cup":"Scottish FA Cup",
+    "soccer_belgium_cup":"Coupe Belgique","soccer_fifa_world_cup":"Coupe du Monde FIFA",
+    "soccer_conmebol_copa_america":"Copa América","soccer_concacaf_gold_cup":"Gold Cup",
+    "soccer_africa_cup_of_nations":"CAN","soccer_uefa_nations_league":"UEFA Nations League",
+    "soccer_concacaf_nations_league":"CONCACAF Nations League","soccer_afc_asian_cup":"AFC Asian Cup",
     "soccer_brazil_campeonato":"BRA-Brasileirao","soccer_brazil_serie_b":"BRA-Série B",
     "soccer_argentina_primera_division":"ARG-Primera División","soccer_argentina_primera_b":"ARG-Primera B",
-    "soccer_chile_campeonato":"CHI-Primera División",
-    "soccer_mexico_ligamx":"MEX-Liga MX","soccer_mexico_ascenso_mx":"MEX-Ascenso MX",
-    "soccer_usa_mls":"USA-MLS","soccer_usa_usl_championship":"USA-USL Championship",
-    "soccer_colombia_primera_a":"COL-Liga BetPlay","soccer_ecuador_primera_a":"ECU-Liga Pro",
-    "soccer_peru_primera_division":"PER-Liga 1","soccer_uruguay_primera_division":"URU-Primera División",
-    "soccer_venezuela_primera":"VEN-Primera División","soccer_paraguay_primera_division":"PAR-Primera División",
-    "soccer_bolivia_primera_division":"BOL-Primera División",
+    "soccer_chile_campeonato":"CHI-Primera División","soccer_mexico_ligamx":"MEX-Liga MX",
+    "soccer_mexico_ascenso_mx":"MEX-Ascenso MX","soccer_usa_mls":"USA-MLS",
+    "soccer_usa_usl_championship":"USA-USL Championship","soccer_colombia_primera_a":"COL-Liga BetPlay",
+    "soccer_ecuador_primera_a":"ECU-Liga Pro","soccer_peru_primera_division":"PER-Liga 1",
+    "soccer_uruguay_primera_division":"URU-Primera División","soccer_venezuela_primera":"VEN-Primera División",
+    "soccer_paraguay_primera_division":"PAR-Primera División","soccer_bolivia_primera_division":"BOL-Primera División",
     "soccer_costa_rica_primera_division":"CRC-Primera División",
-    "soccer_conmebol_copa_libertadores":"Copa Libertadores",
-    "soccer_conmebol_copa_sudamericana":"Copa Sudamericana",
+    "soccer_conmebol_copa_libertadores":"Copa Libertadores","soccer_conmebol_copa_sudamericana":"Copa Sudamericana",
     "soccer_japan_j_league":"JPN-J1 League","soccer_japan_j_league_2":"JPN-J2 League",
     "soccer_china_superleague":"CHN-Super League","soccer_south_korea_k_league1":"KOR-K League 1",
     "soccer_australia_aleague":"AUS-A-League","soccer_india_super_league":"IND-Super League",
@@ -126,63 +97,47 @@ LEAGUE_LABELS = {
 }
 
 def score_matrix(lam_h, lam_a, n=10):
-    h = poisson.pmf(np.arange(n+1), lam_h)
-    a = poisson.pmf(np.arange(n+1), lam_a)
-    return np.outer(h, a)
+    return np.outer(poisson.pmf(np.arange(n+1),lam_h), poisson.pmf(np.arange(n+1),lam_a))
 
 def market_probs(mat):
     idx = np.add.outer(np.arange(mat.shape[0]), np.arange(mat.shape[0]))
     return {
-        "1": float(np.tril(mat,-1).sum()),
-        "X": float(np.trace(mat)),
-        "2": float(np.triu(mat,1).sum()),
-        "Over_2.5": float(mat[idx>2].sum()),
-        "BTTS_Yes": float(mat[1:,1:].sum()),
+        "1":float(np.tril(mat,-1).sum()), "X":float(np.trace(mat)), "2":float(np.triu(mat,1).sum()),
+        "Over_2.5":float(mat[idx>2].sum()), "BTTS_Yes":float(mat[1:,1:].sum()),
     }
 
 def remove_vig(odds):
-    inv = {k:1/v for k,v in odds.items() if v and v>1.0}
-    total = sum(inv.values())
-    return {k:v/total for k,v in inv.items()} if total else {}
+    inv={k:1/v for k,v in odds.items() if v and v>1.0}
+    t=sum(inv.values())
+    return {k:v/t for k,v in inv.items()} if t else {}
 
 def detect_value(model_p, odd, edge_min=0.05):
-    if not odd or odd < 1.3: return False, 0
-    edge = model_p - 1/odd
-    return edge >= edge_min, round(edge*100,1)
-
-def dbx_score(forme, h2h, contexte, xg, blessures):
-    w = {"forme":0.25,"h2h":0.20,"contexte":0.20,"stats_xg":0.20,"blessures":0.15}
-    s = {"forme":forme,"h2h":h2h,"contexte":contexte,"stats_xg":xg,"blessures":blessures}
-    return round(sum(s[k]*w[k] for k in w), 2)
-
-def forme_score(s):
-    pts = {"W":3,"D":1,"L":0}
-    p = sum(pts.get(c,0) for c in (s or "").upper()[:5])
-    return round(p/15*10, 1)
+    if not odd or odd<1.3: return False,0
+    edge=model_p-1/odd
+    return edge>=edge_min, round(edge*100,1)
 
 def lambda_from_odds(odd_1, odd_x, odd_2, home):
     if not odd_1 or not odd_2: return 1.3 if home else 1.1
-    odds = {"1":odd_1,"2":odd_2}
-    if odd_x: odds["X"] = odd_x
-    fair = remove_vig(odds)
-    p = fair.get("1",0.45) if home else fair.get("2",0.30)
-    lam = max(0.5, 0.5+p*2.5) if home else max(0.5, 0.5+p*2.0)
-    return round(lam, 2)
+    odds={"1":odd_1,"2":odd_2}
+    if odd_x: odds["X"]=odd_x
+    fair=remove_vig(odds)
+    p=fair.get("1",0.45) if home else fair.get("2",0.30)
+    return round(max(0.5,0.5+p*(2.5 if home else 2.0)),2)
 
 def fetch_all_matches():
-    all_matches = []
+    all_matches=[]
     for sport in SPORTS:
         try:
-            r = requests.get(
+            r=requests.get(
                 f"https://api.the-odds-api.com/v4/sports/{sport}/odds/",
                 params={"apiKey":API_KEY,"regions":"eu","markets":"h2h,totals","oddsFormat":"decimal","dateFormat":"iso"},
                 timeout=15
             )
-            if r.status_code != 200: continue
+            if r.status_code!=200: continue
             for ev in r.json():
                 if not ev.get("commence_time","").startswith(TODAY): continue
                 home=ev.get("home_team",""); away=ev.get("away_team","")
-                league=LEAGUE_LABELS.get(sport, sport)
+                league=LEAGUE_LABELS.get(sport,sport)
                 try:
                     dt=datetime.fromisoformat(ev["commence_time"].replace("Z","+00:00"))
                     time_str=dt.strftime("%Hh%M")
@@ -206,54 +161,42 @@ def fetch_all_matches():
                     "odd_1":odd_1,"odd_x":odd_x,"odd_2":odd_2,"odd_over_25":odd_over_25,
                     "lam_home":lambda_from_odds(odd_1,odd_x,odd_2,True),
                     "lam_away":lambda_from_odds(odd_1,odd_x,odd_2,False),
-                    "forme_home":None,"forme_away":None,"h2h_home":None,
-                    "motivation":5,"fatigue":2,"blessures_home":0,"blessures_away":0,"context_flags":[],
                 })
         except Exception as e:
             print(f"Erreur {sport}: {e}")
     print(f"Matchs trouvés: {len(all_matches)}")
     return all_matches
 
-MANUAL_PICKS = []
+MANUAL_PICKS=[]
 
 def process_match(m):
     home=m.get("home","?"); away=m.get("away","?")
     league=m.get("league",""); time_=m.get("time","")
     mat=score_matrix(m.get("lam_home",1.3),m.get("lam_away",1.1))
     probs=market_probs(mat)
-    score=dbx_score(
-        forme_score(m.get("forme_home")),forme_score(m.get("h2h_home")),
-        max(0,min(10,m.get("motivation",5)-m.get("fatigue",2)*0.5)),5.0,
-        max(0,min(10,5-m.get("blessures_home",0)*1.5+m.get("blessures_away",0)*1.5))
-    )
-    tags=[]; flags=m.get("context_flags",[])
-    pick_type="grid"; selection=None; market=None; odd_taken=None; model_prob=None
     odd_1=m.get("odd_1"); odd_over=m.get("odd_over_25")
+    tags=[]; pick_type="grid"; selection=None; market=None; odd_taken=None; model_prob=None
 
-    if probs["1"]>=0.80 and score>=5.0 and odd_1 and odd_1>=1.20 and m.get("blessures_home",0)<2 and "derby" not in flags:
-        pick_type="safe"; selection=f"{home} gagne"; market="1X2 — 1"; odd_taken=odd_1; model_prob=probs["1"]
-        tags.append(f"🛡️ Safe VIP · {round(probs['1']*100)}%")
-    elif probs["Over_2.5"]>=0.80 and score>=5.0 and odd_over:
-        pick_type="safe"; selection="Over 2.5 buts"; market="Over/Under 2.5"; odd_taken=odd_over; model_prob=probs["Over_2.5"]
-        tags.append(f"🛡️ Safe VIP · Over 2.5 · {round(probs['Over_2.5']*100)}%")
-    elif odd_1 and score>=5.0:
-        is_val,edge=detect_value(probs["1"],odd_1)
+    # Score basé uniquement sur les probas Poisson (pas de grille DBX sans données)
+    p1=probs["1"]; po=probs["Over_2.5"]
+    score=round(max(p1,po)*10,1)  # score = proba max * 10
+
+    if p1>=0.75 and odd_1 and odd_1>=1.15:
+        pick_type="safe"; selection=f"{home} gagne"; market="1X2 — 1"; odd_taken=odd_1; model_prob=p1
+        tags.append(f"🛡️ Safe VIP · {round(p1*100)}%")
+    elif po>=0.75 and odd_over:
+        pick_type="safe"; selection="Over 2.5 buts"; market="Over/Under 2.5"; odd_taken=odd_over; model_prob=po
+        tags.append(f"🛡️ Safe VIP · Over 2.5 · {round(po*100)}%")
+    elif odd_1:
+        is_val,edge=detect_value(p1,odd_1)
         if is_val:
-            pick_type="value"; selection=f"{home} gagne"; market="1X2 — 1"; odd_taken=odd_1; model_prob=probs["1"]
+            pick_type="value"; selection=f"{home} gagne"; market="1X2 — 1"; odd_taken=odd_1; model_prob=p1
             tags.append(f"🔥 Value +{edge}pp edge")
-    elif odd_over and score>=5.0:
-        is_val,edge=detect_value(probs["Over_2.5"],odd_over)
+    elif odd_over:
+        is_val,edge=detect_value(po,odd_over)
         if is_val:
-            pick_type="value"; selection="Over 2.5 buts"; market="Over/Under 2.5"; odd_taken=odd_over; model_prob=probs["Over_2.5"]
+            pick_type="value"; selection="Over 2.5 buts"; market="Over/Under 2.5"; odd_taken=odd_over; model_prob=po
             tags.append(f"🔥 Value Over 2.5 · +{edge}pp")
-
-    if m.get("blessures_away",0)>=2: tags.append(f"🚑 {m['blessures_away']} blessés clés {away}")
-    if "derby" in flags: tags.append("⚠️ Derby — volatilité haute")
-    if "low_stakes_favorite" in flags: tags.append("⚠️ Piège — enjeu faible")
-    if "post_european_fatigue" in flags: tags.append("⚠️ Fatigue européenne")
-
-    if score<5.0:
-        pick_type="skip"; tags=["⚠️ Sous seuil DBX 6/10"]; selection=None; odd_taken=None
 
     stake=0.03 if(pick_type in("safe","value") and score>=8.0) else 0.02 if pick_type in("safe","value","grid") else 0.0
     return {
