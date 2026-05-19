@@ -221,4 +221,4 @@ def main():
             "total_picks":len(active),
             "safes_vip":sum(1 for p in active if p["type"]=="safe"),
             "value_bets":sum(1 for p in active if p["type"]=="value"),
-            "score_moyen":round(sum(p["score"] fo
+          "score_moyen":round(sum(p["score"] for p in active)/len(active),1) if active else 0,
