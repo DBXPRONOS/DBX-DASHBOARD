@@ -1,34 +1,11 @@
 {
-  "date": "2026-06-01",
-  "updated_at": "21:04",
+  "date": "2026-06-02",
+  "updated_at": "19:02",
   "stats": {
-    "total_picks": 1,
+    "total_picks": 0,
     "safes_vip": 0,
     "value_bets": 0,
-    "score_moyen": 4.6
+    "score_moyen": 0
   },
-  "picks": [
-    {
-      "home_team": "Ponte Preta",
-      "away_team": "Botafogo",
-      "league": "BRA-Serie B",
-      "time": "22h00",
-      "type": "grid",
-      "score": 4.6,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.3677,
-      "prob_x": 0.2694,
-      "prob_2": 0.3629,
-      "prob_over": 0.4587,
-      "odd_1": 3.05,
-      "odd_x": 2.88,
-      "odd_2": 2.48,
-      "odd_over_25": 2.48
-    }
-  ]
+  "picks": []
 }
