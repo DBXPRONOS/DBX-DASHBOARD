@@ -1,33 +1,57 @@
 {
-  "date": "2026-06-11",
-  "updated_at": "17:58",
+  "date": "2026-06-12",
+  "updated_at": "16:34",
   "stats": {
-    "total_picks": 1,
+    "total_picks": 2,
     "safes_vip": 0,
-    "value_bets": 0,
-    "score_moyen": 7.1
+    "value_bets": 1,
+    "score_moyen": 5.5
   },
   "picks": [
     {
-      "home_team": "Mexico",
-      "away_team": "South Africa",
+      "home_team": "Canada",
+      "away_team": "Bosnia & Herzegovina",
       "league": "Coupe du Monde FIFA",
       "time": "19h00",
+      "type": "value",
+      "score": 6.0,
+      "selection": "Canada gagne",
+      "market": "1X2 - 1",
+      "odd": 1.83,
+      "model_prob": 0.5976,
+      "stake_pct": 0.02,
+      "tags": [
+        "Value +5.1pp edge"
+      ],
+      "prob_1": 0.5976,
+      "prob_x": 0.2246,
+      "prob_2": 0.1778,
+      "prob_over": 0.5137,
+      "odd_1": 1.83,
+      "odd_x": 3.65,
+      "odd_2": 5.0,
+      "odd_over_25": 2.2
+    },
+    {
+      "home_team": "Atletico Goianiense",
+      "away_team": "Clube de Regatas Brasil",
+      "league": "BRA-Serie B",
+      "time": "22h00",
       "type": "grid",
-      "score": 7.1,
+      "score": 4.9,
       "selection": null,
       "market": null,
       "odd": null,
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.7107,
-      "prob_x": 0.1808,
-      "prob_2": 0.1085,
-      "prob_over": 0.5563,
-      "odd_1": 1.45,
-      "odd_x": 4.65,
-      "odd_2": 8.75,
+      "prob_1": 0.4842,
+      "prob_x": 0.2528,
+      "prob_2": 0.263,
+      "prob_over": 0.4916,
+      "odd_1": 2.1,
+      "odd_x": 3.1,
+      "odd_2": 3.05,
       "odd_over_25": null
     }
   ]
