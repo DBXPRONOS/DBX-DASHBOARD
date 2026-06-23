@@ -1,78 +1,11 @@
 {
-  "date": "2026-06-22",
-  "updated_at": "11:49",
+  "date": "2026-06-23",
+  "updated_at": "09:34",
   "stats": {
-    "total_picks": 3,
+    "total_picks": 0,
     "safes_vip": 0,
     "value_bets": 0,
-    "score_moyen": 6.7
+    "score_moyen": 0
   },
-  "picks": [
-    {
-      "home_team": "France",
-      "away_team": "Iraq",
-      "league": "Coupe du Monde FIFA",
-      "time": "21h00",
-      "type": "grid",
-      "score": 8.3,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.8295,
-      "prob_x": 0.1185,
-      "prob_2": 0.0519,
-      "prob_over": 0.6424,
-      "odd_1": 1.08,
-      "odd_x": 14.0,
-      "odd_2": 30.0,
-      "odd_over_25": null
-    },
-    {
-      "home_team": "Argentina",
-      "away_team": "Austria",
-      "league": "Coupe du Monde FIFA",
-      "time": "17h00",
-      "type": "grid",
-      "score": 7.0,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.6985,
-      "prob_x": 0.186,
-      "prob_2": 0.1154,
-      "prob_over": 0.5517,
-      "odd_1": 1.47,
-      "odd_x": 4.4,
-      "odd_2": 8.0,
-      "odd_over_25": 1.82
-    },
-    {
-      "home_team": "Ponte Preta",
-      "away_team": "Grêmio Novorizontino",
-      "league": "BRA-Serie B",
-      "time": "23h00",
-      "type": "grid",
-      "score": 4.7,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.2376,
-      "prob_x": 0.2541,
-      "prob_2": 0.5082,
-      "prob_over": 0.4664,
-      "odd_1": 4.85,
-      "odd_x": 3.3,
-      "odd_2": 1.75,
-      "odd_over_25": null
-    }
-  ]
+  "picks": []
 }
