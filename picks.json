@@ -1,11 +1,58 @@
 {
-  "date": "2026-06-30",
-  "updated_at": "09:29",
+  "date": "2026-07-01",
+  "updated_at": "09:41",
   "stats": {
-    "total_picks": 0,
-    "safes_vip": 0,
+    "total_picks": 2,
+    "safes_vip": 1,
     "value_bets": 0,
-    "score_moyen": 0
+    "score_moyen": 6.4
   },
-  "picks": []
+  "picks": [
+    {
+      "home_team": "England",
+      "away_team": "DR Congo",
+      "league": "Coupe du Monde FIFA",
+      "time": "16h00",
+      "type": "safe",
+      "score": 7.6,
+      "selection": "England gagne",
+      "market": "1X2 - 1",
+      "odd": 1.3,
+      "model_prob": 0.7639,
+      "stake_pct": 0.02,
+      "tags": [
+        "Safe VIP : 76%"
+      ],
+      "prob_1": 0.7639,
+      "prob_x": 0.156,
+      "prob_2": 0.0801,
+      "prob_over": 0.579,
+      "odd_1": 1.3,
+      "odd_x": 5.4,
+      "odd_2": 15.0,
+      "odd_over_25": 1.92
+    },
+    {
+      "home_team": "Belgium",
+      "away_team": "Senegal",
+      "league": "Coupe du Monde FIFA",
+      "time": "20h00",
+      "type": "grid",
+      "score": 5.2,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.5161,
+      "prob_x": 0.246,
+      "prob_2": 0.2379,
+      "prob_over": 0.499,
+      "odd_1": 2.1,
+      "odd_x": 3.4,
+      "odd_2": 3.6,
+      "odd_over_25": null
+    }
+  ]
 }
