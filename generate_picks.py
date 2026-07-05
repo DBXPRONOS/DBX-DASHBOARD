@@ -1,6 +1,25 @@
-import json, os, requests, numpy as np
-from datetime import datetime, date
+import difflib
+import json
+import os
+import re
+from datetime import date, datetime
+
+import numpy as np
+import requests
 from scipy.stats import poisson
+
+try:
+    import pandas as pd
+except Exception:
+    pd = None
+
+try:
+    import soccerdata as sd
+    FBREF_IMPORT_OK = True
+except Exception as _e:
+    sd = None
+    FBREF_IMPORT_OK = False
+    print("soccerdata indisponible (" + str(_e) + ") - mode cotes uniquement pour toutes les ligues")
 
 TODAY = date.today().isoformat()
 NOW = datetime.utcnow().strftime("%H:%M")
@@ -49,6 +68,10 @@ SPORTS = [
     "soccer_saudi_arabian_premier_league","soccer_uae_pro_league",
 ]
 
+# La Coupe du Monde FIFA est prioritaire : traitee en premier lors de la
+# collecte et toujours affichee en tete de sa section sur le dashboard.
+PRIORITY_SPORTS = {"soccer_fifa_world_cup"}
+
 LEAGUE_LABELS = {
     "soccer_france_ligue_one":"FRA-Ligue 1","soccer_france_ligue_two":"FRA-Ligue 2",
     "soccer_epl":"ENG-Premier League","soccer_england_championship":"ENG-Championship",
@@ -96,6 +119,44 @@ LEAGUE_LABELS = {
     "soccer_saudi_arabian_premier_league":"SAU-Pro League","soccer_uae_pro_league":"UAE-Pro League",
 }
 
+# Ligues pour lesquelles soccerdata/FBref fournit de vraies stats (xG, forme,
+# H2H) : le "Big 5" europeen + la Coupe du Monde FIFA. Sur toutes les autres
+# ligues, le modele retombe sur les cotes de-margees (voir lambda_from_odds).
+FBREF_LEAGUES = {
+    "soccer_epl": "ENG-Premier League",
+    "soccer_spain_la_liga": "ESP-La Liga",
+    "soccer_italy_serie_a": "ITA-Serie A",
+    "soccer_germany_bundesliga": "GER-Bundesliga",
+    "soccer_france_ligue_one": "FRA-Ligue 1",
+    "soccer_fifa_world_cup": "INT-World Cup",
+}
+
+# Alias de noms d'equipes The-Odds-API -> nom exact utilise par FBref, pour
+# les cas ou le rapprochement flou (difflib) risque de se tromper.
+TEAM_ALIASES = {
+    "Manchester United": "Manchester Utd", "Newcastle United": "Newcastle Utd",
+    "Tottenham Hotspur": "Tottenham", "Wolverhampton Wanderers": "Wolves",
+    "Nottingham Forest": "Nott'ham Forest", "Brighton and Hove Albion": "Brighton",
+    "West Ham United": "West Ham", "Sheffield United": "Sheffield Utd",
+    "Atletico Madrid": "Atlético Madrid", "Athletic Bilbao": "Athletic Club",
+    "Real Betis": "Betis", "Deportivo Alaves": "Alavés", "Cadiz": "Cádiz",
+    "Almeria": "Almería", "Leganes": "Leganés",
+    "Inter Milan": "Inter", "Internazionale": "Inter", "AC Milan": "Milan",
+    "AS Roma": "Roma", "Hellas Verona": "Verona",
+    "Borussia Dortmund": "Dortmund", "Borussia Monchengladbach": "Gladbach",
+    "Bayer Leverkusen": "Leverkusen", "Eintracht Frankfurt": "Eint Frankfurt",
+    "TSG Hoffenheim": "Hoffenheim", "1899 Hoffenheim": "Hoffenheim",
+    "FC Koln": "Köln", "1.FC Koln": "Köln", "FC Union Berlin": "Union Berlin",
+    "VfL Wolfsburg": "Wolfsburg", "VfB Stuttgart": "Stuttgart",
+    "FSV Mainz 05": "Mainz 05", "Mainz": "Mainz 05",
+    "Paris Saint Germain": "Paris S-G", "Paris Saint-Germain": "Paris S-G", "PSG": "Paris S-G",
+    "Olympique Marseille": "Marseille", "Olympique Lyonnais": "Lyon", "AS Monaco": "Monaco",
+    "OGC Nice": "Nice", "RC Lens": "Lens", "Stade Rennais": "Rennes",
+    "Stade Reims": "Reims", "RC Strasbourg": "Strasbourg", "FC Nantes": "Nantes",
+    "Toulouse FC": "Toulouse", "Montpellier HSC": "Montpellier", "Le Havre AC": "Le Havre",
+}
+
+
 def score_matrix(lam_h, lam_a, n=10):
     return np.outer(poisson.pmf(np.arange(n+1), lam_h), poisson.pmf(np.arange(n+1), lam_a))
 
@@ -130,9 +191,245 @@ def lambda_from_odds(odd_1, odd_x, odd_2, home):
     p = fair.get("1", 0.45) if home else fair.get("2", 0.30)
     return round(max(0.5, 0.5 + p * (2.5 if home else 2.0)), 2)
 
+
+# ---------------------------------------------------------------------------
+# Vraies stats (xG, forme, H2H) via soccerdata/FBref, avec repli automatique
+# et sans jamais melanger silencieusement les deux sources sur un meme match.
+# ---------------------------------------------------------------------------
+
+def _current_euro_season():
+    now = datetime.utcnow()
+    start = now.year if now.month >= 7 else now.year - 1
+    return str(start) + "-" + str(start + 1)
+
+def _normalize_team(name):
+    n = (name or "").lower()
+    n = re.sub(r"\b(fc|cf|afc|ac|sc|cd|ca|sd|ud)\b", " ", n)
+    n = re.sub(r"[^a-z0-9]+", " ", n)
+    return n.strip()
+
+def _flatten_columns(df):
+    cols = []
+    for c in df.columns:
+        if isinstance(c, tuple):
+            parts = [str(p) for p in c if p and not str(p).lower().startswith("unnamed")]
+            cols.append(" ".join(parts).strip().lower())
+        else:
+            cols.append(str(c).strip().lower())
+    df = df.copy()
+    df.columns = cols
+    return df
+
+def _find_col(df, *keywords, exclude=None):
+    for c in df.columns:
+        if all(k in c for k in keywords) and (not exclude or not any(x in c for x in exclude)):
+            return c
+    return None
+
+def _clamp(v, lo=0.0, hi=10.0):
+    return max(lo, min(hi, v))
+
+
+class FBrefSource:
+    """Fournisseur best-effort de vraies stats via soccerdata/FBref.
+
+    Toute erreur (Chrome/Selenium indisponible, page bloquee, equipe non
+    reconnue...) desactive silencieusement la ligue concernee pour le reste
+    du run : l'appelant retombe alors sur l'estimation par cotes pour les
+    matchs correspondants.
+    """
+
+    def __init__(self):
+        self._readers = {}
+        self._season_stats = {}
+        self._schedules = {}
+        self._broken = set()
+
+    def _reader(self, league_key):
+        if league_key not in self._readers:
+            season = str(date.today().year) if league_key == "INT-World Cup" else _current_euro_season()
+            self._readers[league_key] = sd.FBref(leagues=league_key, seasons=season)
+        return self._readers[league_key]
+
+    def _season_df(self, league_key):
+        if league_key in self._broken:
+            return None
+        if league_key not in self._season_stats:
+            try:
+                df = self._reader(league_key).read_team_season_stats(stat_type="standard")
+                self._season_stats[league_key] = _flatten_columns(df.reset_index())
+            except Exception as e:
+                print("FBref indisponible pour " + league_key + ": " + str(e))
+                self._broken.add(league_key)
+                self._season_stats[league_key] = None
+        return self._season_stats[league_key]
+
+    def match_team(self, league_key, team_name):
+        df = self._season_df(league_key)
+        if df is None or "team" not in df.columns:
+            return None
+        teams = list(df["team"].unique())
+        alias = TEAM_ALIASES.get(team_name)
+        if alias in teams:
+            return alias
+        norm = _normalize_team(team_name)
+        best, best_ratio = None, 0.0
+        for t in teams:
+            ratio = difflib.SequenceMatcher(None, norm, _normalize_team(t)).ratio()
+            if ratio > best_ratio:
+                best, best_ratio = t, ratio
+        return best if best_ratio >= 0.72 else None
+
+    def team_season_stats(self, league_key, team_name):
+        df = self._season_df(league_key)
+        matched = self.match_team(league_key, team_name)
+        if df is None or matched is None:
+            return None
+        rows = df[df["team"] == matched]
+        if rows.empty:
+            return None
+        row = rows.iloc[0]
+        mp_col = _find_col(df, "mp")
+        xg_col = next((c for c in df.columns if c.endswith("xg")), None)
+        xga_col = next((c for c in df.columns if c.endswith("xga")), None)
+        players_col = _find_col(df, "players_used") or _find_col(df, "pl")
+        try:
+            mp = float(row[mp_col]) if mp_col is not None else None
+            xg = float(row[xg_col]) if xg_col is not None else None
+            xga = float(row[xga_col]) if xga_col is not None else None
+            players_used = float(row[players_col]) if players_col is not None else None
+        except Exception:
+            return None
+        if not mp or mp <= 0 or xg is None or xga is None:
+            return None
+        return {"team": matched, "mp": mp, "xg90": xg / mp, "xga90": xga / mp, "players_used": players_used}
+
+    def schedule(self, league_key, matched_team):
+        key = (league_key, matched_team)
+        if key in self._schedules:
+            return self._schedules[key]
+        if league_key in self._broken:
+            self._schedules[key] = None
+            return None
+        try:
+            df = self._reader(league_key).read_team_match_stats(stat_type="schedule", team=matched_team)
+            self._schedules[key] = _flatten_columns(df.reset_index())
+        except Exception as e:
+            print("Historique FBref indisponible pour " + matched_team + ": " + str(e))
+            self._schedules[key] = None
+        return self._schedules[key]
+
+    def close(self):
+        for r in self._readers.values():
+            try:
+                if getattr(r, "_driver", None):
+                    r._driver.quit()
+            except Exception:
+                pass
+
+
+def _team_form_h2h_rest(fbref, league_key, matched_team, opponent_name):
+    df = fbref.schedule(league_key, matched_team)
+    if df is None or df.empty:
+        return None
+    date_col = _find_col(df, "date")
+    result_col = _find_col(df, "result")
+    opp_col = _find_col(df, "opponent")
+    if not date_col or not result_col or not opp_col:
+        return None
+    df = df.copy()
+    df["_dt"] = pd.to_datetime(df[date_col], errors="coerce")
+    today_dt = pd.Timestamp(TODAY)
+    played = df[df["_dt"].notna() & (df["_dt"] < today_dt) & df[result_col].isin(["W", "D", "L"])]
+    played = played.sort_values("_dt")
+    if played.empty:
+        return {"ppg5": None, "rest_days": None, "h2h_rate": None, "h2h_n": 0}
+    last5 = played.tail(5)
+    pts_map = {"W": 3, "D": 1, "L": 0}
+    ppg5 = sum(pts_map[r] for r in last5[result_col]) / len(last5)
+    rest_days = (today_dt - played.iloc[-1]["_dt"]).days
+    opp_norm = _normalize_team(opponent_name)
+    h2h_rows = played[played[opp_col].apply(
+        lambda o: difflib.SequenceMatcher(None, opp_norm, _normalize_team(o)).ratio() >= 0.72
+    )]
+    h2h_rate = None
+    if not h2h_rows.empty:
+        h2h_rate = sum(pts_map[r] for r in h2h_rows[result_col]) / (3 * len(h2h_rows))
+    return {"ppg5": round(ppg5, 2), "rest_days": int(rest_days), "h2h_rate": h2h_rate, "h2h_n": len(h2h_rows)}
+
+
+def real_stats_for_match(fbref, league_key, home, away):
+    if fbref is None or pd is None:
+        return None
+    home_stats = fbref.team_season_stats(league_key, home)
+    away_stats = fbref.team_season_stats(league_key, away)
+    if not home_stats or not away_stats:
+        return None
+    home_form = _team_form_h2h_rest(fbref, league_key, home_stats["team"], away)
+    away_form = _team_form_h2h_rest(fbref, league_key, away_stats["team"], home)
+    if not home_form or not away_form:
+        return None
+    lam_home = _clamp(0.55 * home_stats["xg90"] + 0.45 * away_stats["xga90"], 0.2, 4.0) * 1.06
+    lam_away = _clamp(0.55 * away_stats["xg90"] + 0.45 * home_stats["xga90"], 0.2, 4.0) * 0.96
+    return {
+        "lam_home": round(lam_home, 2), "lam_away": round(lam_away, 2),
+        "home_stats": home_stats, "away_stats": away_stats,
+        "home_form": home_form, "away_form": away_form,
+    }
+
+
+def real_score_breakdown(real, probs):
+    favored_home = probs["1"] >= probs["2"]
+    fav_form, oth_form = (real["home_form"], real["away_form"]) if favored_home else (real["away_form"], real["home_form"])
+    fav_stats, oth_stats = (real["home_stats"], real["away_stats"]) if favored_home else (real["away_stats"], real["home_stats"])
+
+    notes = {}
+
+    if fav_form["ppg5"] is None:
+        forme_sub = 5.0
+        notes["forme"] = "neutre (pas de match recent trouve)"
+    else:
+        forme_sub = _clamp(fav_form["ppg5"] / 3 * 10)
+
+    if fav_form["h2h_rate"] is None:
+        h2h_sub = 5.0
+        notes["h2h"] = "neutre (pas de confrontation directe cette saison)"
+    else:
+        h2h_sub = _clamp(fav_form["h2h_rate"] * 10)
+
+    if fav_form["rest_days"] is None or oth_form["rest_days"] is None:
+        contexte_sub = 5.0
+        notes["contexte"] = "neutre (repos inconnu)"
+    else:
+        rest_diff = fav_form["rest_days"] - oth_form["rest_days"]
+        home_bonus = 0.6 if favored_home else -0.3
+        contexte_sub = _clamp(5 + rest_diff * 0.5 + home_bonus)
+
+    xg_diff = fav_stats["xg90"] - oth_stats["xga90"]
+    xg_sub = _clamp((xg_diff + 1.4) / 2.8 * 10)
+
+    if fav_stats.get("players_used") and fav_stats.get("mp"):
+        ratio = fav_stats["players_used"] / fav_stats["mp"]
+        blessures_sub = _clamp(10 - max(0.0, ratio - 0.55) * 20)
+    else:
+        blessures_sub = 5.0
+        notes["blessures"] = "proxy rotation effectif indisponible"
+
+    breakdown = {
+        "forme": round(forme_sub, 1),
+        "h2h": round(h2h_sub, 1),
+        "contexte": round(contexte_sub, 1),
+        "xg": round(xg_sub, 1),
+        "blessures": round(blessures_sub, 1),
+    }
+    score = round(sum(breakdown.values()) / 5, 1)
+    return score, breakdown, notes
+
+
 def fetch_all_matches():
     all_matches = []
-    for sport in SPORTS:
+    ordered_sports = sorted(SPORTS, key=lambda s: 0 if s in PRIORITY_SPORTS else 1)
+    for sport in ordered_sports:
         try:
             r = requests.get(
                 "https://api.the-odds-api.com/v4/sports/" + sport + "/odds/",
@@ -179,6 +476,7 @@ def fetch_all_matches():
                     continue
                 all_matches.append({
                     "home": home, "away": away, "league": league, "time": time_str,
+                    "sport_key": sport,
                     "odd_1": odd_1, "odd_x": odd_x, "odd_2": odd_2, "odd_over_25": odd_over_25,
                     "lam_home": lambda_from_odds(odd_1, odd_x, odd_2, True),
                     "lam_away": lambda_from_odds(odd_1, odd_x, odd_2, False),
@@ -190,13 +488,37 @@ def fetch_all_matches():
 
 MANUAL_PICKS = []
 
-def process_match(m):
+def process_match(m, fbref=None):
     home = m.get("home", "?")
     away = m.get("away", "?")
     league = m.get("league", "")
+    sport_key = m.get("sport_key", "")
     time_ = m.get("time", "")
-    mat = score_matrix(m.get("lam_home", 1.3), m.get("lam_away", 1.1))
+
+    lam_home, lam_away = m.get("lam_home", 1.3), m.get("lam_away", 1.1)
+    data_source = "odds_only"
+    real = None
+
+    if fbref is not None and sport_key in FBREF_LEAGUES:
+        try:
+            real = real_stats_for_match(fbref, FBREF_LEAGUES[sport_key], home, away)
+        except Exception as e:
+            print("Erreur stats reelles " + home + " vs " + away + ": " + str(e))
+            real = None
+        if real:
+            lam_home, lam_away = real["lam_home"], real["lam_away"]
+            data_source = "real_stats"
+
+    mat = score_matrix(lam_home, lam_away)
     probs = market_probs(mat)
+
+    score_breakdown = None
+    score_breakdown_notes = None
+    if data_source == "real_stats":
+        score, score_breakdown, score_breakdown_notes = real_score_breakdown(real, probs)
+    else:
+        score = round(max(probs["1"], probs["Over_2.5"]) * 10, 1)
+
     odd_1 = m.get("odd_1")
     odd_over = m.get("odd_over_25")
     tags = []
@@ -207,7 +529,6 @@ def process_match(m):
     model_prob = None
     p1 = probs["1"]
     po = probs["Over_2.5"]
-    score = round(max(p1, po) * 10, 1)
 
     if p1 >= 0.75 and odd_1 and odd_1 >= 1.15:
         pick_type = "safe"
@@ -265,15 +586,23 @@ def process_match(m):
         "odd_x": m.get("odd_x"),
         "odd_2": m.get("odd_2"),
         "odd_over_25": m.get("odd_over_25"),
+        "priority": sport_key in PRIORITY_SPORTS,
+        "data_source": data_source,
+        "score_breakdown": score_breakdown,
+        "score_breakdown_notes": score_breakdown_notes,
     }
 
 def main():
+    fbref = FBrefSource() if (FBREF_IMPORT_OK and pd is not None) else None
     auto = fetch_all_matches()
     manual_ids = {(m["home"], m["away"]) for m in MANUAL_PICKS}
     all_matches = MANUAL_PICKS + [f for f in auto if (f["home"], f["away"]) not in manual_ids]
-    picks = [process_match(m) for m in all_matches]
+    picks = [process_match(m, fbref) for m in all_matches]
+    if fbref is not None:
+        fbref.close()
     picks.sort(key=lambda p: (
         ["safe", "value", "grid", "skip"].index(p["type"]) if p["type"] in ["safe", "value", "grid", "skip"] else 99,
+        0 if p.get("priority") else 1,
         -p["score"]
     ))
     active = [p for p in picks if p["type"] != "skip"]
@@ -288,6 +617,8 @@ def main():
             "safes_vip": sum(1 for p in active if p["type"] == "safe"),
             "value_bets": sum(1 for p in active if p["type"] == "value"),
             "score_moyen": score_moy,
+            "real_stats_picks": sum(1 for p in active if p["data_source"] == "real_stats"),
+            "odds_only_picks": sum(1 for p in active if p["data_source"] == "odds_only"),
         },
         "picks": picks,
     }
