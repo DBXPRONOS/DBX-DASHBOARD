@@ -166,9 +166,20 @@ def market_probs(mat):
         "1": float(np.tril(mat, -1).sum()),
         "X": float(np.trace(mat)),
         "2": float(np.triu(mat, 1).sum()),
+        "Over_0.5": float(mat[idx > 0].sum()),
+        "Over_1.5": float(mat[idx > 1].sum()),
         "Over_2.5": float(mat[idx > 2].sum()),
+        "Over_3.5": float(mat[idx > 3].sum()),
         "BTTS_Yes": float(mat[1:, 1:].sum()),
+        "Home_scores": float(1 - mat[0, :].sum()),
+        "Away_scores": float(1 - mat[:, 0].sum()),
     }
+
+def top_scores(mat, n=5, max_goals=6):
+    sub = mat[:max_goals+1, :max_goals+1]
+    flat = [(i, j, float(sub[i, j])) for i in range(sub.shape[0]) for j in range(sub.shape[1])]
+    flat.sort(key=lambda t: -t[2])
+    return [{"score": str(i) + "-" + str(j), "prob": round(p, 4)} for i, j, p in flat[:n]]
 
 def remove_vig(odds):
     inv = {k: 1/v for k, v in odds.items() if v and v > 1.0}
@@ -565,6 +576,16 @@ def process_match(m, fbref=None):
 
     stake = 0.03 if (pick_type in ("safe", "value") and score >= 8.0) else 0.02 if pick_type in ("safe", "value", "grid") else 0.0
 
+    odd_2 = m.get("odd_2")
+    favori_team = None
+    favori_odd = None
+    if odd_1 and odd_2:
+        if odd_1 <= odd_2:
+            favori_team, favori_odd = home, odd_1
+        else:
+            favori_team, favori_odd = away, odd_2
+    live_watch = bool(favori_odd and favori_odd < 1.45)
+
     return {
         "home_team": home,
         "away_team": away,
@@ -590,6 +611,18 @@ def process_match(m, fbref=None):
         "data_source": data_source,
         "score_breakdown": score_breakdown,
         "score_breakdown_notes": score_breakdown_notes,
+        "lam_home": round(lam_home, 2),
+        "lam_away": round(lam_away, 2),
+        "prob_over_05": round(probs["Over_0.5"], 4),
+        "prob_over_15": round(probs["Over_1.5"], 4),
+        "prob_over_25": round(probs["Over_2.5"], 4),
+        "prob_over_35": round(probs["Over_3.5"], 4),
+        "prob_btts": round(probs["BTTS_Yes"], 4),
+        "prob_home_scores": round(probs["Home_scores"], 4),
+        "prob_away_scores": round(probs["Away_scores"], 4),
+        "prob_score_matrix": top_scores(mat),
+        "live_watch": live_watch,
+        "favori_team": favori_team,
     }
 
 def main():
