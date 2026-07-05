@@ -1,11 +1,13 @@
 {
   "date": "2026-07-05",
-  "updated_at": "02:32",
+  "updated_at": "03:32",
   "stats": {
     "total_picks": 7,
     "safes_vip": 0,
     "value_bets": 1,
-    "score_moyen": 5.5
+    "score_moyen": 5.5,
+    "real_stats_picks": 0,
+    "odds_only_picks": 7
   },
   "picks": [
     {
@@ -30,29 +32,11 @@
       "odd_1": 2.31,
       "odd_x": 3.06,
       "odd_2": 3.52,
-      "odd_over_25": null
-    },
-    {
-      "home_team": "Kalmar FF",
-      "away_team": "Örgryte IS",
-      "league": "SWE-Allsvenskan",
-      "time": "12h00",
-      "type": "grid",
-      "score": 6.7,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.6705,
-      "prob_x": 0.1964,
-      "prob_2": 0.1331,
-      "prob_over": 0.5494,
-      "odd_1": 1.52,
-      "odd_x": 4.4,
-      "odd_2": 6.4,
-      "odd_over_25": null
+      "odd_over_25": null,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null
     },
     {
       "home_team": "Brazil",
@@ -74,7 +58,37 @@
       "odd_1": 1.75,
       "odd_x": 3.8,
       "odd_2": 4.6,
-      "odd_over_25": null
+      "odd_over_25": null,
+      "priority": true,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null
+    },
+    {
+      "home_team": "Kalmar FF",
+      "away_team": "Örgryte IS",
+      "league": "SWE-Allsvenskan",
+      "time": "12h00",
+      "type": "grid",
+      "score": 6.7,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.6705,
+      "prob_x": 0.1964,
+      "prob_2": 0.1331,
+      "prob_over": 0.5494,
+      "odd_1": 1.52,
+      "odd_x": 4.4,
+      "odd_2": 6.4,
+      "odd_over_25": null,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null
     },
     {
       "home_team": "Shanghai Shenhua FC",
@@ -96,7 +110,11 @@
       "odd_1": 1.65,
       "odd_x": 4.25,
       "odd_2": 4.15,
-      "odd_over_25": 1.38
+      "odd_over_25": 1.38,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null
     },
     {
       "home_team": "IFK Goteborg",
@@ -118,7 +136,11 @@
       "odd_1": 2.18,
       "odd_x": 3.52,
       "odd_2": 3.08,
-      "odd_over_25": 1.7
+      "odd_over_25": 1.7,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null
     },
     {
       "home_team": "IF Elfsborg",
@@ -140,7 +162,11 @@
       "odd_1": 3.73,
       "odd_x": 3.66,
       "odd_2": 1.9,
-      "odd_over_25": 1.7
+      "odd_over_25": 1.7,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null
     },
     {
       "home_team": "Qingdao Hainiu FC",
@@ -162,7 +188,11 @@
       "odd_1": 5.15,
       "odd_x": 4.15,
       "odd_2": 1.55,
-      "odd_over_25": 1.58
+      "odd_over_25": 1.58,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null
     }
   ]
 }
