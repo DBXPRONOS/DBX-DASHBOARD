@@ -53,6 +53,13 @@
   .proba-odd { font-size: 10px; color: #555; margin-top: 2px; }
   .empty-state { text-align: center; padding: 60px 20px; color: #444; }
   .footer { text-align: center; padding: 24px 16px; font-size: 11px; color: #333; }
+  .source-summary { text-align: center; padding: 10px 16px 0; font-size: 11px; color: #555; }
+  .source-badge { display: inline-block; font-size: 10px; padding: 3px 9px; border-radius: 6px; font-weight: 600; letter-spacing: 0.2px; margin-top: 6px; }
+  .source-real { background: #0d2018; color: #4ade80; border: 1px solid #166534; }
+  .source-odds { background: #1c1917; color: #a8a29e; border: 1px solid #44403c; }
+  .breakdown-row { display: flex; gap: 6px; padding: 0 16px 10px; flex-wrap: wrap; }
+  .breakdown-chip { font-size: 10px; background: #141414; border: 1px solid #2a2a2a; border-radius: 6px; padding: 4px 8px; color: #888; }
+  .breakdown-chip b { color: #ccc; font-weight: 700; }
   @media (max-width: 480px) { .stats-bar { grid-template-columns: repeat(2, 1fr); } }
 </style>
 </head>
@@ -67,6 +74,7 @@
   <div class="stat-item"><div class="stat-num" style="color:#fb923c" id="stat-values">—</div><div class="stat-label">Value bets</div></div>
   <div class="stat-item"><div class="stat-num" id="stat-score">—</div><div class="stat-label">Score moy.</div></div>
 </div>
+<div class="source-summary" id="source-summary"></div>
 <div id="picks-container"></div>
 <div class="footer">DBX Pronos · Usage personnel · Pas de garantie de résultat<br><span id="footer-updated"></span></div>
 <script>
@@ -87,6 +95,10 @@ function render(data) {
   document.getElementById('stat-values').textContent = data.stats.value_bets;
   document.getElementById('stat-score').textContent = data.stats.score_moyen > 0 ? data.stats.score_moyen.toFixed(1) : '—';
   document.getElementById('footer-updated').textContent = 'Mis à jour le ' + data.date + ' à ' + data.updated_at;
+  const rs = data.stats.real_stats_picks, os = data.stats.odds_only_picks;
+  document.getElementById('source-summary').textContent = (rs != null && os != null)
+    ? ('📊 ' + rs + ' pick(s) sur stats réelles (FBref) · 🎲 ' + os + ' pick(s) sur cotes uniquement')
+    : '';
   const container = document.getElementById('picks-container');
   if (!data.picks || data.picks.length === 0) {
     container.innerHTML = '<div class="empty-state"><div style="font-size:40px">☕</div><p>Aucun pick aujourd\'hui.<br>Prochain update demain à 06h00.</p></div>';
@@ -142,7 +154,18 @@ function pickCard(p) {
     </div>`;
   }
   const detailHtml=p.selection?`<div class="pick-detail"><div><div class="pick-bet">${p.selection}</div>${p.market?`<div class="pick-prob">${p.market}</div>`:''}</div>${p.odd?`<div class="pick-odd">@ ${p.odd.toFixed(2)}</div>`:''}</div>`:'';
-  return`<div class="pick-card ${cardClass}"><div class="pick-header"><div><div class="pick-match">${p.home_team} vs ${p.away_team}</div><div class="pick-league">${p.league}${p.time?' · '+p.time:''}</div></div><div class="pick-score"><div class="score-num ${scoreClass}">${p.score>0?p.score.toFixed(1):'—'}</div><div class="score-stake">${stakeLabel}</div></div></div>${tagsHtml?`<div class="pick-tags">${tagsHtml}</div>`:''}${probaHtml}${detailHtml}</div>`;
+  const sourceHtml = p.data_source==='real_stats'
+    ? '<span class="source-badge source-real">📊 Stats réelles (FBref)</span>'
+    : '<span class="source-badge source-odds">🎲 Cotes uniquement</span>';
+  let breakdownHtml='';
+  if (p.score_breakdown) {
+    const b = p.score_breakdown;
+    const labels = {forme:'Forme', h2h:'H2H', contexte:'Contexte', xg:'xG', blessures:'Blessures'};
+    breakdownHtml = '<div class="breakdown-row">' + Object.keys(labels).map(k =>
+      `<span class="breakdown-chip">${labels[k]} <b>${b[k]}</b></span>`
+    ).join('') + '</div>';
+  }
+  return`<div class="pick-card ${cardClass}"><div class="pick-header"><div><div class="pick-match">${p.home_team} vs ${p.away_team}</div><div class="pick-league">${p.league}${p.time?' · '+p.time:''}</div>${sourceHtml}</div><div class="pick-score"><div class="score-num ${scoreClass}">${p.score>0?p.score.toFixed(1):'—'}</div><div class="score-stake">${stakeLabel}</div></div></div>${tagsHtml?`<div class="pick-tags">${tagsHtml}</div>`:''}${breakdownHtml}${probaHtml}${detailHtml}</div>`;
 }
 loadPicks();
 </script>
