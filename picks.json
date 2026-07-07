@@ -1,309 +1,191 @@
 {
-  "date": "2026-07-06",
-  "updated_at": "10:14",
+  "date": "2026-07-07",
+  "updated_at": "09:37",
   "stats": {
-    "total_picks": 5,
+    "total_picks": 3,
     "safes_vip": 0,
     "value_bets": 0,
-    "score_moyen": 5.1,
+    "score_moyen": 5.6,
     "real_stats_picks": 0,
-    "odds_only_picks": 5
+    "odds_only_picks": 3
   },
   "picks": [
     {
-      "home_team": "Portugal",
-      "away_team": "Spain",
+      "home_team": "Argentina",
+      "away_team": "Egypt",
       "league": "Coupe du Monde FIFA",
-      "time": "19h00",
+      "time": "16h00",
       "type": "grid",
-      "score": 4.8,
+      "score": 7.4,
       "selection": null,
       "market": null,
       "odd": null,
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.2755,
-      "prob_x": 0.2579,
-      "prob_2": 0.4666,
-      "prob_over": 0.4791,
-      "odd_1": 4.1,
-      "odd_x": 3.7,
-      "odd_2": 1.93,
-      "odd_over_25": 1.72,
+      "prob_1": 0.7434,
+      "prob_x": 0.1656,
+      "prob_2": 0.091,
+      "prob_over": 0.5723,
+      "odd_1": 1.34,
+      "odd_x": 5.1,
+      "odd_2": 11.5,
+      "odd_over_25": 1.89,
       "priority": true,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.09,
-      "lam_away": 1.5,
-      "prob_over_05": 0.925,
-      "prob_over_15": 0.7307,
-      "prob_over_25": 0.4791,
-      "prob_over_35": 0.2618,
-      "prob_btts": 0.5157,
-      "prob_home_scores": 0.6638,
-      "prob_away_scores": 0.7769,
+      "lam_home": 2.31,
+      "lam_away": 0.67,
+      "prob_over_05": 0.9492,
+      "prob_over_15": 0.7978,
+      "prob_over_25": 0.5723,
+      "prob_over_35": 0.3483,
+      "prob_btts": 0.4398,
+      "prob_home_scores": 0.9007,
+      "prob_away_scores": 0.4883,
       "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.1227
-        },
-        {
-          "score": "0-1",
-          "prob": 0.1125
-        },
-        {
-          "score": "1-2",
-          "prob": 0.092
-        },
-        {
-          "score": "0-2",
-          "prob": 0.0844
-        },
-        {
-          "score": "1-0",
-          "prob": 0.0818
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Spain"
-    },
-    {
-      "home_team": "Vila Nova",
-      "away_team": "São Bernardo",
-      "league": "BRA-Serie B",
-      "time": "22h00",
-      "type": "grid",
-      "score": 5.5,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.5525,
-      "prob_x": 0.238,
-      "prob_2": 0.2095,
-      "prob_over": 0.5015,
-      "odd_1": 1.82,
-      "odd_x": 3.2,
-      "odd_2": 3.85,
-      "odd_over_25": null,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.72,
-      "lam_away": 0.96,
-      "prob_over_05": 0.9314,
-      "prob_over_15": 0.7477,
-      "prob_over_25": 0.5015,
-      "prob_over_35": 0.2815,
-      "prob_btts": 0.5066,
-      "prob_home_scores": 0.8209,
-      "prob_away_scores": 0.6171,
-      "prob_score_matrix": [
-        {
-          "score": "1-0",
-          "prob": 0.1179
-        },
-        {
-          "score": "1-1",
-          "prob": 0.1132
-        },
         {
           "score": "2-0",
-          "prob": 0.1014
+          "prob": 0.1355
+        },
+        {
+          "score": "1-0",
+          "prob": 0.1173
+        },
+        {
+          "score": "3-0",
+          "prob": 0.1043
         },
         {
           "score": "2-1",
-          "prob": 0.0974
-        },
-        {
-          "score": "0-0",
-          "prob": 0.0686
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Vila Nova"
-    },
-    {
-      "home_team": "Botafogo",
-      "away_team": "Avai",
-      "league": "BRA-Serie B",
-      "time": "22h00",
-      "type": "grid",
-      "score": 5.4,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.538,
-      "prob_x": 0.2421,
-      "prob_2": 0.2199,
-      "prob_over": 0.4965,
-      "odd_1": 1.88,
-      "odd_x": 3.1,
-      "odd_2": 3.7,
-      "odd_over_25": null,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.68,
-      "lam_away": 0.98,
-      "prob_over_05": 0.9301,
-      "prob_over_15": 0.744,
-      "prob_over_25": 0.4965,
-      "prob_over_35": 0.2771,
-      "prob_btts": 0.5083,
-      "prob_home_scores": 0.8136,
-      "prob_away_scores": 0.6247,
-      "prob_score_matrix": [
-        {
-          "score": "1-0",
-          "prob": 0.1175
+          "prob": 0.0908
         },
         {
           "score": "1-1",
-          "prob": 0.1152
-        },
-        {
-          "score": "2-0",
-          "prob": 0.0987
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0967
-        },
-        {
-          "score": "0-0",
-          "prob": 0.0699
+          "prob": 0.0786
         }
       ],
-      "live_watch": false,
-      "favori_team": "Botafogo"
+      "live_watch": true,
+      "favori_team": "Argentina"
     },
     {
-      "home_team": "BK Hacken",
-      "away_team": "Djurgardens IF",
-      "league": "SWE-Allsvenskan",
-      "time": "17h00",
+      "home_team": "Switzerland",
+      "away_team": "Colombia",
+      "league": "Coupe du Monde FIFA",
+      "time": "20h00",
       "type": "grid",
-      "score": 5.0,
+      "score": 4.6,
       "selection": null,
       "market": null,
       "odd": null,
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.4338,
-      "prob_x": 0.2571,
-      "prob_2": 0.3091,
-      "prob_over": 0.499,
-      "odd_1": 2.4,
-      "odd_x": 3.58,
-      "odd_2": 2.66,
-      "odd_over_25": null,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.47,
-      "lam_away": 1.2,
-      "prob_over_05": 0.9307,
-      "prob_over_15": 0.7458,
-      "prob_over_25": 0.499,
-      "prob_over_35": 0.2793,
-      "prob_btts": 0.5381,
-      "prob_home_scores": 0.7701,
-      "prob_away_scores": 0.6988,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.1222
-        },
-        {
-          "score": "1-0",
-          "prob": 0.1018
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0898
-        },
-        {
-          "score": "0-1",
-          "prob": 0.0831
-        },
-        {
-          "score": "2-0",
-          "prob": 0.0748
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "BK Hacken"
-    },
-    {
-      "home_team": "IF Brommapojkarna",
-      "away_team": "GAIS",
-      "league": "SWE-Allsvenskan",
-      "time": "17h00",
-      "type": "grid",
-      "score": 4.8,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.3514,
-      "prob_x": 0.2643,
-      "prob_2": 0.3843,
-      "prob_over": 0.4791,
-      "odd_1": 3.08,
-      "odd_x": 3.34,
+      "prob_1": 0.3255,
+      "prob_x": 0.2682,
+      "prob_2": 0.4063,
+      "prob_over": 0.4587,
+      "odd_1": 3.55,
+      "odd_x": 3.05,
       "odd_2": 2.25,
-      "odd_over_25": 1.9,
+      "odd_over_25": null,
+      "priority": true,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.17,
+      "lam_away": 1.34,
+      "prob_over_05": 0.9187,
+      "prob_over_15": 0.7147,
+      "prob_over_25": 0.4587,
+      "prob_over_35": 0.2446,
+      "prob_btts": 0.5091,
+      "prob_home_scores": 0.6896,
+      "prob_away_scores": 0.7382,
+      "prob_score_matrix": [
+        {
+          "score": "1-1",
+          "prob": 0.1274
+        },
+        {
+          "score": "0-1",
+          "prob": 0.1089
+        },
+        {
+          "score": "1-0",
+          "prob": 0.0951
+        },
+        {
+          "score": "1-2",
+          "prob": 0.0854
+        },
+        {
+          "score": "0-0",
+          "prob": 0.0813
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Colombia"
+    },
+    {
+      "home_team": "Athletic Club (MG)",
+      "away_team": "Operario PR",
+      "league": "BRA-Serie B",
+      "time": "23h00",
+      "type": "grid",
+      "score": 4.7,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.4489,
+      "prob_x": 0.2617,
+      "prob_2": 0.2893,
+      "prob_over": 0.4715,
+      "odd_1": 2.42,
+      "odd_x": 2.92,
+      "odd_2": 3.05,
+      "odd_over_25": 2.42,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.26,
-      "lam_away": 1.33,
-      "prob_over_05": 0.925,
-      "prob_over_15": 0.7307,
-      "prob_over_25": 0.4791,
-      "prob_over_35": 0.2618,
-      "prob_btts": 0.5269,
-      "prob_home_scores": 0.7163,
-      "prob_away_scores": 0.7355,
+      "lam_home": 1.45,
+      "lam_away": 1.11,
+      "prob_over_05": 0.9227,
+      "prob_over_15": 0.7248,
+      "prob_over_25": 0.4715,
+      "prob_over_35": 0.2553,
+      "prob_btts": 0.5132,
+      "prob_home_scores": 0.7654,
+      "prob_away_scores": 0.6704,
       "prob_score_matrix": [
         {
           "score": "1-1",
-          "prob": 0.1257
-        },
-        {
-          "score": "0-1",
-          "prob": 0.0998
+          "prob": 0.1244
         },
         {
           "score": "1-0",
-          "prob": 0.0945
-        },
-        {
-          "score": "1-2",
-          "prob": 0.0836
+          "prob": 0.1121
         },
         {
           "score": "2-1",
-          "prob": 0.0792
+          "prob": 0.0902
+        },
+        {
+          "score": "0-1",
+          "prob": 0.0858
+        },
+        {
+          "score": "2-0",
+          "prob": 0.0813
         }
       ],
       "live_watch": false,
-      "favori_team": "GAIS"
+      "favori_team": "Athletic Club (MG)"
     }
   ]
 }
