@@ -1,73 +1,13 @@
 {
-  "date": "2026-07-08",
-  "updated_at": "08:23",
+  "date": "2026-07-09",
+  "updated_at": "09:44",
   "stats": {
-    "total_picks": 1,
+    "total_picks": 0,
     "safes_vip": 0,
     "value_bets": 0,
-    "score_moyen": 4.7,
+    "score_moyen": 0,
     "real_stats_picks": 0,
-    "odds_only_picks": 1
+    "odds_only_picks": 0
   },
-  "picks": [
-    {
-      "home_team": "Ponte Preta",
-      "away_team": "Criciuma",
-      "league": "BRA-Serie B",
-      "time": "23h00",
-      "type": "grid",
-      "score": 4.7,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.2019,
-      "prob_x": 0.2427,
-      "prob_2": 0.5554,
-      "prob_over": 0.474,
-      "odd_1": 5.8,
-      "odd_x": 3.65,
-      "odd_2": 1.6,
-      "odd_over_25": 2.12,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 0.9,
-      "lam_away": 1.67,
-      "prob_over_05": 0.9235,
-      "prob_over_15": 0.7268,
-      "prob_over_25": 0.474,
-      "prob_over_35": 0.2575,
-      "prob_btts": 0.4817,
-      "prob_home_scores": 0.5934,
-      "prob_away_scores": 0.8118,
-      "prob_score_matrix": [
-        {
-          "score": "0-1",
-          "prob": 0.1278
-        },
-        {
-          "score": "1-1",
-          "prob": 0.115
-        },
-        {
-          "score": "0-2",
-          "prob": 0.1067
-        },
-        {
-          "score": "1-2",
-          "prob": 0.0961
-        },
-        {
-          "score": "0-0",
-          "prob": 0.0765
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Criciuma"
-    }
-  ]
+  "picks": []
 }
