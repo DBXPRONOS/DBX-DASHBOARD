@@ -1,408 +1,48 @@
 {
-  "date": "2026-08-02",
-  "updated_at": "08:20",
+  "date": "2026-08-03",
+  "updated_at": "09:38",
   "stats": {
-    "total_picks": 36,
+    "total_picks": 9,
     "safes_vip": 0,
-    "value_bets": 3,
-    "score_moyen": 5.5,
+    "value_bets": 0,
+    "score_moyen": 5.2,
     "real_stats_picks": 0,
-    "odds_only_picks": 36
+    "odds_only_picks": 9
   },
   "picks": [
     {
-      "home_team": "Rapid Wien",
-      "away_team": "Rheindorf Altach",
-      "league": "AUT-Bundesliga",
-      "time": "17h00",
-      "type": "value",
-      "score": 6.0,
-      "selection": "Rapid Wien gagne",
-      "market": "1X2 - 1",
-      "odd": 1.84,
-      "model_prob": 0.5951,
-      "stake_pct": 0.02,
-      "tags": [
-        "Value +5.2pp edge"
-      ],
-      "prob_1": 0.5951,
-      "prob_x": 0.2248,
-      "prob_2": 0.18,
-      "prob_over": 0.5161,
-      "odd_1": 1.84,
-      "odd_x": 3.8,
-      "odd_2": 4.9,
-      "odd_over_25": null,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.84,
-      "lam_away": 0.9,
-      "prob_over_05": 0.9354,
-      "prob_over_15": 0.7585,
-      "prob_over_25": 0.5161,
-      "prob_over_35": 0.2947,
-      "prob_btts": 0.4992,
-      "prob_home_scores": 0.8412,
-      "prob_away_scores": 0.5934,
-      "prob_score_matrix": [
-        {
-          "score": "1-0",
-          "prob": 0.1188
-        },
-        {
-          "score": "2-0",
-          "prob": 0.1093
-        },
-        {
-          "score": "1-1",
-          "prob": 0.1069
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0984
-        },
-        {
-          "score": "3-0",
-          "prob": 0.067
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Rapid Wien"
-    },
-    {
-      "home_team": "Wolfsberger AC",
-      "away_team": "Austria Wien",
-      "league": "AUT-Bundesliga",
-      "time": "15h00",
-      "type": "value",
-      "score": 4.9,
-      "selection": "Wolfsberger AC gagne",
-      "market": "1X2 - 1",
-      "odd": 2.48,
-      "model_prob": 0.455,
-      "stake_pct": 0.02,
-      "tags": [
-        "Value +5.2pp edge"
-      ],
-      "prob_1": 0.455,
-      "prob_x": 0.2566,
-      "prob_2": 0.2884,
-      "prob_over": 0.4916,
-      "odd_1": 2.48,
-      "odd_x": 3.55,
-      "odd_2": 3.1,
-      "odd_over_25": null,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.5,
-      "lam_away": 1.14,
-      "prob_over_05": 0.9286,
-      "prob_over_15": 0.7402,
-      "prob_over_25": 0.4916,
-      "prob_over_35": 0.2727,
-      "prob_btts": 0.5284,
-      "prob_home_scores": 0.7769,
-      "prob_away_scores": 0.6802,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.122
-        },
-        {
-          "score": "1-0",
-          "prob": 0.107
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0915
-        },
-        {
-          "score": "0-1",
-          "prob": 0.0814
-        },
-        {
-          "score": "2-0",
-          "prob": 0.0803
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Wolfsberger AC"
-    },
-    {
-      "home_team": "Austria Lustenau",
-      "away_team": "Ried",
-      "league": "AUT-Bundesliga",
-      "time": "15h00",
-      "type": "value",
-      "score": 4.7,
-      "selection": "Austria Lustenau gagne",
-      "market": "1X2 - 1",
-      "odd": 3.0,
-      "model_prob": 0.3858,
-      "stake_pct": 0.02,
-      "tags": [
-        "Value +5.3pp edge"
-      ],
-      "prob_1": 0.3858,
-      "prob_x": 0.2661,
-      "prob_2": 0.3481,
-      "prob_over": 0.4715,
-      "odd_1": 3.0,
-      "odd_x": 3.3,
-      "odd_2": 2.66,
-      "odd_over_25": null,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.32,
-      "lam_away": 1.24,
-      "prob_over_05": 0.9227,
-      "prob_over_15": 0.7248,
-      "prob_over_25": 0.4715,
-      "prob_over_35": 0.2553,
-      "prob_btts": 0.5208,
-      "prob_home_scores": 0.7329,
-      "prob_away_scores": 0.7106,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.1265
-        },
-        {
-          "score": "1-0",
-          "prob": 0.102
-        },
-        {
-          "score": "0-1",
-          "prob": 0.0959
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0835
-        },
-        {
-          "score": "1-2",
-          "prob": 0.0785
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Ried"
-    },
-    {
-      "home_team": "FC Krasnodar",
-      "away_team": "FC Fakel Voronezh",
-      "league": "RUS-Premier League",
-      "time": "15h15",
-      "type": "grid",
-      "score": 7.4,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.7403,
-      "prob_x": 0.166,
-      "prob_2": 0.0936,
-      "prob_over": 0.579,
-      "odd_1": 1.32,
-      "odd_x": 5.39,
-      "odd_2": 10.26,
-      "odd_over_25": null,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 2.32,
-      "lam_away": 0.69,
-      "prob_over_05": 0.9507,
-      "prob_over_15": 0.8023,
-      "prob_over_25": 0.579,
-      "prob_over_35": 0.355,
-      "prob_btts": 0.4494,
-      "prob_home_scores": 0.9017,
-      "prob_away_scores": 0.4984,
-      "prob_score_matrix": [
-        {
-          "score": "2-0",
-          "prob": 0.1327
-        },
-        {
-          "score": "1-0",
-          "prob": 0.1144
-        },
-        {
-          "score": "3-0",
-          "prob": 0.1026
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0915
-        },
-        {
-          "score": "1-1",
-          "prob": 0.0789
-        }
-      ],
-      "live_watch": true,
-      "favori_team": "FC Krasnodar"
-    },
-    {
-      "home_team": "FC Midtjylland",
-      "away_team": "AC Horsens",
-      "league": "DEN-Superliga",
-      "time": "12h00",
-      "type": "grid",
-      "score": 7.2,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.7207,
-      "prob_x": 0.1744,
-      "prob_2": 0.1048,
-      "prob_over": 0.5745,
-      "odd_1": 1.33,
-      "odd_x": 5.2,
-      "odd_2": 8.1,
-      "odd_over_25": null,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 2.26,
-      "lam_away": 0.73,
-      "prob_over_05": 0.9497,
-      "prob_over_15": 0.7993,
-      "prob_over_25": 0.5745,
-      "prob_over_35": 0.3505,
-      "prob_btts": 0.464,
-      "prob_home_scores": 0.8956,
-      "prob_away_scores": 0.5181,
-      "prob_score_matrix": [
-        {
-          "score": "2-0",
-          "prob": 0.1284
-        },
-        {
-          "score": "1-0",
-          "prob": 0.1136
-        },
-        {
-          "score": "3-0",
-          "prob": 0.0967
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0937
-        },
-        {
-          "score": "1-1",
-          "prob": 0.083
-        }
-      ],
-      "live_watch": true,
-      "favori_team": "FC Midtjylland"
-    },
-    {
-      "home_team": "AIK",
-      "away_team": "Örgryte IS",
+      "home_team": "Djurgardens IF",
+      "away_team": "Västerås SK",
       "league": "SWE-Allsvenskan",
-      "time": "14h30",
+      "time": "17h00",
       "type": "grid",
-      "score": 6.9,
+      "score": 6.8,
       "selection": null,
       "market": null,
       "odd": null,
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.6874,
-      "prob_x": 0.1898,
-      "prob_2": 0.1228,
-      "prob_over": 0.554,
-      "odd_1": 1.43,
-      "odd_x": 4.4,
-      "odd_2": 7.0,
-      "odd_over_25": null,
+      "prob_1": 0.6763,
+      "prob_x": 0.1933,
+      "prob_2": 0.1303,
+      "prob_over": 0.5563,
+      "odd_1": 1.45,
+      "odd_x": 4.6,
+      "odd_2": 6.2,
+      "odd_over_25": 1.44,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 2.13,
-      "lam_away": 0.77,
-      "prob_over_05": 0.945,
-      "prob_over_15": 0.7854,
-      "prob_over_25": 0.554,
-      "prob_over_35": 0.3304,
-      "prob_btts": 0.4732,
-      "prob_home_scores": 0.8812,
-      "prob_away_scores": 0.537,
-      "prob_score_matrix": [
-        {
-          "score": "2-0",
-          "prob": 0.1248
-        },
-        {
-          "score": "1-0",
-          "prob": 0.1172
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0961
-        },
-        {
-          "score": "1-1",
-          "prob": 0.0902
-        },
-        {
-          "score": "3-0",
-          "prob": 0.0886
-        }
-      ],
-      "live_watch": true,
-      "favori_team": "AIK"
-    },
-    {
-      "home_team": "América",
-      "away_team": "Santos Laguna",
-      "league": "MEX-Liga MX",
-      "time": "23h00",
-      "type": "grid",
-      "score": 6.7,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.6744,
-      "prob_x": 0.1943,
-      "prob_2": 0.1313,
-      "prob_over": 0.554,
-      "odd_1": 1.4,
-      "odd_x": 4.2,
-      "odd_2": 6.0,
-      "odd_over_25": 1.57,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 2.1,
+      "lam_home": 2.11,
       "lam_away": 0.8,
-      "prob_over_05": 0.945,
-      "prob_over_15": 0.7854,
-      "prob_over_25": 0.554,
-      "prob_over_35": 0.3304,
-      "prob_btts": 0.4832,
-      "prob_home_scores": 0.8775,
+      "prob_over_05": 0.9455,
+      "prob_over_15": 0.787,
+      "prob_over_25": 0.5563,
+      "prob_over_35": 0.3326,
+      "prob_btts": 0.4839,
+      "prob_home_scores": 0.8788,
       "prob_away_scores": 0.5507,
       "prob_score_matrix": [
         {
@@ -411,147 +51,29 @@
         },
         {
           "score": "1-0",
-          "prob": 0.1155
+          "prob": 0.1149
         },
         {
           "score": "2-1",
-          "prob": 0.0971
+          "prob": 0.097
         },
         {
           "score": "1-1",
-          "prob": 0.0924
+          "prob": 0.092
         },
         {
           "score": "3-0",
-          "prob": 0.0849
-        }
-      ],
-      "live_watch": true,
-      "favori_team": "América"
-    },
-    {
-      "home_team": "Universidad de Chile",
-      "away_team": "Huachipato",
-      "league": "CHI-Primera Division",
-      "time": "21h30",
-      "type": "grid",
-      "score": 6.4,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.6445,
-      "prob_x": 0.2064,
-      "prob_2": 0.1491,
-      "prob_over": 0.54,
-      "odd_1": 1.54,
-      "odd_x": 4.05,
-      "odd_2": 5.45,
-      "odd_over_25": null,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 2.0,
-      "lam_away": 0.84,
-      "prob_over_05": 0.9416,
-      "prob_over_15": 0.7756,
-      "prob_over_25": 0.54,
-      "prob_over_35": 0.317,
-      "prob_btts": 0.4914,
-      "prob_home_scores": 0.8647,
-      "prob_away_scores": 0.5683,
-      "prob_score_matrix": [
-        {
-          "score": "1-0",
-          "prob": 0.1169
-        },
-        {
-          "score": "2-0",
-          "prob": 0.1169
-        },
-        {
-          "score": "1-1",
-          "prob": 0.0982
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0982
-        },
-        {
-          "score": "3-0",
-          "prob": 0.0779
+          "prob": 0.0853
         }
       ],
       "live_watch": false,
-      "favori_team": "Universidad de Chile"
+      "favori_team": "Djurgardens IF"
     },
     {
-      "home_team": "Legia Warszawa",
-      "away_team": "Zagłębie Lubin",
-      "league": "POL-Ekstraklasa",
-      "time": "12h45",
-      "type": "grid",
-      "score": 6.3,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.6337,
-      "prob_x": 0.2109,
-      "prob_2": 0.1554,
-      "prob_over": 0.5329,
-      "odd_1": 1.58,
-      "odd_x": 3.85,
-      "odd_2": 5.3,
-      "odd_over_25": 1.88,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.96,
-      "lam_away": 0.85,
-      "prob_over_05": 0.9398,
-      "prob_over_15": 0.7706,
-      "prob_over_25": 0.5329,
-      "prob_over_35": 0.3103,
-      "prob_btts": 0.4919,
-      "prob_home_scores": 0.8591,
-      "prob_away_scores": 0.5726,
-      "prob_score_matrix": [
-        {
-          "score": "1-0",
-          "prob": 0.118
-        },
-        {
-          "score": "2-0",
-          "prob": 0.1156
-        },
-        {
-          "score": "1-1",
-          "prob": 0.1003
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0983
-        },
-        {
-          "score": "3-0",
-          "prob": 0.0756
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Legia Warszawa"
-    },
-    {
-      "home_team": "KFUM",
-      "away_team": "Kristiansund BK",
-      "league": "NOR-Eliteserien",
-      "time": "15h00",
+      "home_team": "York City",
+      "away_team": "Crawley Town",
+      "league": "EFL Cup",
+      "time": "18h30",
       "type": "grid",
       "score": 6.2,
       "selection": null,
@@ -564,10 +86,10 @@
       "prob_x": 0.215,
       "prob_2": 0.1651,
       "prob_over": 0.5329,
-      "odd_1": 1.62,
-      "odd_x": 3.85,
-      "odd_2": 4.9,
-      "odd_over_25": 1.65,
+      "odd_1": 1.72,
+      "odd_x": 4.1,
+      "odd_2": 5.2,
+      "odd_over_25": null,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
@@ -604,544 +126,13 @@
         }
       ],
       "live_watch": false,
-      "favori_team": "KFUM"
+      "favori_team": "York City"
     },
     {
-      "home_team": "FC Nordsjaelland",
-      "away_team": "Randers FC",
+      "home_team": "OB Odense BK",
+      "away_team": "SonderjyskE",
       "league": "DEN-Superliga",
-      "time": "12h00",
-      "type": "grid",
-      "score": 6.1,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.615,
-      "prob_x": 0.2156,
-      "prob_2": 0.1694,
-      "prob_over": 0.5377,
-      "odd_1": 1.64,
-      "odd_x": 4.05,
-      "odd_2": 4.74,
-      "odd_over_25": 1.63,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.93,
-      "lam_away": 0.9,
-      "prob_over_05": 0.941,
-      "prob_over_15": 0.774,
-      "prob_over_25": 0.5377,
-      "prob_over_35": 0.3147,
-      "prob_btts": 0.5073,
-      "prob_home_scores": 0.8549,
-      "prob_away_scores": 0.5934,
-      "prob_score_matrix": [
-        {
-          "score": "1-0",
-          "prob": 0.1139
-        },
-        {
-          "score": "2-0",
-          "prob": 0.1099
-        },
-        {
-          "score": "1-1",
-          "prob": 0.1025
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0989
-        },
-        {
-          "score": "3-0",
-          "prob": 0.0707
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "FC Nordsjaelland"
-    },
-    {
-      "home_team": "Molde",
-      "away_team": "Sarpsborg FK",
-      "league": "NOR-Eliteserien",
-      "time": "15h00",
-      "type": "grid",
-      "score": 6.0,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.5967,
-      "prob_x": 0.2215,
-      "prob_2": 0.1819,
-      "prob_over": 0.5329,
-      "odd_1": 1.67,
-      "odd_x": 4.0,
-      "odd_2": 4.25,
-      "odd_over_25": null,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.88,
-      "lam_away": 0.93,
-      "prob_over_05": 0.9398,
-      "prob_over_15": 0.7706,
-      "prob_over_25": 0.5329,
-      "prob_over_35": 0.3103,
-      "prob_btts": 0.5131,
-      "prob_home_scores": 0.8474,
-      "prob_away_scores": 0.6054,
-      "prob_score_matrix": [
-        {
-          "score": "1-0",
-          "prob": 0.1132
-        },
-        {
-          "score": "2-0",
-          "prob": 0.1064
-        },
-        {
-          "score": "1-1",
-          "prob": 0.1053
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0989
-        },
-        {
-          "score": "3-0",
-          "prob": 0.0667
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Molde"
-    },
-    {
-      "home_team": "IFK Goteborg",
-      "away_team": "Degerfors IF",
-      "league": "SWE-Allsvenskan",
-      "time": "12h00",
-      "type": "grid",
-      "score": 5.8,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.5809,
-      "prob_x": 0.2285,
-      "prob_2": 0.1906,
-      "prob_over": 0.5161,
-      "odd_1": 1.64,
-      "odd_x": 3.3,
-      "odd_2": 3.95,
-      "odd_over_25": 1.73,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.81,
-      "lam_away": 0.93,
-      "prob_over_05": 0.9354,
-      "prob_over_15": 0.7585,
-      "prob_over_25": 0.5161,
-      "prob_over_35": 0.2947,
-      "prob_btts": 0.5064,
-      "prob_home_scores": 0.8363,
-      "prob_away_scores": 0.6054,
-      "prob_score_matrix": [
-        {
-          "score": "1-0",
-          "prob": 0.1169
-        },
-        {
-          "score": "1-1",
-          "prob": 0.1087
-        },
-        {
-          "score": "2-0",
-          "prob": 0.1058
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0984
-        },
-        {
-          "score": "0-0",
-          "prob": 0.0646
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "IFK Goteborg"
-    },
-    {
-      "home_team": "GKS Katowice",
-      "away_team": "Radomiak Radom",
-      "league": "POL-Ekstraklasa",
-      "time": "18h15",
-      "type": "grid",
-      "score": 5.6,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.5572,
-      "prob_x": 0.2351,
-      "prob_2": 0.2077,
-      "prob_over": 0.5113,
-      "odd_1": 1.93,
-      "odd_x": 3.61,
-      "odd_2": 4.08,
-      "odd_over_25": 1.88,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.75,
-      "lam_away": 0.97,
-      "prob_over_05": 0.9341,
-      "prob_over_15": 0.7549,
-      "prob_over_25": 0.5113,
-      "prob_over_35": 0.2903,
-      "prob_btts": 0.513,
-      "prob_home_scores": 0.8262,
-      "prob_away_scores": 0.6209,
-      "prob_score_matrix": [
-        {
-          "score": "1-0",
-          "prob": 0.1153
-        },
-        {
-          "score": "1-1",
-          "prob": 0.1118
-        },
-        {
-          "score": "2-0",
-          "prob": 0.1009
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0978
-        },
-        {
-          "score": "0-0",
-          "prob": 0.0659
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "GKS Katowice"
-    },
-    {
-      "home_team": "Brondby IF",
-      "away_team": "Viborg FF",
-      "league": "DEN-Superliga",
-      "time": "14h00",
-      "type": "grid",
-      "score": 5.5,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.5475,
-      "prob_x": 0.2363,
-      "prob_2": 0.2162,
-      "prob_over": 0.5161,
-      "odd_1": 1.89,
-      "odd_x": 3.7,
-      "odd_2": 3.73,
-      "odd_over_25": 1.6,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.74,
-      "lam_away": 1.0,
-      "prob_over_05": 0.9354,
-      "prob_over_15": 0.7585,
-      "prob_over_25": 0.5161,
-      "prob_over_35": 0.2947,
-      "prob_btts": 0.5212,
-      "prob_home_scores": 0.8245,
-      "prob_away_scores": 0.6321,
-      "prob_score_matrix": [
-        {
-          "score": "1-0",
-          "prob": 0.1124
-        },
-        {
-          "score": "1-1",
-          "prob": 0.1124
-        },
-        {
-          "score": "2-0",
-          "prob": 0.0977
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0977
-        },
-        {
-          "score": "0-0",
-          "prob": 0.0646
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Brondby IF"
-    },
-    {
-      "home_team": "Deportivo Riestra",
-      "away_team": "Barracas Central",
-      "league": "ARG-Primera Division",
-      "time": "17h30",
-      "type": "grid",
-      "score": 5.5,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.5456,
-      "prob_x": 0.246,
-      "prob_2": 0.2084,
-      "prob_over": 0.4689,
-      "odd_1": 2.0,
-      "odd_x": 2.7,
-      "odd_2": 4.4,
-      "odd_over_25": null,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.64,
-      "lam_away": 0.91,
-      "prob_over_05": 0.9219,
-      "prob_over_15": 0.7228,
-      "prob_over_25": 0.4689,
-      "prob_over_35": 0.2532,
-      "prob_btts": 0.4816,
-      "prob_home_scores": 0.806,
-      "prob_away_scores": 0.5975,
-      "prob_score_matrix": [
-        {
-          "score": "1-0",
-          "prob": 0.1281
-        },
-        {
-          "score": "1-1",
-          "prob": 0.1165
-        },
-        {
-          "score": "2-0",
-          "prob": 0.105
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0956
-        },
-        {
-          "score": "0-0",
-          "prob": 0.0781
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Deportivo Riestra"
-    },
-    {
-      "home_team": "SK Brann",
-      "away_team": "Rosenborg",
-      "league": "NOR-Eliteserien",
-      "time": "17h15",
-      "type": "grid",
-      "score": 5.4,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.5355,
-      "prob_x": 0.2393,
-      "prob_2": 0.2252,
-      "prob_over": 0.5137,
-      "odd_1": 1.89,
-      "odd_x": 3.65,
-      "odd_2": 3.5,
-      "odd_over_25": null,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.71,
-      "lam_away": 1.02,
-      "prob_over_05": 0.9348,
-      "prob_over_15": 0.7567,
-      "prob_over_25": 0.5137,
-      "prob_over_35": 0.2925,
-      "prob_btts": 0.5238,
-      "prob_home_scores": 0.8191,
-      "prob_away_scores": 0.6394,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.1138
-        },
-        {
-          "score": "1-0",
-          "prob": 0.1115
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0973
-        },
-        {
-          "score": "2-0",
-          "prob": 0.0954
-        },
-        {
-          "score": "0-1",
-          "prob": 0.0665
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "SK Brann"
-    },
-    {
-      "home_team": "River Plate",
-      "away_team": "Rosario Central",
-      "league": "ARG-Primera Division",
-      "time": "22h15",
-      "type": "grid",
-      "score": 5.4,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.5356,
-      "prob_x": 0.2441,
-      "prob_2": 0.2203,
-      "prob_over": 0.4891,
-      "odd_1": 1.92,
-      "odd_x": 2.95,
-      "odd_2": 3.83,
-      "odd_over_25": null,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.66,
-      "lam_away": 0.97,
-      "prob_over_05": 0.9279,
-      "prob_over_15": 0.7384,
-      "prob_over_25": 0.4891,
-      "prob_over_35": 0.2705,
-      "prob_btts": 0.5029,
-      "prob_home_scores": 0.8099,
-      "prob_away_scores": 0.6209,
-      "prob_score_matrix": [
-        {
-          "score": "1-0",
-          "prob": 0.1197
-        },
-        {
-          "score": "1-1",
-          "prob": 0.1161
-        },
-        {
-          "score": "2-0",
-          "prob": 0.0993
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0963
-        },
-        {
-          "score": "0-0",
-          "prob": 0.0721
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "River Plate"
-    },
-    {
-      "home_team": "FC Sion",
-      "away_team": "FC Luzern",
-      "league": "SUI-Super League",
-      "time": "14h30",
-      "type": "grid",
-      "score": 5.2,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.5115,
-      "prob_x": 0.2429,
-      "prob_2": 0.2456,
-      "prob_over": 0.5185,
-      "odd_1": 2.07,
-      "odd_x": 3.96,
-      "odd_2": 3.34,
-      "odd_over_25": null,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.67,
-      "lam_away": 1.08,
-      "prob_over_05": 0.9361,
-      "prob_over_15": 0.7603,
-      "prob_over_25": 0.5185,
-      "prob_over_35": 0.297,
-      "prob_btts": 0.5361,
-      "prob_home_scores": 0.8118,
-      "prob_away_scores": 0.6604,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.1153
-        },
-        {
-          "score": "1-0",
-          "prob": 0.1068
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0963
-        },
-        {
-          "score": "2-0",
-          "prob": 0.0891
-        },
-        {
-          "score": "0-1",
-          "prob": 0.069
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "FC Sion"
-    },
-    {
-      "home_team": "Gazovik Orenburg",
-      "away_team": "Zenit St Petersburg",
-      "league": "RUS-Premier League",
-      "time": "13h00",
+      "time": "17h00",
       "type": "grid",
       "score": 5.1,
       "selection": null,
@@ -1150,116 +141,57 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.1386,
-      "prob_x": 0.2094,
-      "prob_2": 0.652,
+      "prob_1": 0.4896,
+      "prob_x": 0.2489,
+      "prob_2": 0.2615,
       "prob_over": 0.5064,
-      "odd_1": 9.42,
-      "odd_x": 5.39,
-      "odd_2": 1.34,
+      "odd_1": 2.05,
+      "odd_x": 3.45,
+      "odd_2": 3.0,
       "odd_over_25": null,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 0.76,
-      "lam_away": 1.94,
+      "lam_home": 1.6,
+      "lam_away": 1.1,
       "prob_over_05": 0.9328,
       "prob_over_15": 0.7513,
       "prob_over_25": 0.5064,
       "prob_over_35": 0.2859,
-      "prob_btts": 0.4558,
-      "prob_home_scores": 0.5323,
-      "prob_away_scores": 0.8563,
-      "prob_score_matrix": [
-        {
-          "score": "0-1",
-          "prob": 0.1304
-        },
-        {
-          "score": "0-2",
-          "prob": 0.1265
-        },
-        {
-          "score": "1-1",
-          "prob": 0.0991
-        },
-        {
-          "score": "1-2",
-          "prob": 0.0961
-        },
-        {
-          "score": "0-3",
-          "prob": 0.0818
-        }
-      ],
-      "live_watch": true,
-      "favori_team": "Zenit St Petersburg"
-    },
-    {
-      "home_team": "Qingdao West Coast FC",
-      "away_team": "Qingdao Hainiu FC",
-      "league": "CHN-Super League",
-      "time": "10h00",
-      "type": "grid",
-      "score": 5.1,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.5065,
-      "prob_x": 0.2457,
-      "prob_2": 0.2478,
-      "prob_over": 0.5088,
-      "odd_1": 2.02,
-      "odd_x": 3.55,
-      "odd_2": 3.25,
-      "odd_over_25": 1.6,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.64,
-      "lam_away": 1.07,
-      "prob_over_05": 0.9335,
-      "prob_over_15": 0.7531,
-      "prob_over_25": 0.5088,
-      "prob_over_35": 0.2881,
-      "prob_btts": 0.5295,
-      "prob_home_scores": 0.806,
-      "prob_away_scores": 0.657,
+      "prob_btts": 0.5324,
+      "prob_home_scores": 0.7981,
+      "prob_away_scores": 0.6671,
       "prob_score_matrix": [
         {
           "score": "1-1",
-          "prob": 0.1168
+          "prob": 0.1183
         },
         {
           "score": "1-0",
-          "prob": 0.1091
+          "prob": 0.1075
         },
         {
           "score": "2-1",
-          "prob": 0.0957
+          "prob": 0.0946
         },
         {
           "score": "2-0",
-          "prob": 0.0895
+          "prob": 0.086
         },
         {
           "score": "0-1",
-          "prob": 0.0712
+          "prob": 0.0739
         }
       ],
       "live_watch": false,
-      "favori_team": "Qingdao West Coast FC"
+      "favori_team": "OB Odense BK"
     },
     {
-      "home_team": "FC Vaduz",
-      "away_team": "FC St Gallen",
-      "league": "SUI-Super League",
-      "time": "12h00",
+      "home_team": "Halmstads BK",
+      "away_team": "IK Sirius",
+      "league": "SWE-Allsvenskan",
+      "time": "17h00",
       "type": "grid",
       "score": 5.0,
       "selection": null,
@@ -1268,292 +200,56 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.3377,
-      "prob_x": 0.2597,
-      "prob_2": 0.4026,
-      "prob_over": 0.4965,
-      "odd_1": 3.05,
-      "odd_x": 3.75,
-      "odd_2": 2.05,
-      "odd_over_25": 1.47,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.26,
-      "lam_away": 1.4,
-      "prob_over_05": 0.9301,
-      "prob_over_15": 0.744,
-      "prob_over_25": 0.4965,
-      "prob_over_35": 0.2771,
-      "prob_btts": 0.5397,
-      "prob_home_scores": 0.7163,
-      "prob_away_scores": 0.7534,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.1234
-        },
-        {
-          "score": "0-1",
-          "prob": 0.0979
-        },
-        {
-          "score": "1-0",
-          "prob": 0.0881
-        },
-        {
-          "score": "1-2",
-          "prob": 0.0864
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0777
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "FC St Gallen"
-    },
-    {
-      "home_team": "AC Oulu",
-      "away_team": "Ilves Tampere",
-      "league": "FIN-Veikkausliiga",
-      "time": "14h00",
-      "type": "grid",
-      "score": 5.0,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.4508,
-      "prob_x": 0.2549,
-      "prob_2": 0.2943,
-      "prob_over": 0.5015,
-      "odd_1": 2.18,
-      "odd_x": 3.35,
-      "odd_2": 2.65,
-      "odd_over_25": 1.55,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.51,
-      "lam_away": 1.17,
-      "prob_over_05": 0.9314,
-      "prob_over_15": 0.7477,
-      "prob_over_25": 0.5015,
-      "prob_over_35": 0.2815,
-      "prob_btts": 0.5373,
-      "prob_home_scores": 0.7791,
-      "prob_away_scores": 0.6896,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.1211
-        },
-        {
-          "score": "1-0",
-          "prob": 0.1035
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0915
-        },
-        {
-          "score": "0-1",
-          "prob": 0.0802
-        },
-        {
-          "score": "2-0",
-          "prob": 0.0782
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "AC Oulu"
-    },
-    {
-      "home_team": "La Serena",
-      "away_team": "O'Higgins",
-      "league": "CHI-Primera Division",
-      "time": "19h00",
-      "type": "grid",
-      "score": 5.0,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.429,
-      "prob_x": 0.2575,
-      "prob_2": 0.3135,
+      "prob_1": 0.1511,
+      "prob_x": 0.2172,
+      "prob_2": 0.6316,
       "prob_over": 0.499,
-      "odd_1": 2.3,
-      "odd_x": 3.4,
-      "odd_2": 2.5,
-      "odd_over_25": null,
+      "odd_1": 8.1,
+      "odd_x": 4.85,
+      "odd_2": 1.35,
+      "odd_over_25": 1.49,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.46,
-      "lam_away": 1.21,
+      "lam_home": 0.79,
+      "lam_away": 1.88,
       "prob_over_05": 0.9307,
       "prob_over_15": 0.7458,
       "prob_over_25": 0.499,
       "prob_over_35": 0.2793,
-      "prob_btts": 0.5388,
-      "prob_home_scores": 0.7678,
-      "prob_away_scores": 0.7018,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.1223
-        },
-        {
-          "score": "1-0",
-          "prob": 0.1011
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0893
-        },
-        {
-          "score": "0-1",
-          "prob": 0.0838
-        },
-        {
-          "score": "1-2",
-          "prob": 0.074
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "La Serena"
-    },
-    {
-      "home_team": "Liaoning Tieren FC",
-      "away_team": "Shanghai Shenhua FC",
-      "league": "CHN-Super League",
-      "time": "11h35",
-      "type": "grid",
-      "score": 5.0,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.2233,
-      "prob_x": 0.2412,
-      "prob_2": 0.5355,
-      "prob_over": 0.5039,
-      "odd_1": 4.65,
-      "odd_x": 4.45,
-      "odd_2": 1.55,
-      "odd_over_25": 1.36,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.0,
-      "lam_away": 1.69,
-      "prob_over_05": 0.9321,
-      "prob_over_15": 0.7495,
-      "prob_over_25": 0.5039,
-      "prob_over_35": 0.2837,
-      "prob_btts": 0.5155,
-      "prob_home_scores": 0.6321,
-      "prob_away_scores": 0.8155,
+      "prob_btts": 0.4628,
+      "prob_home_scores": 0.5462,
+      "prob_away_scores": 0.8474,
       "prob_score_matrix": [
         {
           "score": "0-1",
-          "prob": 0.1147
-        },
-        {
-          "score": "1-1",
-          "prob": 0.1147
+          "prob": 0.1302
         },
         {
           "score": "0-2",
-          "prob": 0.0969
+          "prob": 0.1224
         },
-        {
-          "score": "1-2",
-          "prob": 0.0969
-        },
-        {
-          "score": "0-0",
-          "prob": 0.0679
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Shanghai Shenhua FC"
-    },
-    {
-      "home_team": "Grasshopper Zürich",
-      "away_team": "FC Lugano",
-      "league": "SUI-Super League",
-      "time": "14h30",
-      "type": "grid",
-      "score": 4.9,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.2875,
-      "prob_x": 0.2577,
-      "prob_2": 0.4547,
-      "prob_over": 0.4866,
-      "odd_1": 3.83,
-      "odd_x": 3.85,
-      "odd_2": 1.94,
-      "odd_over_25": null,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.13,
-      "lam_away": 1.49,
-      "prob_over_05": 0.9272,
-      "prob_over_15": 0.7365,
-      "prob_over_25": 0.4866,
-      "prob_over_35": 0.2684,
-      "prob_btts": 0.5244,
-      "prob_home_scores": 0.677,
-      "prob_away_scores": 0.7746,
-      "prob_score_matrix": [
         {
           "score": "1-1",
-          "prob": 0.1226
-        },
-        {
-          "score": "0-1",
-          "prob": 0.1085
+          "prob": 0.1029
         },
         {
           "score": "1-2",
-          "prob": 0.0913
+          "prob": 0.0967
         },
         {
-          "score": "1-0",
-          "prob": 0.0823
-        },
-        {
-          "score": "0-2",
-          "prob": 0.0808
+          "score": "0-3",
+          "prob": 0.0767
         }
       ],
-      "live_watch": false,
-      "favori_team": "FC Lugano"
+      "live_watch": true,
+      "favori_team": "IK Sirius"
     },
     {
-      "home_team": "Silkeborg IF",
-      "away_team": "FC Copenhagen",
-      "league": "DEN-Superliga",
+      "home_team": "SJK Seinäjoki",
+      "away_team": "HJK Helsinki",
+      "league": "FIN-Veikkausliiga",
       "time": "16h00",
       "type": "grid",
       "score": 4.9,
@@ -1563,212 +259,35 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.2345,
-      "prob_x": 0.247,
-      "prob_2": 0.5185,
-      "prob_over": 0.4916,
-      "odd_1": 4.6,
-      "odd_x": 4.1,
-      "odd_2": 1.67,
+      "prob_1": 0.3172,
+      "prob_x": 0.259,
+      "prob_2": 0.4238,
+      "prob_over": 0.494,
+      "odd_1": 3.29,
+      "odd_x": 3.82,
+      "odd_2": 1.99,
       "odd_over_25": null,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.01,
-      "lam_away": 1.63,
-      "prob_over_05": 0.9286,
-      "prob_over_15": 0.7402,
-      "prob_over_25": 0.4916,
-      "prob_over_35": 0.2727,
-      "prob_btts": 0.5112,
-      "prob_home_scores": 0.6358,
-      "prob_away_scores": 0.8041,
+      "lam_home": 1.21,
+      "lam_away": 1.44,
+      "prob_over_05": 0.9293,
+      "prob_over_15": 0.7421,
+      "prob_over_25": 0.494,
+      "prob_over_35": 0.2749,
+      "prob_btts": 0.5355,
+      "prob_home_scores": 0.7018,
+      "prob_away_scores": 0.7631,
       "prob_score_matrix": [
         {
           "score": "1-1",
-          "prob": 0.1175
+          "prob": 0.1231
         },
         {
           "score": "0-1",
-          "prob": 0.1163
-        },
-        {
-          "score": "1-2",
-          "prob": 0.0957
-        },
-        {
-          "score": "0-2",
-          "prob": 0.0948
-        },
-        {
-          "score": "1-0",
-          "prob": 0.0721
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "FC Copenhagen"
-    },
-    {
-      "home_team": "Aalesund",
-      "away_team": "Tromso",
-      "league": "NOR-Eliteserien",
-      "time": "15h00",
-      "type": "grid",
-      "score": 4.9,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.2919,
-      "prob_x": 0.2583,
-      "prob_2": 0.4499,
-      "prob_over": 0.4866,
-      "odd_1": 3.6,
-      "odd_x": 3.65,
-      "odd_2": 1.88,
-      "odd_over_25": 1.68,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.14,
-      "lam_away": 1.48,
-      "prob_over_05": 0.9272,
-      "prob_over_15": 0.7365,
-      "prob_over_25": 0.4866,
-      "prob_over_35": 0.2684,
-      "prob_btts": 0.5253,
-      "prob_home_scores": 0.6802,
-      "prob_away_scores": 0.7724,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.1228
-        },
-        {
-          "score": "0-1",
-          "prob": 0.1077
-        },
-        {
-          "score": "1-2",
-          "prob": 0.0909
-        },
-        {
-          "score": "1-0",
-          "prob": 0.083
-        },
-        {
-          "score": "0-2",
-          "prob": 0.0797
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Tromso"
-    },
-    {
-      "home_team": "VPS Vaasa",
-      "away_team": "FC Inter Turku",
-      "league": "FIN-Veikkausliiga",
-      "time": "12h00",
-      "type": "grid",
-      "score": 4.9,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.416,
-      "prob_x": 0.2612,
-      "prob_2": 0.3228,
-      "prob_over": 0.4866,
-      "odd_1": 2.5,
-      "odd_x": 3.25,
-      "odd_2": 2.55,
-      "odd_over_25": null,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.41,
-      "lam_away": 1.21,
-      "prob_over_05": 0.9272,
-      "prob_over_15": 0.7365,
-      "prob_over_25": 0.4866,
-      "prob_over_35": 0.2684,
-      "prob_btts": 0.5305,
-      "prob_home_scores": 0.7559,
-      "prob_away_scores": 0.7018,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.1242
-        },
-        {
-          "score": "1-0",
-          "prob": 0.1027
-        },
-        {
-          "score": "0-1",
-          "prob": 0.0881
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0876
-        },
-        {
-          "score": "1-2",
-          "prob": 0.0751
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "VPS Vaasa"
-    },
-    {
-      "home_team": "Deportes Concepción",
-      "away_team": "Universidad Católica (CHI)",
-      "league": "CHI-Primera Division",
-      "time": "16h30",
-      "type": "grid",
-      "score": 4.9,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.3138,
-      "prob_x": 0.2605,
-      "prob_2": 0.4257,
-      "prob_over": 0.4866,
-      "odd_1": 3.3,
-      "odd_x": 3.5,
-      "odd_2": 1.97,
-      "odd_over_25": 1.81,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.19,
-      "lam_away": 1.43,
-      "prob_over_05": 0.9272,
-      "prob_over_15": 0.7365,
-      "prob_over_25": 0.4866,
-      "prob_over_35": 0.2684,
-      "prob_btts": 0.5293,
-      "prob_home_scores": 0.6958,
-      "prob_away_scores": 0.7607,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.1239
-        },
-        {
-          "score": "0-1",
-          "prob": 0.1041
+          "prob": 0.1017
         },
         {
           "score": "1-2",
@@ -1776,257 +295,80 @@
         },
         {
           "score": "1-0",
-          "prob": 0.0866
+          "prob": 0.0855
         },
         {
-          "score": "0-2",
-          "prob": 0.0744
+          "score": "2-1",
+          "prob": 0.0745
         }
       ],
       "live_watch": false,
-      "favori_team": "Universidad Católica (CHI)"
+      "favori_team": "HJK Helsinki"
     },
     {
-      "home_team": "Shenzhen Peng City FC",
-      "away_team": "Chongqing Tonglianglong FC",
-      "league": "CHN-Super League",
-      "time": "12h00",
+      "home_team": "Cracovia Kraków",
+      "away_team": "Pogoń Szczecin",
+      "league": "POL-Ekstraklasa",
+      "time": "17h00",
       "type": "grid",
-      "score": 4.9,
+      "score": 4.8,
       "selection": null,
       "market": null,
       "odd": null,
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.4308,
-      "prob_x": 0.259,
-      "prob_2": 0.3102,
-      "prob_over": 0.4916,
-      "odd_1": 2.4,
-      "odd_x": 3.3,
-      "odd_2": 2.65,
-      "odd_over_25": null,
+      "prob_1": 0.4741,
+      "prob_x": 0.2564,
+      "prob_2": 0.2696,
+      "prob_over": 0.4816,
+      "odd_1": 2.25,
+      "odd_x": 3.05,
+      "odd_2": 3.2,
+      "odd_over_25": 2.12,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.45,
-      "lam_away": 1.19,
-      "prob_over_05": 0.9286,
-      "prob_over_15": 0.7402,
-      "prob_over_25": 0.4916,
-      "prob_over_35": 0.2727,
-      "prob_btts": 0.5326,
-      "prob_home_scores": 0.7654,
-      "prob_away_scores": 0.6958,
+      "lam_home": 1.52,
+      "lam_away": 1.08,
+      "prob_over_05": 0.9257,
+      "prob_over_15": 0.7326,
+      "prob_over_25": 0.4816,
+      "prob_over_35": 0.264,
+      "prob_btts": 0.516,
+      "prob_home_scores": 0.7813,
+      "prob_away_scores": 0.6604,
       "prob_score_matrix": [
         {
           "score": "1-1",
-          "prob": 0.1231
+          "prob": 0.1219
         },
         {
           "score": "1-0",
-          "prob": 0.1035
+          "prob": 0.1129
         },
         {
           "score": "2-1",
-          "prob": 0.0893
-        },
-        {
-          "score": "0-1",
-          "prob": 0.0849
+          "prob": 0.0927
         },
         {
           "score": "2-0",
-          "prob": 0.075
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Shenzhen Peng City FC"
-    },
-    {
-      "home_team": "IF Brommapojkarna",
-      "away_team": "Malmo FF",
-      "league": "SWE-Allsvenskan",
-      "time": "12h00",
-      "type": "grid",
-      "score": 4.8,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.3086,
-      "prob_x": 0.2613,
-      "prob_2": 0.4301,
-      "prob_over": 0.4816,
-      "odd_1": 3.6,
-      "odd_x": 3.6,
-      "odd_2": 2.08,
-      "odd_over_25": 1.55,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.17,
-      "lam_away": 1.43,
-      "prob_over_05": 0.9257,
-      "prob_over_15": 0.7326,
-      "prob_over_25": 0.4816,
-      "prob_over_35": 0.264,
-      "prob_btts": 0.5246,
-      "prob_home_scores": 0.6896,
-      "prob_away_scores": 0.7607,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.1243
+          "prob": 0.0858
         },
         {
           "score": "0-1",
-          "prob": 0.1062
-        },
-        {
-          "score": "1-2",
-          "prob": 0.0889
-        },
-        {
-          "score": "1-0",
-          "prob": 0.0869
-        },
-        {
-          "score": "0-2",
-          "prob": 0.0759
+          "prob": 0.0802
         }
       ],
       "live_watch": false,
-      "favori_team": "Malmo FF"
+      "favori_team": "Cracovia Kraków"
     },
     {
-      "home_team": "Śląsk Wrocław",
-      "away_team": "Raków Częstochowa",
-      "league": "POL-Ekstraklasa",
-      "time": "15h30",
-      "type": "grid",
-      "score": 4.8,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.3774,
-      "prob_x": 0.2639,
-      "prob_2": 0.3587,
-      "prob_over": 0.4816,
-      "odd_1": 2.75,
-      "odd_x": 3.2,
-      "odd_2": 2.3,
-      "odd_over_25": null,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.32,
-      "lam_away": 1.28,
-      "prob_over_05": 0.9257,
-      "prob_over_15": 0.7326,
-      "prob_over_25": 0.4816,
-      "prob_over_35": 0.264,
-      "prob_btts": 0.5291,
-      "prob_home_scores": 0.7329,
-      "prob_away_scores": 0.722,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.1255
-        },
-        {
-          "score": "1-0",
-          "prob": 0.098
-        },
-        {
-          "score": "0-1",
-          "prob": 0.0951
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0828
-        },
-        {
-          "score": "1-2",
-          "prob": 0.0803
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Raków Częstochowa"
-    },
-    {
-      "home_team": "FC Akhmat Grozny",
-      "away_team": "Spartak Moscow",
-      "league": "RUS-Premier League",
-      "time": "17h30",
-      "type": "grid",
-      "score": 4.8,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.2841,
-      "prob_x": 0.2591,
-      "prob_2": 0.4568,
-      "prob_over": 0.4791,
-      "odd_1": 3.95,
-      "odd_x": 3.63,
-      "odd_2": 1.98,
-      "odd_over_25": 1.87,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.11,
-      "lam_away": 1.48,
-      "prob_over_05": 0.925,
-      "prob_over_15": 0.7307,
-      "prob_over_25": 0.4791,
-      "prob_over_35": 0.2618,
-      "prob_btts": 0.5178,
-      "prob_home_scores": 0.6704,
-      "prob_away_scores": 0.7724,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.1232
-        },
-        {
-          "score": "0-1",
-          "prob": 0.111
-        },
-        {
-          "score": "1-2",
-          "prob": 0.0912
-        },
-        {
-          "score": "1-0",
-          "prob": 0.0833
-        },
-        {
-          "score": "0-2",
-          "prob": 0.0822
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Spartak Moscow"
-    },
-    {
-      "home_team": "Newells Old Boys",
-      "away_team": "Boca Juniors",
+      "home_team": "Velez Sarsfield BA",
+      "away_team": "Independiente",
       "league": "ARG-Primera Division",
-      "time": "20h00",
+      "time": "22h00",
       "type": "grid",
       "score": 4.7,
       "selection": null,
@@ -2035,110 +377,169 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.3107,
-      "prob_x": 0.2652,
-      "prob_2": 0.4241,
-      "prob_over": 0.4664,
-      "odd_1": 3.45,
-      "odd_x": 3.0,
-      "odd_2": 2.0,
+      "prob_1": 0.444,
+      "prob_x": 0.2622,
+      "prob_2": 0.2937,
+      "prob_over": 0.4715,
+      "odd_1": 2.4,
+      "odd_x": 2.85,
+      "odd_2": 2.9,
       "odd_over_25": null,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.15,
-      "lam_away": 1.39,
-      "prob_over_05": 0.9211,
-      "prob_over_15": 0.7208,
-      "prob_over_25": 0.4664,
-      "prob_over_35": 0.251,
-      "prob_btts": 0.5132,
-      "prob_home_scores": 0.6834,
-      "prob_away_scores": 0.7509,
+      "lam_home": 1.44,
+      "lam_away": 1.12,
+      "prob_over_05": 0.9227,
+      "prob_over_15": 0.7248,
+      "prob_over_25": 0.4715,
+      "prob_over_35": 0.2553,
+      "prob_btts": 0.5141,
+      "prob_home_scores": 0.7631,
+      "prob_away_scores": 0.6737,
       "prob_score_matrix": [
         {
           "score": "1-1",
-          "prob": 0.1261
-        },
-        {
-          "score": "0-1",
-          "prob": 0.1096
+          "prob": 0.1247
         },
         {
           "score": "1-0",
-          "prob": 0.0907
+          "prob": 0.1113
         },
         {
-          "score": "1-2",
-          "prob": 0.0876
+          "score": "2-1",
+          "prob": 0.0898
         },
         {
-          "score": "0-0",
-          "prob": 0.0789
+          "score": "0-1",
+          "prob": 0.0866
+        },
+        {
+          "score": "2-0",
+          "prob": 0.0801
         }
       ],
       "live_watch": false,
-      "favori_team": "Boca Juniors"
+      "favori_team": "Velez Sarsfield BA"
     },
     {
-      "home_team": "Aldosivi Mar del Plata",
-      "away_team": "Gimnasia La Plata",
+      "home_team": "Platense",
+      "away_team": "Talleres",
       "league": "ARG-Primera Division",
-      "time": "17h30",
+      "time": "22h00",
       "type": "grid",
-      "score": 4.5,
+      "score": 4.7,
       "selection": null,
       "market": null,
       "odd": null,
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.3718,
-      "prob_x": 0.2706,
-      "prob_2": 0.3575,
-      "prob_over": 0.4536,
-      "odd_1": 2.95,
-      "odd_x": 2.75,
-      "odd_2": 2.45,
+      "prob_1": 0.4388,
+      "prob_x": 0.2639,
+      "prob_2": 0.2973,
+      "prob_over": 0.4664,
+      "odd_1": 2.4,
+      "odd_x": 2.7,
+      "odd_2": 2.85,
       "odd_over_25": null,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.26,
-      "lam_away": 1.23,
-      "prob_over_05": 0.9171,
-      "prob_over_15": 0.7106,
-      "prob_over_25": 0.4536,
-      "prob_over_35": 0.2403,
-      "prob_btts": 0.507,
-      "prob_home_scores": 0.7163,
-      "prob_away_scores": 0.7077,
+      "lam_home": 1.42,
+      "lam_away": 1.12,
+      "prob_over_05": 0.9211,
+      "prob_over_15": 0.7208,
+      "prob_over_25": 0.4664,
+      "prob_over_35": 0.251,
+      "prob_btts": 0.5109,
+      "prob_home_scores": 0.7583,
+      "prob_away_scores": 0.6737,
       "prob_score_matrix": [
         {
           "score": "1-1",
-          "prob": 0.1285
+          "prob": 0.1254
         },
         {
           "score": "1-0",
-          "prob": 0.1045
-        },
-        {
-          "score": "0-1",
-          "prob": 0.102
-        },
-        {
-          "score": "0-0",
-          "prob": 0.0829
+          "prob": 0.112
         },
         {
           "score": "2-1",
-          "prob": 0.081
+          "prob": 0.0891
+        },
+        {
+          "score": "0-1",
+          "prob": 0.0883
+        },
+        {
+          "score": "2-0",
+          "prob": 0.0795
         }
       ],
       "live_watch": false,
-      "favori_team": "Gimnasia La Plata"
+      "favori_team": "Platense"
+    },
+    {
+      "home_team": "Sarmiento de Junin",
+      "away_team": "Independiente Rivadavia",
+      "league": "ARG-Primera Division",
+      "time": "19h45",
+      "type": "grid",
+      "score": 4.6,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.3355,
+      "prob_x": 0.2675,
+      "prob_2": 0.3971,
+      "prob_over": 0.4639,
+      "odd_1": 3.25,
+      "odd_x": 2.95,
+      "odd_2": 2.2,
+      "odd_over_25": null,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.2,
+      "lam_away": 1.33,
+      "prob_over_05": 0.9203,
+      "prob_over_15": 0.7188,
+      "prob_over_25": 0.4639,
+      "prob_over_35": 0.2489,
+      "prob_btts": 0.514,
+      "prob_home_scores": 0.6988,
+      "prob_away_scores": 0.7355,
+      "prob_score_matrix": [
+        {
+          "score": "1-1",
+          "prob": 0.1271
+        },
+        {
+          "score": "0-1",
+          "prob": 0.1059
+        },
+        {
+          "score": "1-0",
+          "prob": 0.0956
+        },
+        {
+          "score": "1-2",
+          "prob": 0.0845
+        },
+        {
+          "score": "0-0",
+          "prob": 0.0797
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Independiente Rivadavia"
     }
   ]
 }
