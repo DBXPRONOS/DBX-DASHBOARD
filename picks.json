@@ -1,108 +1,169 @@
 {
-  "date": "2026-09-01",
-  "updated_at": "11:04",
+  "date": "2026-09-02",
+  "updated_at": "10:36",
   "stats": {
-    "total_picks": 24,
-    "safes_vip": 0,
+    "total_picks": 27,
+    "safes_vip": 1,
     "value_bets": 0,
-    "score_moyen": 5.3,
+    "score_moyen": 5.4,
     "real_stats_picks": 0,
-    "odds_only_picks": 24
+    "odds_only_picks": 27
   },
   "picks": [
     {
-      "home_team": "Salford City",
-      "away_team": "Newport County",
-      "league": "ENG-League Two",
-      "time": "18h45",
-      "type": "grid",
-      "score": 6.6,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
+      "home_team": "Flamengo",
+      "away_team": "Mirassol",
+      "league": "BRA-Brasileirao",
+      "time": "22h30",
+      "type": "safe",
+      "score": 7.6,
+      "selection": "Flamengo gagne",
+      "market": "1X2 - 1",
+      "odd": 1.17,
+      "model_prob": 0.7641,
       "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.6596,
-      "prob_x": 0.2004,
-      "prob_2": 0.14,
-      "prob_over": 0.5471,
-      "odd_1": 1.5,
-      "odd_x": 4.3,
-      "odd_2": 5.75,
+      "tags": [
+        "Safe VIP : 76%"
+      ],
+      "prob_1": 0.7641,
+      "prob_x": 0.1533,
+      "prob_2": 0.0826,
+      "prob_over": 0.6009,
+      "odd_1": 1.17,
+      "odd_x": 6.5,
+      "odd_2": 11.0,
       "odd_over_25": null,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 2.05,
-      "lam_away": 0.82,
-      "prob_over_05": 0.9433,
-      "prob_over_15": 0.7806,
-      "prob_over_25": 0.5471,
-      "prob_over_35": 0.3237,
-      "prob_btts": 0.4875,
-      "prob_home_scores": 0.8713,
-      "prob_away_scores": 0.5596,
+      "lam_home": 2.44,
+      "lam_away": 0.67,
+      "prob_over_05": 0.9553,
+      "prob_over_15": 0.8166,
+      "prob_over_25": 0.6009,
+      "prob_over_35": 0.3773,
+      "prob_btts": 0.4457,
+      "prob_home_scores": 0.9128,
+      "prob_away_scores": 0.4883,
       "prob_score_matrix": [
         {
           "score": "2-0",
-          "prob": 0.1191
+          "prob": 0.1328
         },
         {
           "score": "1-0",
-          "prob": 0.1162
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0977
-        },
-        {
-          "score": "1-1",
-          "prob": 0.0953
+          "prob": 0.1088
         },
         {
           "score": "3-0",
-          "prob": 0.0814
+          "prob": 0.108
+        },
+        {
+          "score": "2-1",
+          "prob": 0.089
+        },
+        {
+          "score": "1-1",
+          "prob": 0.0729
         }
       ],
-      "live_watch": false,
-      "favori_team": "Salford City"
+      "live_watch": true,
+      "favori_team": "Flamengo"
     },
     {
-      "home_team": "Chesterfield FC",
-      "away_team": "Gillingham",
-      "league": "ENG-League Two",
-      "time": "18h45",
+      "home_team": "Mito HollyHock",
+      "away_team": "Kashima Antlers",
+      "league": "JPN-J1 League",
+      "time": "10h00",
       "type": "grid",
-      "score": 6.5,
+      "score": 7.1,
       "selection": null,
       "market": null,
       "odd": null,
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.6519,
-      "prob_x": 0.2051,
-      "prob_2": 0.1429,
-      "prob_over": 0.5329,
-      "odd_1": 1.56,
-      "odd_x": 3.85,
-      "odd_2": 6.0,
-      "odd_over_25": 1.94,
+      "prob_1": 0.7071,
+      "prob_x": 0.1806,
+      "prob_2": 0.1123,
+      "prob_over": 0.5678,
+      "odd_1": 1.28,
+      "odd_x": 4.6,
+      "odd_2": 7.0,
+      "odd_over_25": null,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 2.0,
-      "lam_away": 0.81,
-      "prob_over_05": 0.9398,
-      "prob_over_15": 0.7706,
-      "prob_over_25": 0.5329,
-      "prob_over_35": 0.3103,
-      "prob_btts": 0.48,
-      "prob_home_scores": 0.8647,
-      "prob_away_scores": 0.5551,
+      "lam_home": 2.21,
+      "lam_away": 0.75,
+      "prob_over_05": 0.9482,
+      "prob_over_15": 0.7948,
+      "prob_over_25": 0.5678,
+      "prob_over_35": 0.3438,
+      "prob_btts": 0.4697,
+      "prob_home_scores": 0.8903,
+      "prob_away_scores": 0.5276,
+      "prob_score_matrix": [
+        {
+          "score": "2-0",
+          "prob": 0.1265
+        },
+        {
+          "score": "1-0",
+          "prob": 0.1145
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0949
+        },
+        {
+          "score": "3-0",
+          "prob": 0.0932
+        },
+        {
+          "score": "1-1",
+          "prob": 0.0859
+        }
+      ],
+      "live_watch": true,
+      "favori_team": "Mito HollyHock"
+    },
+    {
+      "home_team": "Coquimbo Unido",
+      "away_team": "Universidad de Concepción",
+      "league": "CHI-Primera Division",
+      "time": "22h00",
+      "type": "grid",
+      "score": 6.3,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.6319,
+      "prob_x": 0.2126,
+      "prob_2": 0.1555,
+      "prob_over": 0.5258,
+      "odd_1": 1.6,
+      "odd_x": 3.6,
+      "odd_2": 5.4,
+      "odd_over_25": 2.08,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.94,
+      "lam_away": 0.84,
+      "prob_over_05": 0.938,
+      "prob_over_15": 0.7655,
+      "prob_over_25": 0.5258,
+      "prob_over_35": 0.3036,
+      "prob_btts": 0.4866,
+      "prob_home_scores": 0.8563,
+      "prob_away_scores": 0.5683,
       "prob_score_matrix": [
         {
           "score": "1-0",
@@ -110,206 +171,147 @@
         },
         {
           "score": "2-0",
-          "prob": 0.1204
+          "prob": 0.1167
         },
         {
           "score": "1-1",
-          "prob": 0.0975
+          "prob": 0.1011
         },
         {
           "score": "2-1",
-          "prob": 0.0975
+          "prob": 0.0981
         },
         {
           "score": "3-0",
-          "prob": 0.0803
+          "prob": 0.0755
         }
       ],
       "live_watch": false,
-      "favori_team": "Chesterfield FC"
+      "favori_team": "Coquimbo Unido"
     },
     {
-      "home_team": "Huddersfield Town",
-      "away_team": "Oxford United",
-      "league": "ENG-League One",
-      "time": "18h45",
+      "home_team": "Hiroshima Sanfrecce FC",
+      "away_team": "Nagoya Grampus",
+      "league": "JPN-J1 League",
+      "time": "10h00",
       "type": "grid",
-      "score": 5.9,
+      "score": 6.3,
       "selection": null,
       "market": null,
       "odd": null,
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.5877,
-      "prob_x": 0.2255,
-      "prob_2": 0.1868,
-      "prob_over": 0.5234,
-      "odd_1": 1.69,
-      "odd_x": 3.65,
-      "odd_2": 4.2,
-      "odd_over_25": 1.67,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.84,
-      "lam_away": 0.93,
-      "prob_over_05": 0.9373,
-      "prob_over_15": 0.7638,
-      "prob_over_25": 0.5234,
-      "prob_over_35": 0.3014,
-      "prob_btts": 0.5093,
-      "prob_home_scores": 0.8412,
-      "prob_away_scores": 0.6054,
-      "prob_score_matrix": [
-        {
-          "score": "1-0",
-          "prob": 0.1153
-        },
-        {
-          "score": "1-1",
-          "prob": 0.1072
-        },
-        {
-          "score": "2-0",
-          "prob": 0.1061
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0986
-        },
-        {
-          "score": "3-0",
-          "prob": 0.0651
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Huddersfield Town"
-    },
-    {
-      "home_team": "Northampton Town",
-      "away_team": "Crawley Town",
-      "league": "ENG-League Two",
-      "time": "18h45",
-      "type": "grid",
-      "score": 5.9,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.5924,
-      "prob_x": 0.2243,
-      "prob_2": 0.1833,
-      "prob_over": 0.5234,
-      "odd_1": 1.73,
-      "odd_x": 3.75,
-      "odd_2": 4.4,
-      "odd_over_25": 1.8,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.85,
-      "lam_away": 0.92,
-      "prob_over_05": 0.9373,
-      "prob_over_15": 0.7638,
-      "prob_over_25": 0.5234,
-      "prob_over_35": 0.3014,
-      "prob_btts": 0.5069,
-      "prob_home_scores": 0.8428,
-      "prob_away_scores": 0.6015,
-      "prob_score_matrix": [
-        {
-          "score": "1-0",
-          "prob": 0.1159
-        },
-        {
-          "score": "2-0",
-          "prob": 0.1072
-        },
-        {
-          "score": "1-1",
-          "prob": 0.1067
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0987
-        },
-        {
-          "score": "3-0",
-          "prob": 0.0661
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Northampton Town"
-    },
-    {
-      "home_team": "Torino",
-      "away_team": "Monza",
-      "league": "Coppa Italia",
-      "time": "19h00",
-      "type": "grid",
-      "score": 5.9,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.5927,
-      "prob_x": 0.225,
-      "prob_2": 0.1823,
+      "prob_1": 0.6255,
+      "prob_x": 0.2158,
+      "prob_2": 0.1587,
       "prob_over": 0.5185,
-      "odd_1": 1.7,
-      "odd_x": 3.55,
-      "odd_2": 4.4,
-      "odd_over_25": null,
+      "odd_1": 1.55,
+      "odd_x": 3.3,
+      "odd_2": 5.2,
+      "odd_over_25": 2.17,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.84,
-      "lam_away": 0.91,
+      "lam_home": 1.91,
+      "lam_away": 0.84,
       "prob_over_05": 0.9361,
       "prob_over_15": 0.7603,
       "prob_over_25": 0.5185,
       "prob_over_35": 0.297,
-      "prob_btts": 0.5026,
-      "prob_home_scores": 0.8412,
-      "prob_away_scores": 0.5975,
+      "prob_btts": 0.4841,
+      "prob_home_scores": 0.8519,
+      "prob_away_scores": 0.5683,
       "prob_score_matrix": [
         {
           "score": "1-0",
-          "prob": 0.1176
+          "prob": 0.1221
         },
         {
           "score": "2-0",
-          "prob": 0.1082
+          "prob": 0.1166
         },
         {
           "score": "1-1",
-          "prob": 0.107
+          "prob": 0.1026
         },
         {
           "score": "2-1",
-          "prob": 0.0985
+          "prob": 0.098
         },
         {
           "score": "3-0",
-          "prob": 0.0664
+          "prob": 0.0742
         }
       ],
       "live_watch": false,
-      "favori_team": "Torino"
+      "favori_team": "Hiroshima Sanfrecce FC"
     },
     {
-      "home_team": "Bradford City",
-      "away_team": "Cambridge United",
-      "league": "ENG-League One",
-      "time": "18h45",
+      "home_team": "FC Luzern",
+      "away_team": "FC Vaduz",
+      "league": "SUI-Super League",
+      "time": "18h30",
+      "type": "grid",
+      "score": 6.1,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.6122,
+      "prob_x": 0.2152,
+      "prob_2": 0.1726,
+      "prob_over": 0.5447,
+      "odd_1": 1.62,
+      "odd_x": 4.35,
+      "odd_2": 4.5,
+      "odd_over_25": null,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.94,
+      "lam_away": 0.92,
+      "prob_over_05": 0.9427,
+      "prob_over_15": 0.7789,
+      "prob_over_25": 0.5447,
+      "prob_over_35": 0.3214,
+      "prob_btts": 0.515,
+      "prob_home_scores": 0.8563,
+      "prob_away_scores": 0.6015,
+      "prob_score_matrix": [
+        {
+          "score": "1-0",
+          "prob": 0.1111
+        },
+        {
+          "score": "2-0",
+          "prob": 0.1078
+        },
+        {
+          "score": "1-1",
+          "prob": 0.1022
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0991
+        },
+        {
+          "score": "3-0",
+          "prob": 0.0697
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "FC Luzern"
+    },
+    {
+      "home_team": "Cerezo Osaka",
+      "away_team": "Kashiwa Reysol",
+      "league": "JPN-J1 League",
+      "time": "10h00",
       "type": "grid",
       "score": 5.8,
       "selection": null,
@@ -318,43 +320,43 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.5811,
-      "prob_x": 0.2294,
-      "prob_2": 0.1895,
+      "prob_1": 0.5763,
+      "prob_x": 0.2306,
+      "prob_2": 0.1931,
       "prob_over": 0.5113,
-      "odd_1": 1.74,
-      "odd_x": 3.4,
-      "odd_2": 4.3,
-      "odd_over_25": 1.95,
+      "odd_1": 1.75,
+      "odd_x": 3.35,
+      "odd_2": 4.2,
+      "odd_over_25": 1.45,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.8,
-      "lam_away": 0.92,
+      "lam_home": 1.79,
+      "lam_away": 0.93,
       "prob_over_05": 0.9341,
       "prob_over_15": 0.7549,
       "prob_over_25": 0.5113,
       "prob_over_35": 0.2903,
-      "prob_btts": 0.5021,
-      "prob_home_scores": 0.8347,
-      "prob_away_scores": 0.6015,
+      "prob_btts": 0.5044,
+      "prob_home_scores": 0.833,
+      "prob_away_scores": 0.6054,
       "prob_score_matrix": [
         {
           "score": "1-0",
-          "prob": 0.1186
+          "prob": 0.1179
         },
         {
           "score": "1-1",
-          "prob": 0.1091
+          "prob": 0.1097
         },
         {
           "score": "2-0",
-          "prob": 0.1067
+          "prob": 0.1055
         },
         {
           "score": "2-1",
-          "prob": 0.0982
+          "prob": 0.0981
         },
         {
           "score": "0-0",
@@ -362,12 +364,189 @@
         }
       ],
       "live_watch": false,
-      "favori_team": "Bradford City"
+      "favori_team": "Cerezo Osaka"
     },
     {
-      "home_team": "Bristol Rovers",
-      "away_team": "Colchester United",
-      "league": "ENG-League Two",
+      "home_team": "Udinese",
+      "away_team": "Venezia",
+      "league": "Coppa Italia",
+      "time": "16h00",
+      "type": "grid",
+      "score": 5.7,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.5666,
+      "prob_x": 0.232,
+      "prob_2": 0.2014,
+      "prob_over": 0.5161,
+      "odd_1": 1.85,
+      "odd_x": 3.65,
+      "odd_2": 4.1,
+      "odd_over_25": 1.8,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.78,
+      "lam_away": 0.96,
+      "prob_over_05": 0.9354,
+      "prob_over_15": 0.7585,
+      "prob_over_25": 0.5161,
+      "prob_over_35": 0.2947,
+      "prob_btts": 0.513,
+      "prob_home_scores": 0.8314,
+      "prob_away_scores": 0.6171,
+      "prob_score_matrix": [
+        {
+          "score": "1-0",
+          "prob": 0.1149
+        },
+        {
+          "score": "1-1",
+          "prob": 0.1103
+        },
+        {
+          "score": "2-0",
+          "prob": 0.1023
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0982
+        },
+        {
+          "score": "0-0",
+          "prob": 0.0646
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Udinese"
+    },
+    {
+      "home_team": "RB Salzburg",
+      "away_team": "Rapid Wien",
+      "league": "AUT-Bundesliga",
+      "time": "18h30",
+      "type": "grid",
+      "score": 5.6,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.5592,
+      "prob_x": 0.2315,
+      "prob_2": 0.2093,
+      "prob_over": 0.5282,
+      "odd_1": 1.82,
+      "odd_x": 4.0,
+      "odd_2": 3.75,
+      "odd_over_25": null,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.79,
+      "lam_away": 1.0,
+      "prob_over_05": 0.9386,
+      "prob_over_15": 0.7672,
+      "prob_over_25": 0.5282,
+      "prob_over_35": 0.3058,
+      "prob_btts": 0.5266,
+      "prob_home_scores": 0.833,
+      "prob_away_scores": 0.6321,
+      "prob_score_matrix": [
+        {
+          "score": "1-0",
+          "prob": 0.1099
+        },
+        {
+          "score": "1-1",
+          "prob": 0.1099
+        },
+        {
+          "score": "2-0",
+          "prob": 0.0984
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0984
+        },
+        {
+          "score": "0-0",
+          "prob": 0.0614
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "RB Salzburg"
+    },
+    {
+      "home_team": "Sassuolo",
+      "away_team": "Frosinone",
+      "league": "Coppa Italia",
+      "time": "13h00",
+      "type": "grid",
+      "score": 5.6,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.564,
+      "prob_x": 0.2313,
+      "prob_2": 0.2047,
+      "prob_over": 0.5234,
+      "odd_1": 1.76,
+      "odd_x": 3.75,
+      "odd_2": 3.8,
+      "odd_over_25": null,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.79,
+      "lam_away": 0.98,
+      "prob_over_05": 0.9373,
+      "prob_over_15": 0.7638,
+      "prob_over_25": 0.5234,
+      "prob_over_35": 0.3014,
+      "prob_btts": 0.5204,
+      "prob_home_scores": 0.833,
+      "prob_away_scores": 0.6247,
+      "prob_score_matrix": [
+        {
+          "score": "1-0",
+          "prob": 0.1122
+        },
+        {
+          "score": "1-1",
+          "prob": 0.1099
+        },
+        {
+          "score": "2-0",
+          "prob": 0.1004
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0984
+        },
+        {
+          "score": "0-0",
+          "prob": 0.0627
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Sassuolo"
+    },
+    {
+      "home_team": "VfL Osnabrück",
+      "away_team": "Bayern Munich",
+      "league": "DFB Pokal",
       "time": "18h45",
       "type": "grid",
       "score": 5.6,
@@ -377,116 +556,175 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.5618,
-      "prob_x": 0.2331,
-      "prob_2": 0.205,
-      "prob_over": 0.5161,
-      "odd_1": 1.83,
-      "odd_x": 3.6,
-      "odd_2": 4.0,
-      "odd_over_25": 1.8,
+      "prob_1": 0.0699,
+      "prob_x": 0.1516,
+      "prob_2": 0.7785,
+      "prob_over": 0.5609,
+      "odd_1": 40.0,
+      "odd_x": 22.0,
+      "odd_2": 1.01,
+      "odd_over_25": null,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.77,
-      "lam_away": 0.97,
-      "prob_over_05": 0.9354,
-      "prob_over_15": 0.7585,
-      "prob_over_25": 0.5161,
-      "prob_over_35": 0.2947,
-      "prob_btts": 0.5152,
-      "prob_home_scores": 0.8297,
-      "prob_away_scores": 0.6209,
+      "lam_home": 0.56,
+      "lam_away": 2.37,
+      "prob_over_05": 0.9466,
+      "prob_over_15": 0.7901,
+      "prob_over_25": 0.5609,
+      "prob_over_35": 0.3371,
+      "prob_btts": 0.3887,
+      "prob_home_scores": 0.4288,
+      "prob_away_scores": 0.9065,
       "prob_score_matrix": [
         {
-          "score": "1-0",
-          "prob": 0.1143
+          "score": "0-2",
+          "prob": 0.15
+        },
+        {
+          "score": "0-1",
+          "prob": 0.1266
+        },
+        {
+          "score": "0-3",
+          "prob": 0.1185
+        },
+        {
+          "score": "1-2",
+          "prob": 0.084
         },
         {
           "score": "1-1",
-          "prob": 0.1109
-        },
-        {
-          "score": "2-0",
-          "prob": 0.1011
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0981
-        },
-        {
-          "score": "0-0",
-          "prob": 0.0646
+          "prob": 0.0709
         }
       ],
-      "live_watch": false,
-      "favori_team": "Bristol Rovers"
+      "live_watch": true,
+      "favori_team": "Bayern Munich"
     },
     {
-      "home_team": "Leicester City",
-      "away_team": "Plymouth Argyle",
-      "league": "ENG-League One",
-      "time": "18h45",
+      "home_team": "FC Thun",
+      "away_team": "FC Lausanne-Sport",
+      "league": "SUI-Super League",
+      "time": "18h30",
       "type": "grid",
-      "score": 5.4,
+      "score": 5.2,
       "selection": null,
       "market": null,
       "odd": null,
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.5426,
-      "prob_x": 0.2365,
-      "prob_2": 0.2209,
-      "prob_over": 0.521,
-      "odd_1": 1.89,
-      "odd_x": 3.8,
-      "odd_2": 3.63,
-      "odd_over_25": 1.66,
+      "prob_1": 0.5186,
+      "prob_x": 0.245,
+      "prob_2": 0.2364,
+      "prob_over": 0.5015,
+      "odd_1": 2.11,
+      "odd_x": 3.49,
+      "odd_2": 3.66,
+      "odd_over_25": null,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.74,
-      "lam_away": 1.02,
-      "prob_over_05": 0.9367,
-      "prob_over_15": 0.762,
-      "prob_over_25": 0.521,
-      "prob_over_35": 0.2992,
-      "prob_btts": 0.5272,
-      "prob_home_scores": 0.8245,
-      "prob_away_scores": 0.6394,
+      "lam_home": 1.65,
+      "lam_away": 1.03,
+      "prob_over_05": 0.9314,
+      "prob_over_15": 0.7477,
+      "prob_over_25": 0.5015,
+      "prob_over_35": 0.2815,
+      "prob_btts": 0.5195,
+      "prob_home_scores": 0.808,
+      "prob_away_scores": 0.643,
       "prob_score_matrix": [
         {
           "score": "1-1",
-          "prob": 0.1123
+          "prob": 0.1165
         },
         {
           "score": "1-0",
-          "prob": 0.1101
+          "prob": 0.1131
         },
         {
           "score": "2-1",
-          "prob": 0.0977
+          "prob": 0.0961
         },
         {
           "score": "2-0",
-          "prob": 0.0958
+          "prob": 0.0933
         },
         {
           "score": "0-1",
-          "prob": 0.0646
+          "prob": 0.0706
         }
       ],
       "live_watch": false,
-      "favori_team": "Leicester City"
+      "favori_team": "FC Thun"
     },
     {
-      "home_team": "Parma",
-      "away_team": "Cremonese",
-      "league": "Coppa Italia",
-      "time": "16h00",
+      "home_team": "Austria Wien",
+      "away_team": "WSG Tirol",
+      "league": "AUT-Bundesliga",
+      "time": "16h30",
+      "type": "grid",
+      "score": 5.2,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.5162,
+      "prob_x": 0.244,
+      "prob_2": 0.2398,
+      "prob_over": 0.5088,
+      "odd_1": 1.92,
+      "odd_x": 3.45,
+      "odd_2": 3.25,
+      "odd_over_25": null,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.66,
+      "lam_away": 1.05,
+      "prob_over_05": 0.9335,
+      "prob_over_15": 0.7531,
+      "prob_over_25": 0.5088,
+      "prob_over_35": 0.2881,
+      "prob_btts": 0.5265,
+      "prob_home_scores": 0.8099,
+      "prob_away_scores": 0.6501,
+      "prob_score_matrix": [
+        {
+          "score": "1-1",
+          "prob": 0.116
+        },
+        {
+          "score": "1-0",
+          "prob": 0.1105
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0963
+        },
+        {
+          "score": "2-0",
+          "prob": 0.0917
+        },
+        {
+          "score": "0-1",
+          "prob": 0.0699
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Austria Wien"
+    },
+    {
+      "home_team": "Burton Albion",
+      "away_team": "Wimbledon",
+      "league": "ENG-League One",
+      "time": "18h45",
       "type": "grid",
       "score": 5.1,
       "selection": null,
@@ -495,27 +733,27 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.5063,
-      "prob_x": 0.2487,
-      "prob_2": 0.245,
-      "prob_over": 0.494,
-      "odd_1": 2.05,
-      "odd_x": 3.2,
-      "odd_2": 3.4,
-      "odd_over_25": null,
+      "prob_1": 0.5087,
+      "prob_x": 0.2488,
+      "prob_2": 0.2425,
+      "prob_over": 0.4916,
+      "odd_1": 2.11,
+      "odd_x": 3.24,
+      "odd_2": 3.5,
+      "odd_over_25": 2.1,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
       "lam_home": 1.61,
-      "lam_away": 1.04,
-      "prob_over_05": 0.9293,
-      "prob_over_15": 0.7421,
-      "prob_over_25": 0.494,
-      "prob_over_35": 0.2749,
-      "prob_btts": 0.5173,
+      "lam_away": 1.03,
+      "prob_over_05": 0.9286,
+      "prob_over_15": 0.7402,
+      "prob_over_25": 0.4916,
+      "prob_over_35": 0.2727,
+      "prob_btts": 0.5145,
       "prob_home_scores": 0.8001,
-      "prob_away_scores": 0.6465,
+      "prob_away_scores": 0.643,
       "prob_score_matrix": [
         {
           "score": "1-1",
@@ -523,15 +761,15 @@
         },
         {
           "score": "1-0",
-          "prob": 0.1137
+          "prob": 0.1149
         },
         {
           "score": "2-1",
-          "prob": 0.0952
+          "prob": 0.0953
         },
         {
           "score": "2-0",
-          "prob": 0.0916
+          "prob": 0.0925
         },
         {
           "score": "0-1",
@@ -539,11 +777,70 @@
         }
       ],
       "live_watch": false,
-      "favori_team": "Parma"
+      "favori_team": "Burton Albion"
     },
     {
-      "home_team": "Doncaster Rovers",
-      "away_team": "Notts County",
+      "home_team": "Reading",
+      "away_team": "Mansfield Town",
+      "league": "ENG-League One",
+      "time": "19h00",
+      "type": "grid",
+      "score": 5.1,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.5138,
+      "prob_x": 0.2449,
+      "prob_2": 0.2413,
+      "prob_over": 0.5064,
+      "odd_1": 2.03,
+      "odd_x": 3.56,
+      "odd_2": 3.4,
+      "odd_over_25": 1.73,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.65,
+      "lam_away": 1.05,
+      "prob_over_05": 0.9328,
+      "prob_over_15": 0.7513,
+      "prob_over_25": 0.5064,
+      "prob_over_35": 0.2859,
+      "prob_btts": 0.5252,
+      "prob_home_scores": 0.808,
+      "prob_away_scores": 0.6501,
+      "prob_score_matrix": [
+        {
+          "score": "1-1",
+          "prob": 0.1164
+        },
+        {
+          "score": "1-0",
+          "prob": 0.1109
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0961
+        },
+        {
+          "score": "2-0",
+          "prob": 0.0915
+        },
+        {
+          "score": "0-1",
+          "prob": 0.0706
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Reading"
+    },
+    {
+      "home_team": "Barnsley",
+      "away_team": "Blackpool",
       "league": "ENG-League One",
       "time": "18h45",
       "type": "grid",
@@ -554,35 +851,35 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.4747,
-      "prob_x": 0.2531,
-      "prob_2": 0.2722,
-      "prob_over": 0.4965,
-      "odd_1": 2.17,
-      "odd_x": 3.3,
-      "odd_2": 3.0,
-      "odd_over_25": 1.86,
+      "prob_1": 0.4726,
+      "prob_x": 0.2518,
+      "prob_2": 0.2756,
+      "prob_over": 0.5039,
+      "odd_1": 2.2,
+      "odd_x": 3.6,
+      "odd_2": 2.95,
+      "odd_over_25": 1.68,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.55,
-      "lam_away": 1.11,
-      "prob_over_05": 0.9301,
-      "prob_over_15": 0.744,
-      "prob_over_25": 0.4965,
-      "prob_over_35": 0.2771,
-      "prob_btts": 0.5281,
-      "prob_home_scores": 0.7878,
-      "prob_away_scores": 0.6704,
+      "lam_home": 1.56,
+      "lam_away": 1.13,
+      "prob_over_05": 0.9321,
+      "prob_over_15": 0.7495,
+      "prob_over_25": 0.5039,
+      "prob_over_35": 0.2837,
+      "prob_btts": 0.5347,
+      "prob_home_scores": 0.7899,
+      "prob_away_scores": 0.677,
       "prob_score_matrix": [
         {
           "score": "1-1",
-          "prob": 0.1203
+          "prob": 0.1197
         },
         {
           "score": "1-0",
-          "prob": 0.1084
+          "prob": 0.1059
         },
         {
           "score": "2-1",
@@ -590,20 +887,20 @@
         },
         {
           "score": "2-0",
-          "prob": 0.084
+          "prob": 0.0826
         },
         {
           "score": "0-1",
-          "prob": 0.0776
+          "prob": 0.0767
         }
       ],
       "live_watch": false,
-      "favori_team": "Doncaster Rovers"
+      "favori_team": "Barnsley"
     },
     {
-      "home_team": "Crewe Alexandra",
-      "away_team": "Walsall",
-      "league": "ENG-League Two",
+      "home_team": "Luton",
+      "away_team": "Stockport County FC",
+      "league": "ENG-League One",
       "time": "18h45",
       "type": "grid",
       "score": 5.0,
@@ -613,173 +910,55 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.4675,
-      "prob_x": 0.2535,
-      "prob_2": 0.279,
-      "prob_over": 0.499,
-      "odd_1": 2.25,
-      "odd_x": 3.5,
-      "odd_2": 2.95,
-      "odd_over_25": 1.78,
+      "prob_1": 0.4411,
+      "prob_x": 0.2559,
+      "prob_2": 0.303,
+      "prob_over": 0.5015,
+      "odd_1": 2.36,
+      "odd_x": 3.58,
+      "odd_2": 2.71,
+      "odd_over_25": 1.61,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.54,
-      "lam_away": 1.13,
-      "prob_over_05": 0.9307,
-      "prob_over_15": 0.7458,
-      "prob_over_25": 0.499,
-      "prob_over_35": 0.2793,
-      "prob_btts": 0.5318,
-      "prob_home_scores": 0.7856,
-      "prob_away_scores": 0.677,
+      "lam_home": 1.49,
+      "lam_away": 1.19,
+      "prob_over_05": 0.9314,
+      "prob_over_15": 0.7477,
+      "prob_over_25": 0.5015,
+      "prob_over_35": 0.2815,
+      "prob_btts": 0.539,
+      "prob_home_scores": 0.7746,
+      "prob_away_scores": 0.6958,
       "prob_score_matrix": [
         {
           "score": "1-1",
-          "prob": 0.1205
+          "prob": 0.1216
         },
         {
           "score": "1-0",
-          "prob": 0.1066
+          "prob": 0.1022
         },
         {
           "score": "2-1",
-          "prob": 0.0928
-        },
-        {
-          "score": "2-0",
-          "prob": 0.0821
+          "prob": 0.0906
         },
         {
           "score": "0-1",
-          "prob": 0.0783
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Crewe Alexandra"
-    },
-    {
-      "home_team": "Rochdale",
-      "away_team": "Shrewsbury Town",
-      "league": "ENG-League Two",
-      "time": "18h45",
-      "type": "grid",
-      "score": 5.0,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.4795,
-      "prob_x": 0.2524,
-      "prob_2": 0.268,
-      "prob_over": 0.4965,
-      "odd_1": 2.14,
-      "odd_x": 3.3,
-      "odd_2": 3.05,
-      "odd_over_25": 1.86,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.56,
-      "lam_away": 1.1,
-      "prob_over_05": 0.9301,
-      "prob_over_15": 0.744,
-      "prob_over_25": 0.4965,
-      "prob_over_35": 0.2771,
-      "prob_btts": 0.5269,
-      "prob_home_scores": 0.7899,
-      "prob_away_scores": 0.6671,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.12
-        },
-        {
-          "score": "1-0",
-          "prob": 0.1091
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0936
+          "prob": 0.0816
         },
         {
           "score": "2-0",
-          "prob": 0.0851
-        },
-        {
-          "score": "0-1",
-          "prob": 0.0769
+          "prob": 0.0761
         }
       ],
       "live_watch": false,
-      "favori_team": "Rochdale"
+      "favori_team": "Luton"
     },
     {
-      "home_team": "Tranmere Rovers",
-      "away_team": "Rotherham United",
-      "league": "ENG-League Two",
-      "time": "18h45",
-      "type": "grid",
-      "score": 5.0,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.4698,
-      "prob_x": 0.2537,
-      "prob_2": 0.2764,
-      "prob_over": 0.4965,
-      "odd_1": 2.25,
-      "odd_x": 3.4,
-      "odd_2": 3.0,
-      "odd_over_25": 1.99,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.54,
-      "lam_away": 1.12,
-      "prob_over_05": 0.9301,
-      "prob_over_15": 0.744,
-      "prob_over_25": 0.4965,
-      "prob_over_35": 0.2771,
-      "prob_btts": 0.5293,
-      "prob_home_scores": 0.7856,
-      "prob_away_scores": 0.6737,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.1206
-        },
-        {
-          "score": "1-0",
-          "prob": 0.1077
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0929
-        },
-        {
-          "score": "2-0",
-          "prob": 0.0829
-        },
-        {
-          "score": "0-1",
-          "prob": 0.0783
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Tranmere Rovers"
-    },
-    {
-      "home_team": "FC Zurich",
-      "away_team": "BSC Young Boys",
+      "home_team": "Grasshopper Zürich",
+      "away_team": "FC St Gallen",
       "league": "SUI-Super League",
       "time": "18h30",
       "type": "grid",
@@ -790,57 +969,57 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.2081,
-      "prob_x": 0.237,
-      "prob_2": 0.5549,
-      "prob_over": 0.5039,
-      "odd_1": 5.25,
-      "odd_x": 4.75,
-      "odd_2": 1.55,
+      "prob_1": 0.2556,
+      "prob_x": 0.2502,
+      "prob_2": 0.4941,
+      "prob_over": 0.4965,
+      "odd_1": 4.27,
+      "odd_x": 4.24,
+      "odd_2": 1.77,
       "odd_over_25": null,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 0.96,
-      "lam_away": 1.73,
-      "prob_over_05": 0.9321,
-      "prob_over_15": 0.7495,
-      "prob_over_25": 0.5039,
-      "prob_over_35": 0.2837,
-      "prob_btts": 0.5077,
-      "prob_home_scores": 0.6171,
-      "prob_away_scores": 0.8227,
+      "lam_home": 1.07,
+      "lam_away": 1.59,
+      "prob_over_05": 0.9301,
+      "prob_over_15": 0.744,
+      "prob_over_25": 0.4965,
+      "prob_over_35": 0.2771,
+      "prob_btts": 0.523,
+      "prob_home_scores": 0.657,
+      "prob_away_scores": 0.7961,
       "prob_score_matrix": [
         {
-          "score": "0-1",
-          "prob": 0.1174
-        },
-        {
           "score": "1-1",
-          "prob": 0.1127
+          "prob": 0.119
         },
         {
-          "score": "0-2",
-          "prob": 0.1016
+          "score": "0-1",
+          "prob": 0.1112
         },
         {
           "score": "1-2",
-          "prob": 0.0975
+          "prob": 0.0946
         },
         {
-          "score": "0-0",
-          "prob": 0.0679
+          "score": "0-2",
+          "prob": 0.0884
+        },
+        {
+          "score": "1-0",
+          "prob": 0.0748
         }
       ],
       "live_watch": false,
-      "favori_team": "BSC Young Boys"
+      "favori_team": "FC St Gallen"
     },
     {
-      "home_team": "Wolfsberger AC",
-      "away_team": "LASK",
-      "league": "AUT-Bundesliga",
-      "time": "17h30",
+      "home_team": "FC Machida Zelvia",
+      "away_team": "Kawasaki Frontale",
+      "league": "JPN-J1 League",
+      "time": "10h00",
       "type": "grid",
       "score": 5.0,
       "selection": null,
@@ -849,114 +1028,55 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.196,
-      "prob_x": 0.2345,
-      "prob_2": 0.5695,
-      "prob_over": 0.499,
-      "odd_1": 5.5,
-      "odd_x": 4.5,
-      "odd_2": 1.5,
+      "prob_1": 0.5035,
+      "prob_x": 0.2528,
+      "prob_2": 0.2437,
+      "prob_over": 0.4765,
+      "odd_1": 2.12,
+      "odd_x": 2.85,
+      "odd_2": 3.55,
       "odd_over_25": null,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 0.92,
-      "lam_away": 1.75,
-      "prob_over_05": 0.9307,
-      "prob_over_15": 0.7458,
-      "prob_over_25": 0.499,
-      "prob_over_35": 0.2793,
-      "prob_btts": 0.497,
-      "prob_home_scores": 0.6015,
-      "prob_away_scores": 0.8262,
-      "prob_score_matrix": [
-        {
-          "score": "0-1",
-          "prob": 0.1212
-        },
-        {
-          "score": "1-1",
-          "prob": 0.1115
-        },
-        {
-          "score": "0-2",
-          "prob": 0.106
-        },
-        {
-          "score": "1-2",
-          "prob": 0.0976
-        },
-        {
-          "score": "0-0",
-          "prob": 0.0693
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "LASK"
-    },
-    {
-      "home_team": "Bromley FC",
-      "away_team": "Leyton Orient",
-      "league": "ENG-League One",
-      "time": "18h45",
-      "type": "grid",
-      "score": 4.9,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.4208,
-      "prob_x": 0.2609,
-      "prob_2": 0.3183,
-      "prob_over": 0.4866,
-      "odd_1": 2.48,
-      "odd_x": 3.2,
-      "odd_2": 2.6,
-      "odd_over_25": 1.85,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.42,
-      "lam_away": 1.2,
-      "prob_over_05": 0.9272,
-      "prob_over_15": 0.7365,
-      "prob_over_25": 0.4866,
-      "prob_over_35": 0.2684,
-      "prob_btts": 0.5299,
-      "prob_home_scores": 0.7583,
-      "prob_away_scores": 0.6988,
+      "lam_home": 1.57,
+      "lam_away": 1.01,
+      "prob_over_05": 0.9242,
+      "prob_over_15": 0.7287,
+      "prob_over_25": 0.4765,
+      "prob_over_35": 0.2597,
+      "prob_btts": 0.5035,
+      "prob_home_scores": 0.792,
+      "prob_away_scores": 0.6358,
       "prob_score_matrix": [
         {
           "score": "1-1",
-          "prob": 0.1241
+          "prob": 0.1202
         },
         {
           "score": "1-0",
-          "prob": 0.1034
+          "prob": 0.119
         },
         {
           "score": "2-1",
-          "prob": 0.0881
+          "prob": 0.0943
+        },
+        {
+          "score": "2-0",
+          "prob": 0.0934
         },
         {
           "score": "0-1",
-          "prob": 0.0874
-        },
-        {
-          "score": "1-2",
-          "prob": 0.0744
+          "prob": 0.0765
         }
       ],
       "live_watch": false,
-      "favori_team": "Bromley FC"
+      "favori_team": "FC Machida Zelvia"
     },
     {
-      "home_team": "Peterborough United",
-      "away_team": "Stevenage",
+      "home_team": "Wigan Athletic",
+      "away_team": "Milton Keynes Dons",
       "league": "ENG-League One",
       "time": "18h45",
       "type": "grid",
@@ -967,175 +1087,57 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.4234,
-      "prob_x": 0.2601,
-      "prob_2": 0.3165,
-      "prob_over": 0.4891,
-      "odd_1": 2.5,
-      "odd_x": 3.4,
-      "odd_2": 2.65,
-      "odd_over_25": 1.94,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.43,
-      "lam_away": 1.2,
-      "prob_over_05": 0.9279,
-      "prob_over_15": 0.7384,
-      "prob_over_25": 0.4891,
-      "prob_over_35": 0.2705,
-      "prob_btts": 0.5316,
-      "prob_home_scores": 0.7607,
-      "prob_away_scores": 0.6988,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.1237
-        },
-        {
-          "score": "1-0",
-          "prob": 0.1031
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0884
-        },
-        {
-          "score": "0-1",
-          "prob": 0.0865
-        },
-        {
-          "score": "1-2",
-          "prob": 0.0742
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Peterborough United"
-    },
-    {
-      "home_team": "Wycombe Wanderers",
-      "away_team": "Sheffield Wednesday",
-      "league": "ENG-League One",
-      "time": "18h45",
-      "type": "grid",
-      "score": 4.9,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.4047,
-      "prob_x": 0.2601,
-      "prob_2": 0.3351,
+      "prob_1": 0.4479,
+      "prob_x": 0.2568,
+      "prob_2": 0.2953,
       "prob_over": 0.494,
-      "odd_1": 2.59,
-      "odd_x": 3.54,
-      "odd_2": 2.48,
-      "odd_over_25": 1.67,
+      "odd_1": 2.37,
+      "odd_x": 3.4,
+      "odd_2": 2.85,
+      "odd_over_25": 1.81,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.4,
-      "lam_away": 1.25,
+      "lam_home": 1.49,
+      "lam_away": 1.16,
       "prob_over_05": 0.9293,
       "prob_over_15": 0.7421,
       "prob_over_25": 0.494,
       "prob_over_35": 0.2749,
-      "prob_btts": 0.5375,
-      "prob_home_scores": 0.7534,
-      "prob_away_scores": 0.7135,
+      "prob_btts": 0.5318,
+      "prob_home_scores": 0.7746,
+      "prob_away_scores": 0.6865,
       "prob_score_matrix": [
         {
           "score": "1-1",
-          "prob": 0.1236
+          "prob": 0.1221
         },
         {
           "score": "1-0",
-          "prob": 0.0989
-        },
-        {
-          "score": "0-1",
-          "prob": 0.0883
+          "prob": 0.1053
         },
         {
           "score": "2-1",
-          "prob": 0.0865
-        },
-        {
-          "score": "1-2",
-          "prob": 0.0773
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Sheffield Wednesday"
-    },
-    {
-      "home_team": "Accrington Stanley",
-      "away_team": "Grimsby Town",
-      "league": "ENG-League Two",
-      "time": "18h45",
-      "type": "grid",
-      "score": 4.9,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.3006,
-      "prob_x": 0.2592,
-      "prob_2": 0.4402,
-      "prob_over": 0.4866,
-      "odd_1": 3.6,
-      "odd_x": 3.75,
-      "odd_2": 1.98,
-      "odd_over_25": 1.89,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.16,
-      "lam_away": 1.46,
-      "prob_over_05": 0.9272,
-      "prob_over_15": 0.7365,
-      "prob_over_25": 0.4866,
-      "prob_over_35": 0.2684,
-      "prob_btts": 0.5271,
-      "prob_home_scores": 0.6865,
-      "prob_away_scores": 0.7678,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.1233
+          "prob": 0.091
         },
         {
           "score": "0-1",
-          "prob": 0.1063
+          "prob": 0.082
         },
         {
-          "score": "1-2",
-          "prob": 0.09
-        },
-        {
-          "score": "1-0",
-          "prob": 0.0845
-        },
-        {
-          "score": "0-2",
-          "prob": 0.0776
+          "score": "2-0",
+          "prob": 0.0784
         }
       ],
       "live_watch": false,
-      "favori_team": "Grimsby Town"
+      "favori_team": "Wigan Athletic"
     },
     {
-      "home_team": "Exeter City",
-      "away_team": "Barnet",
-      "league": "ENG-League Two",
-      "time": "18h45",
+      "home_team": "AGF Aarhus",
+      "away_team": "FC Midtjylland",
+      "league": "DEN-Superliga",
+      "time": "18h00",
       "type": "grid",
       "score": 4.9,
       "selection": null,
@@ -1144,175 +1146,116 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.3102,
-      "prob_x": 0.259,
-      "prob_2": 0.4308,
+      "prob_1": 0.328,
+      "prob_x": 0.2603,
+      "prob_2": 0.4117,
       "prob_over": 0.4916,
-      "odd_1": 3.4,
-      "odd_x": 3.75,
-      "odd_2": 1.98,
-      "odd_over_25": 1.66,
+      "odd_1": 3.2,
+      "odd_x": 3.65,
+      "odd_2": 2.06,
+      "odd_over_25": 1.57,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.19,
-      "lam_away": 1.45,
+      "lam_home": 1.23,
+      "lam_away": 1.41,
       "prob_over_05": 0.9286,
       "prob_over_15": 0.7402,
       "prob_over_25": 0.4916,
       "prob_over_35": 0.2727,
-      "prob_btts": 0.5326,
-      "prob_home_scores": 0.6958,
-      "prob_away_scores": 0.7654,
+      "prob_btts": 0.5349,
+      "prob_home_scores": 0.7077,
+      "prob_away_scores": 0.7559,
       "prob_score_matrix": [
         {
           "score": "1-1",
-          "prob": 0.1231
+          "prob": 0.1238
         },
         {
           "score": "0-1",
-          "prob": 0.1035
-        },
-        {
-          "score": "1-2",
-          "prob": 0.0893
+          "prob": 0.1006
         },
         {
           "score": "1-0",
-          "prob": 0.0849
+          "prob": 0.0878
+        },
+        {
+          "score": "1-2",
+          "prob": 0.0873
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0761
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "FC Midtjylland"
+    },
+    {
+      "home_team": "JEF United Chiba",
+      "away_team": "Fagiano Okayama",
+      "league": "JPN-J1 League",
+      "time": "10h00",
+      "type": "grid",
+      "score": 4.9,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.1331,
+      "prob_x": 0.211,
+      "prob_2": 0.6559,
+      "prob_over": 0.4891,
+      "odd_1": 9.5,
+      "odd_x": 4.1,
+      "odd_2": 1.21,
+      "odd_over_25": 1.71,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 0.72,
+      "lam_away": 1.91,
+      "prob_over_05": 0.9279,
+      "prob_over_15": 0.7383,
+      "prob_over_25": 0.4891,
+      "prob_over_35": 0.2705,
+      "prob_btts": 0.4372,
+      "prob_home_scores": 0.5133,
+      "prob_away_scores": 0.8519,
+      "prob_score_matrix": [
+        {
+          "score": "0-1",
+          "prob": 0.1377
         },
         {
           "score": "0-2",
-          "prob": 0.075
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Barnet"
-    },
-    {
-      "home_team": "Fleetwood Town",
-      "away_team": "Oldham Athletic",
-      "league": "ENG-League Two",
-      "time": "18h45",
-      "type": "grid",
-      "score": 4.9,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.4234,
-      "prob_x": 0.2601,
-      "prob_2": 0.3165,
-      "prob_over": 0.4891,
-      "odd_1": 2.5,
-      "odd_x": 3.4,
-      "odd_2": 2.65,
-      "odd_over_25": 1.94,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.43,
-      "lam_away": 1.2,
-      "prob_over_05": 0.9279,
-      "prob_over_15": 0.7384,
-      "prob_over_25": 0.4891,
-      "prob_over_35": 0.2705,
-      "prob_btts": 0.5316,
-      "prob_home_scores": 0.7607,
-      "prob_away_scores": 0.6988,
-      "prob_score_matrix": [
+          "prob": 0.1315
+        },
         {
           "score": "1-1",
-          "prob": 0.1237
-        },
-        {
-          "score": "1-0",
-          "prob": 0.1031
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0884
-        },
-        {
-          "score": "0-1",
-          "prob": 0.0865
+          "prob": 0.0991
         },
         {
           "score": "1-2",
-          "prob": 0.0742
+          "prob": 0.0947
+        },
+        {
+          "score": "0-3",
+          "prob": 0.0837
         }
       ],
-      "live_watch": false,
-      "favori_team": "Fleetwood Town"
+      "live_watch": true,
+      "favori_team": "Fagiano Okayama"
     },
     {
-      "home_team": "Swindon Town",
-      "away_team": "Port Vale",
-      "league": "ENG-League Two",
-      "time": "18h45",
-      "type": "grid",
-      "score": 4.9,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.3527,
-      "prob_x": 0.262,
-      "prob_2": 0.3853,
-      "prob_over": 0.4891,
-      "odd_1": 3.0,
-      "odd_x": 3.5,
-      "odd_2": 2.2,
-      "odd_over_25": 1.82,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.28,
-      "lam_away": 1.35,
-      "prob_over_05": 0.9279,
-      "prob_over_15": 0.7384,
-      "prob_over_25": 0.4891,
-      "prob_over_35": 0.2705,
-      "prob_btts": 0.5348,
-      "prob_home_scores": 0.722,
-      "prob_away_scores": 0.7408,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.1246
-        },
-        {
-          "score": "0-1",
-          "prob": 0.0973
-        },
-        {
-          "score": "1-0",
-          "prob": 0.0923
-        },
-        {
-          "score": "1-2",
-          "prob": 0.0841
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0797
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Port Vale"
-    },
-    {
-      "home_team": "Cheltenham Town",
-      "away_team": "York City",
-      "league": "ENG-League Two",
-      "time": "18h45",
+      "home_team": "Sint Truiden",
+      "away_team": "Union Saint-Gilloise",
+      "league": "BEL-Pro League",
+      "time": "18h30",
       "type": "grid",
       "score": 4.8,
       "selection": null,
@@ -1321,57 +1264,116 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.2867,
-      "prob_x": 0.2588,
-      "prob_2": 0.4545,
-      "prob_over": 0.4816,
-      "odd_1": 3.75,
-      "odd_x": 3.6,
+      "prob_1": 0.3068,
+      "prob_x": 0.2605,
+      "prob_2": 0.4327,
+      "prob_over": 0.4841,
+      "odd_1": 3.3,
+      "odd_x": 3.4,
       "odd_2": 1.9,
-      "odd_over_25": 1.78,
+      "odd_over_25": null,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.12,
-      "lam_away": 1.48,
-      "prob_over_05": 0.9257,
-      "prob_over_15": 0.7326,
-      "prob_over_25": 0.4816,
-      "prob_over_35": 0.264,
-      "prob_btts": 0.5204,
-      "prob_home_scores": 0.6737,
-      "prob_away_scores": 0.7724,
+      "lam_home": 1.17,
+      "lam_away": 1.44,
+      "prob_over_05": 0.9265,
+      "prob_over_15": 0.7345,
+      "prob_over_25": 0.4841,
+      "prob_over_35": 0.2662,
+      "prob_btts": 0.5262,
+      "prob_home_scores": 0.6896,
+      "prob_away_scores": 0.7631,
       "prob_score_matrix": [
         {
           "score": "1-1",
-          "prob": 0.1231
+          "prob": 0.1239
         },
         {
           "score": "0-1",
-          "prob": 0.1099
+          "prob": 0.1059
         },
         {
           "score": "1-2",
-          "prob": 0.0911
+          "prob": 0.0892
         },
         {
           "score": "1-0",
-          "prob": 0.0832
+          "prob": 0.086
         },
         {
           "score": "0-2",
-          "prob": 0.0813
+          "prob": 0.0762
         }
       ],
       "live_watch": false,
-      "favori_team": "York City"
+      "favori_team": "Union Saint-Gilloise"
     },
     {
-      "home_team": "Londrina",
-      "away_team": "Juventude",
-      "league": "BRA-Serie B",
-      "time": "22h30",
+      "home_team": "Tokyo Verdy",
+      "away_team": "Vissel Kobe",
+      "league": "JPN-J1 League",
+      "time": "10h00",
+      "type": "grid",
+      "score": 4.8,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.1445,
+      "prob_x": 0.2179,
+      "prob_2": 0.6375,
+      "prob_over": 0.4841,
+      "odd_1": 9.0,
+      "odd_x": 3.95,
+      "odd_2": 1.3,
+      "odd_over_25": 1.97,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 0.75,
+      "lam_away": 1.86,
+      "prob_over_05": 0.9265,
+      "prob_over_15": 0.7345,
+      "prob_over_25": 0.4841,
+      "prob_over_35": 0.2662,
+      "prob_btts": 0.4455,
+      "prob_home_scores": 0.5276,
+      "prob_away_scores": 0.8443,
+      "prob_score_matrix": [
+        {
+          "score": "0-1",
+          "prob": 0.1368
+        },
+        {
+          "score": "0-2",
+          "prob": 0.1272
+        },
+        {
+          "score": "1-1",
+          "prob": 0.1026
+        },
+        {
+          "score": "1-2",
+          "prob": 0.0954
+        },
+        {
+          "score": "0-3",
+          "prob": 0.0789
+        }
+      ],
+      "live_watch": true,
+      "favori_team": "Vissel Kobe"
+    },
+    {
+      "home_team": "Yokohama F Marinos",
+      "away_team": "Kyoto Purple Sanga",
+      "league": "JPN-J1 League",
+      "time": "10h00",
       "type": "grid",
       "score": 4.7,
       "selection": null,
@@ -1380,51 +1382,228 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.3853,
-      "prob_x": 0.2673,
-      "prob_2": 0.3474,
-      "prob_over": 0.4664,
-      "odd_1": 2.9,
+      "prob_1": 0.4708,
+      "prob_x": 0.2607,
+      "prob_2": 0.2685,
+      "prob_over": 0.4639,
+      "odd_1": 2.3,
+      "odd_x": 2.7,
+      "odd_2": 3.25,
+      "odd_over_25": null,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.48,
+      "lam_away": 1.05,
+      "prob_over_05": 0.9203,
+      "prob_over_15": 0.7188,
+      "prob_over_25": 0.4639,
+      "prob_over_35": 0.2489,
+      "prob_btts": 0.5021,
+      "prob_home_scores": 0.7724,
+      "prob_away_scores": 0.6501,
+      "prob_score_matrix": [
+        {
+          "score": "1-1",
+          "prob": 0.1238
+        },
+        {
+          "score": "1-0",
+          "prob": 0.1179
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0916
+        },
+        {
+          "score": "2-0",
+          "prob": 0.0872
+        },
+        {
+          "score": "0-1",
+          "prob": 0.0836
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Yokohama F Marinos"
+    },
+    {
+      "home_team": "Shimizu S Pulse",
+      "away_team": "FC Tokyo",
+      "league": "JPN-J1 League",
+      "time": "10h00",
+      "type": "grid",
+      "score": 4.6,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.265,
+      "prob_x": 0.2621,
+      "prob_2": 0.4729,
+      "prob_over": 0.4562,
+      "odd_1": 4.25,
       "odd_x": 3.0,
-      "odd_2": 2.55,
-      "odd_over_25": 2.4,
+      "odd_2": 1.88,
+      "odd_over_25": null,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.03,
+      "lam_away": 1.47,
+      "prob_over_05": 0.9179,
+      "prob_over_15": 0.7127,
+      "prob_over_25": 0.4562,
+      "prob_over_35": 0.2424,
+      "prob_btts": 0.4952,
+      "prob_home_scores": 0.643,
+      "prob_away_scores": 0.7701,
+      "prob_score_matrix": [
+        {
+          "score": "1-1",
+          "prob": 0.1243
+        },
+        {
+          "score": "0-1",
+          "prob": 0.1207
+        },
+        {
+          "score": "1-2",
+          "prob": 0.0913
+        },
+        {
+          "score": "0-2",
+          "prob": 0.0887
+        },
+        {
+          "score": "1-0",
+          "prob": 0.0845
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "FC Tokyo"
+    },
+    {
+      "home_team": "V-Varen Nagasaki",
+      "away_team": "Gamba Osaka",
+      "league": "JPN-J1 League",
+      "time": "10h00",
+      "type": "grid",
+      "score": 4.6,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.3965,
+      "prob_x": 0.2687,
+      "prob_2": 0.3347,
+      "prob_over": 0.4587,
+      "odd_1": 2.75,
+      "odd_x": 2.75,
+      "odd_2": 2.63,
+      "odd_over_25": null,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.32,
+      "lam_away": 1.19,
+      "prob_over_05": 0.9187,
+      "prob_over_15": 0.7147,
+      "prob_over_25": 0.4587,
+      "prob_over_35": 0.2446,
+      "prob_btts": 0.5099,
+      "prob_home_scores": 0.7329,
+      "prob_away_scores": 0.6958,
+      "prob_score_matrix": [
+        {
+          "score": "1-1",
+          "prob": 0.1277
+        },
+        {
+          "score": "1-0",
+          "prob": 0.1073
+        },
+        {
+          "score": "0-1",
+          "prob": 0.0967
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0843
+        },
+        {
+          "score": "0-0",
+          "prob": 0.0813
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Gamba Osaka"
+    },
+    {
+      "home_team": "Avispa Fukuoka",
+      "away_team": "Urawa Red Diamonds",
+      "league": "JPN-J1 League",
+      "time": "10h00",
+      "type": "grid",
+      "score": 4.5,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.4026,
+      "prob_x": 0.2715,
+      "prob_2": 0.3259,
+      "prob_over": 0.4459,
+      "odd_1": 2.7,
+      "odd_x": 2.48,
+      "odd_2": 2.7,
+      "odd_over_25": null,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
       "lam_home": 1.31,
-      "lam_away": 1.23,
-      "prob_over_05": 0.9211,
-      "prob_over_15": 0.7208,
-      "prob_over_25": 0.4664,
-      "prob_over_35": 0.251,
-      "prob_btts": 0.5168,
+      "lam_away": 1.15,
+      "prob_over_05": 0.9146,
+      "prob_over_15": 0.7044,
+      "prob_over_25": 0.4459,
+      "prob_over_35": 0.2339,
+      "prob_btts": 0.499,
       "prob_home_scores": 0.7302,
-      "prob_away_scores": 0.7077,
+      "prob_away_scores": 0.6834,
       "prob_score_matrix": [
         {
           "score": "1-1",
-          "prob": 0.1271
+          "prob": 0.1287
         },
         {
           "score": "1-0",
-          "prob": 0.1033
+          "prob": 0.1119
         },
         {
           "score": "0-1",
-          "prob": 0.097
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0832
+          "prob": 0.0983
         },
         {
           "score": "0-0",
-          "prob": 0.0789
+          "prob": 0.0854
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0843
         }
       ],
       "live_watch": false,
-      "favori_team": "Juventude"
+      "favori_team": "Avispa Fukuoka"
     }
   ]
 }
