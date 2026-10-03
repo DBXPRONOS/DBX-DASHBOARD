@@ -1,138 +1,616 @@
 {
-  "date": "2026-10-02",
-  "updated_at": "11:51",
+  "date": "2026-10-03",
+  "updated_at": "11:04",
   "stats": {
-    "total_picks": 17,
+    "total_picks": 32,
     "safes_vip": 0,
-    "value_bets": 0,
-    "score_moyen": 5.3,
+    "value_bets": 3,
+    "score_moyen": 5.7,
     "real_stats_picks": 0,
-    "odds_only_picks": 17
+    "odds_only_picks": 32
   },
   "picks": [
     {
-      "home_team": "France",
-      "away_team": "Italy",
-      "league": "UEFA Nations League",
-      "time": "18h45",
-      "type": "grid",
-      "score": 6.7,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
+      "home_team": "Atlético Tucuman",
+      "away_team": "Barracas Central",
+      "league": "ARG-Primera Division",
+      "time": "20h00",
+      "type": "value",
+      "score": 5.9,
+      "selection": "Atlético Tucuman gagne",
+      "market": "1X2 - 1",
+      "odd": 1.85,
+      "model_prob": 0.5915,
       "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.6739,
-      "prob_x": 0.1938,
-      "prob_2": 0.1323,
-      "prob_over": 0.5586,
-      "odd_1": 1.44,
-      "odd_x": 4.6,
-      "odd_2": 5.9,
+      "tags": [
+        "Value +5.1pp edge"
+      ],
+      "prob_1": 0.5915,
+      "prob_x": 0.2302,
+      "prob_2": 0.1782,
+      "prob_over": 0.4916,
+      "odd_1": 1.85,
+      "odd_x": 3.1,
+      "odd_2": 5.26,
       "odd_over_25": null,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 2.11,
-      "lam_away": 0.81,
-      "prob_over_05": 0.9461,
-      "prob_over_15": 0.7886,
-      "prob_over_25": 0.5586,
-      "prob_over_35": 0.3348,
-      "prob_btts": 0.4878,
-      "prob_home_scores": 0.8788,
-      "prob_away_scores": 0.5551,
+      "lam_home": 1.78,
+      "lam_away": 0.86,
+      "prob_over_05": 0.9286,
+      "prob_over_15": 0.7402,
+      "prob_over_25": 0.4916,
+      "prob_over_35": 0.2727,
+      "prob_btts": 0.4796,
+      "prob_home_scores": 0.8314,
+      "prob_away_scores": 0.5768,
       "prob_score_matrix": [
         {
-          "score": "2-0",
-          "prob": 0.1201
+          "score": "1-0",
+          "prob": 0.127
         },
         {
-          "score": "1-0",
-          "prob": 0.1138
+          "score": "2-0",
+          "prob": 0.1131
+        },
+        {
+          "score": "1-1",
+          "prob": 0.1092
         },
         {
           "score": "2-1",
           "prob": 0.0972
         },
         {
-          "score": "1-1",
-          "prob": 0.0922
-        },
-        {
-          "score": "3-0",
-          "prob": 0.0844
+          "score": "0-0",
+          "prob": 0.0714
         }
       ],
-      "live_watch": true,
-      "favori_team": "France"
+      "live_watch": false,
+      "favori_team": "Atlético Tucuman"
     },
     {
-      "home_team": "Belgium",
-      "away_team": "Turkey",
+      "home_team": "Defensa y Justicia",
+      "away_team": "San Lorenzo",
+      "league": "ARG-Primera Division",
+      "time": "17h45",
+      "type": "value",
+      "score": 5.3,
+      "selection": "Defensa y Justicia gagne",
+      "market": "1X2 - 1",
+      "odd": 2.13,
+      "model_prob": 0.5257,
+      "stake_pct": 0.02,
+      "tags": [
+        "Value +5.6pp edge"
+      ],
+      "prob_1": 0.5257,
+      "prob_x": 0.2492,
+      "prob_2": 0.2251,
+      "prob_over": 0.474,
+      "odd_1": 2.13,
+      "odd_x": 2.93,
+      "odd_2": 4.12,
+      "odd_over_25": 2.5,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.61,
+      "lam_away": 0.96,
+      "prob_over_05": 0.9235,
+      "prob_over_15": 0.7268,
+      "prob_over_25": 0.474,
+      "prob_over_35": 0.2575,
+      "prob_btts": 0.4938,
+      "prob_home_scores": 0.8001,
+      "prob_away_scores": 0.6171,
+      "prob_score_matrix": [
+        {
+          "score": "1-0",
+          "prob": 0.1232
+        },
+        {
+          "score": "1-1",
+          "prob": 0.1183
+        },
+        {
+          "score": "2-0",
+          "prob": 0.0992
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0952
+        },
+        {
+          "score": "0-0",
+          "prob": 0.0765
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Defensa y Justicia"
+    },
+    {
+      "home_team": "Newells Old Boys",
+      "away_team": "Lanus",
+      "league": "ARG-Primera Division",
+      "time": "20h00",
+      "type": "value",
+      "score": 4.6,
+      "selection": "Newells Old Boys gagne",
+      "market": "1X2 - 1",
+      "odd": 2.79,
+      "model_prob": 0.409,
+      "stake_pct": 0.02,
+      "tags": [
+        "Value +5.1pp edge"
+      ],
+      "prob_1": 0.409,
+      "prob_x": 0.2675,
+      "prob_2": 0.3236,
+      "prob_over": 0.4613,
+      "odd_1": 2.79,
+      "odd_x": 2.92,
+      "odd_2": 2.84,
+      "odd_over_25": null,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.35,
+      "lam_away": 1.17,
+      "prob_over_05": 0.9195,
+      "prob_over_15": 0.7168,
+      "prob_over_25": 0.4613,
+      "prob_over_35": 0.2467,
+      "prob_btts": 0.5109,
+      "prob_home_scores": 0.7408,
+      "prob_away_scores": 0.6896,
+      "prob_score_matrix": [
+        {
+          "score": "1-1",
+          "prob": 0.1271
+        },
+        {
+          "score": "1-0",
+          "prob": 0.1086
+        },
+        {
+          "score": "0-1",
+          "prob": 0.0941
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0858
+        },
+        {
+          "score": "0-0",
+          "prob": 0.0805
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Newells Old Boys"
+    },
+    {
+      "home_team": "Spain",
+      "away_team": "Czech Republic",
       "league": "UEFA Nations League",
       "time": "18h45",
       "type": "grid",
-      "score": 6.5,
+      "score": 8.3,
       "selection": null,
       "market": null,
       "odd": null,
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.6458,
-      "prob_x": 0.2041,
-      "prob_2": 0.1501,
-      "prob_over": 0.5517,
-      "odd_1": 1.59,
-      "odd_x": 4.65,
-      "odd_2": 5.35,
+      "prob_1": 0.8338,
+      "prob_x": 0.1161,
+      "prob_2": 0.0499,
+      "prob_over": 0.6444,
+      "odd_1": 1.07,
+      "odd_x": 14.2,
+      "odd_2": 42.0,
       "odd_over_25": null,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 2.03,
+      "lam_home": 2.77,
+      "lam_away": 0.55,
+      "prob_over_05": 0.9637,
+      "prob_over_15": 0.8437,
+      "prob_over_25": 0.6444,
+      "prob_over_35": 0.4239,
+      "prob_btts": 0.3965,
+      "prob_home_scores": 0.9373,
+      "prob_away_scores": 0.4231,
+      "prob_score_matrix": [
+        {
+          "score": "2-0",
+          "prob": 0.1387
+        },
+        {
+          "score": "3-0",
+          "prob": 0.1281
+        },
+        {
+          "score": "1-0",
+          "prob": 0.1001
+        },
+        {
+          "score": "4-0",
+          "prob": 0.0887
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0763
+        }
+      ],
+      "live_watch": true,
+      "favori_team": "Spain"
+    },
+    {
+      "home_team": "Belarus",
+      "away_team": "San Marino",
+      "league": "UEFA Nations League",
+      "time": "16h00",
+      "type": "grid",
+      "score": 8.2,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.8247,
+      "prob_x": 0.1216,
+      "prob_2": 0.0535,
+      "prob_over": 0.6344,
+      "odd_1": 1.1,
+      "odd_x": 11.1,
+      "odd_2": 34.0,
+      "odd_over_25": null,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 2.71,
+      "lam_away": 0.56,
+      "prob_over_05": 0.9619,
+      "prob_over_15": 0.8376,
+      "prob_over_25": 0.6344,
+      "prob_over_35": 0.4129,
+      "prob_btts": 0.4002,
+      "prob_home_scores": 0.9335,
+      "prob_away_scores": 0.4289,
+      "prob_score_matrix": [
+        {
+          "score": "2-0",
+          "prob": 0.1396
+        },
+        {
+          "score": "3-0",
+          "prob": 0.1261
+        },
+        {
+          "score": "1-0",
+          "prob": 0.103
+        },
+        {
+          "score": "4-0",
+          "prob": 0.0854
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0782
+        }
+      ],
+      "live_watch": true,
+      "favori_team": "Belarus"
+    },
+    {
+      "home_team": "Cuiabá",
+      "away_team": "Ponte Preta",
+      "league": "BRA-Serie B",
+      "time": "20h00",
+      "type": "grid",
+      "score": 8.0,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.797,
+      "prob_x": 0.1373,
+      "prob_2": 0.0656,
+      "prob_over": 0.6116,
+      "odd_1": 1.14,
+      "odd_x": 7.5,
+      "odd_2": 18.0,
+      "odd_over_25": null,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 2.56,
+      "lam_away": 0.6,
+      "prob_over_05": 0.9575,
+      "prob_over_15": 0.8234,
+      "prob_over_25": 0.6116,
+      "prob_over_35": 0.3885,
+      "prob_btts": 0.4163,
+      "prob_home_scores": 0.9227,
+      "prob_away_scores": 0.4512,
+      "prob_score_matrix": [
+        {
+          "score": "2-0",
+          "prob": 0.139
+        },
+        {
+          "score": "3-0",
+          "prob": 0.1186
+        },
+        {
+          "score": "1-0",
+          "prob": 0.1086
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0834
+        },
+        {
+          "score": "4-0",
+          "prob": 0.0759
+        }
+      ],
+      "live_watch": true,
+      "favori_team": "Cuiabá"
+    },
+    {
+      "home_team": "Switzerland",
+      "away_team": "Slovenia",
+      "league": "UEFA Nations League",
+      "time": "18h45",
+      "type": "grid",
+      "score": 7.5,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.7483,
+      "prob_x": 0.1627,
+      "prob_2": 0.089,
+      "prob_over": 0.579,
+      "odd_1": 1.27,
+      "odd_x": 5.25,
+      "odd_2": 11.0,
+      "odd_over_25": 1.65,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 2.34,
+      "lam_away": 0.67,
+      "prob_over_05": 0.9507,
+      "prob_over_15": 0.8023,
+      "prob_over_25": 0.579,
+      "prob_over_35": 0.355,
+      "prob_btts": 0.4412,
+      "prob_home_scores": 0.9037,
+      "prob_away_scores": 0.4883,
+      "prob_score_matrix": [
+        {
+          "score": "2-0",
+          "prob": 0.135
+        },
+        {
+          "score": "1-0",
+          "prob": 0.1153
+        },
+        {
+          "score": "3-0",
+          "prob": 0.1053
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0904
+        },
+        {
+          "score": "1-1",
+          "prob": 0.0773
+        }
+      ],
+      "live_watch": true,
+      "favori_team": "Switzerland"
+    },
+    {
+      "home_team": "Atletico Goianiense",
+      "away_team": "América Mineiro",
+      "league": "BRA-Serie B",
+      "time": "19h00",
+      "type": "grid",
+      "score": 7.2,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.7237,
+      "prob_x": 0.1742,
+      "prob_2": 0.1021,
+      "prob_over": 0.5678,
+      "odd_1": 1.33,
+      "odd_x": 4.8,
+      "odd_2": 9.0,
+      "odd_over_25": 1.71,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 2.25,
+      "lam_away": 0.71,
+      "prob_over_05": 0.9482,
+      "prob_over_15": 0.7948,
+      "prob_over_25": 0.5678,
+      "prob_over_35": 0.3438,
+      "prob_btts": 0.4548,
+      "prob_home_scores": 0.8946,
+      "prob_away_scores": 0.5084,
+      "prob_score_matrix": [
+        {
+          "score": "2-0",
+          "prob": 0.1312
+        },
+        {
+          "score": "1-0",
+          "prob": 0.1166
+        },
+        {
+          "score": "3-0",
+          "prob": 0.0984
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0931
+        },
+        {
+          "score": "1-1",
+          "prob": 0.0828
+        }
+      ],
+      "live_watch": true,
+      "favori_team": "Atletico Goianiense"
+    },
+    {
+      "home_team": "Iceland",
+      "away_team": "Bulgaria",
+      "league": "UEFA Nations League",
+      "time": "16h00",
+      "type": "grid",
+      "score": 7.0,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.6979,
+      "prob_x": 0.1856,
+      "prob_2": 0.1165,
+      "prob_over": 0.5563,
+      "odd_1": 1.43,
+      "odd_x": 4.5,
+      "odd_2": 7.5,
+      "odd_over_25": 1.83,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 2.16,
+      "lam_away": 0.75,
+      "prob_over_05": 0.9455,
+      "prob_over_15": 0.787,
+      "prob_over_25": 0.5563,
+      "prob_over_35": 0.3326,
+      "prob_btts": 0.4668,
+      "prob_home_scores": 0.8847,
+      "prob_away_scores": 0.5276,
+      "prob_score_matrix": [
+        {
+          "score": "2-0",
+          "prob": 0.1271
+        },
+        {
+          "score": "1-0",
+          "prob": 0.1177
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0953
+        },
+        {
+          "score": "3-0",
+          "prob": 0.0915
+        },
+        {
+          "score": "1-1",
+          "prob": 0.0883
+        }
+      ],
+      "live_watch": true,
+      "favori_team": "Iceland"
+    },
+    {
+      "home_team": "Almería",
+      "away_team": "Burgos CF",
+      "league": "ESP-La Liga 2",
+      "time": "14h15",
+      "type": "grid",
+      "score": 6.3,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.6312,
+      "prob_x": 0.2112,
+      "prob_2": 0.1575,
+      "prob_over": 0.5353,
+      "odd_1": 1.61,
+      "odd_x": 3.95,
+      "odd_2": 5.25,
+      "odd_over_25": 1.8,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.96,
       "lam_away": 0.86,
-      "prob_over_05": 0.9444,
-      "prob_over_15": 0.7838,
-      "prob_over_25": 0.5517,
-      "prob_over_35": 0.3281,
-      "prob_btts": 0.5011,
-      "prob_home_scores": 0.8687,
+      "prob_over_05": 0.9404,
+      "prob_over_15": 0.7723,
+      "prob_over_25": 0.5353,
+      "prob_over_35": 0.3125,
+      "prob_btts": 0.4956,
+      "prob_home_scores": 0.8591,
       "prob_away_scores": 0.5768,
       "prob_score_matrix": [
+        {
+          "score": "1-0",
+          "prob": 0.1168
+        },
         {
           "score": "2-0",
           "prob": 0.1145
         },
         {
-          "score": "1-0",
-          "prob": 0.1128
+          "score": "1-1",
+          "prob": 0.1005
         },
         {
           "score": "2-1",
           "prob": 0.0985
         },
         {
-          "score": "1-1",
-          "prob": 0.097
-        },
-        {
           "score": "3-0",
-          "prob": 0.0775
+          "prob": 0.0748
         }
       ],
       "live_watch": false,
-      "favori_team": "Belgium"
+      "favori_team": "Almería"
     },
     {
-      "home_team": "Poland",
-      "away_team": "Romania",
-      "league": "UEFA Nations League",
-      "time": "18h45",
+      "home_team": "Walsall",
+      "away_team": "Crawley Town",
+      "league": "ENG-League Two",
+      "time": "14h00",
       "type": "grid",
       "score": 6.2,
       "selection": null,
@@ -141,56 +619,233 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.6235,
-      "prob_x": 0.2116,
-      "prob_2": 0.1649,
-      "prob_over": 0.5471,
+      "prob_1": 0.6196,
+      "prob_x": 0.2143,
+      "prob_2": 0.1661,
+      "prob_over": 0.5377,
       "odd_1": 1.6,
-      "odd_x": 4.4,
+      "odd_x": 4.05,
       "odd_2": 4.7,
       "odd_over_25": null,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.97,
+      "lam_home": 1.94,
+      "lam_away": 0.89,
+      "prob_over_05": 0.941,
+      "prob_over_15": 0.774,
+      "prob_over_25": 0.5377,
+      "prob_over_35": 0.3147,
+      "prob_btts": 0.5046,
+      "prob_home_scores": 0.8563,
+      "prob_away_scores": 0.5893,
+      "prob_score_matrix": [
+        {
+          "score": "1-0",
+          "prob": 0.1145
+        },
+        {
+          "score": "2-0",
+          "prob": 0.1111
+        },
+        {
+          "score": "1-1",
+          "prob": 0.1019
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0988
+        },
+        {
+          "score": "3-0",
+          "prob": 0.0718
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Walsall"
+    },
+    {
+      "home_team": "Chesterfield FC",
+      "away_team": "Tranmere Rovers",
+      "league": "ENG-League Two",
+      "time": "11h30",
+      "type": "grid",
+      "score": 6.1,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.6084,
+      "prob_x": 0.2187,
+      "prob_2": 0.1729,
+      "prob_over": 0.5305,
+      "odd_1": 1.62,
+      "odd_x": 3.8,
+      "odd_2": 4.5,
+      "odd_over_25": 1.62,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.9,
       "lam_away": 0.9,
-      "prob_over_05": 0.9433,
-      "prob_over_15": 0.7806,
-      "prob_over_25": 0.5471,
-      "prob_over_35": 0.3237,
-      "prob_btts": 0.5107,
-      "prob_home_scores": 0.8605,
+      "prob_over_05": 0.9392,
+      "prob_over_15": 0.7689,
+      "prob_over_25": 0.5305,
+      "prob_over_35": 0.3081,
+      "prob_btts": 0.5047,
+      "prob_home_scores": 0.8504,
       "prob_away_scores": 0.5934,
       "prob_score_matrix": [
         {
           "score": "1-0",
-          "prob": 0.1117
+          "prob": 0.1155
         },
         {
           "score": "2-0",
-          "prob": 0.11
+          "prob": 0.1098
         },
         {
           "score": "1-1",
-          "prob": 0.1005
+          "prob": 0.104
         },
         {
           "score": "2-1",
-          "prob": 0.099
+          "prob": 0.0988
         },
         {
           "score": "3-0",
-          "prob": 0.0722
+          "prob": 0.0695
         }
       ],
       "live_watch": false,
-      "favori_team": "Poland"
+      "favori_team": "Chesterfield FC"
     },
     {
-      "home_team": "Kazakhstan",
-      "away_team": "Moldova",
-      "league": "UEFA Nations League",
+      "home_team": "Salford City",
+      "away_team": "Fleetwood Town",
+      "league": "ENG-League Two",
+      "time": "14h00",
+      "type": "grid",
+      "score": 6.1,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.606,
+      "prob_x": 0.2189,
+      "prob_2": 0.1751,
+      "prob_over": 0.5329,
+      "odd_1": 1.62,
+      "odd_x": 3.85,
+      "odd_2": 4.4,
+      "odd_over_25": 1.62,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.9,
+      "lam_away": 0.91,
+      "prob_over_05": 0.9398,
+      "prob_over_15": 0.7706,
+      "prob_over_25": 0.5329,
+      "prob_over_35": 0.3103,
+      "prob_btts": 0.5081,
+      "prob_home_scores": 0.8504,
+      "prob_away_scores": 0.5975,
+      "prob_score_matrix": [
+        {
+          "score": "1-0",
+          "prob": 0.1144
+        },
+        {
+          "score": "2-0",
+          "prob": 0.1087
+        },
+        {
+          "score": "1-1",
+          "prob": 0.1041
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0989
+        },
+        {
+          "score": "3-0",
+          "prob": 0.0688
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Salford City"
+    },
+    {
+      "home_team": "Grimsby Town",
+      "away_team": "Shrewsbury Town",
+      "league": "ENG-League Two",
+      "time": "14h00",
+      "type": "grid",
+      "score": 6.1,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.6084,
+      "prob_x": 0.2187,
+      "prob_2": 0.1729,
+      "prob_over": 0.5305,
+      "odd_1": 1.68,
+      "odd_x": 3.85,
+      "odd_2": 4.75,
+      "odd_over_25": 1.76,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.9,
+      "lam_away": 0.9,
+      "prob_over_05": 0.9392,
+      "prob_over_15": 0.7689,
+      "prob_over_25": 0.5305,
+      "prob_over_35": 0.3081,
+      "prob_btts": 0.5047,
+      "prob_home_scores": 0.8504,
+      "prob_away_scores": 0.5934,
+      "prob_score_matrix": [
+        {
+          "score": "1-0",
+          "prob": 0.1155
+        },
+        {
+          "score": "2-0",
+          "prob": 0.1098
+        },
+        {
+          "score": "1-1",
+          "prob": 0.104
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0988
+        },
+        {
+          "score": "3-0",
+          "prob": 0.0695
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Grimsby Town"
+    },
+    {
+      "home_team": "Gillingham",
+      "away_team": "Newport County",
+      "league": "ENG-League Two",
       "time": "14h00",
       "type": "grid",
       "score": 5.7,
@@ -200,234 +855,234 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.5717,
-      "prob_x": 0.2326,
-      "prob_2": 0.1957,
-      "prob_over": 0.5064,
-      "odd_1": 1.82,
-      "odd_x": 3.3,
-      "odd_2": 4.3,
-      "odd_over_25": null,
+      "prob_1": 0.5666,
+      "prob_x": 0.232,
+      "prob_2": 0.2014,
+      "prob_over": 0.5161,
+      "odd_1": 1.84,
+      "odd_x": 3.65,
+      "odd_2": 4.12,
+      "odd_over_25": 1.94,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.77,
-      "lam_away": 0.93,
-      "prob_over_05": 0.9328,
-      "prob_over_15": 0.7513,
-      "prob_over_25": 0.5064,
-      "prob_over_35": 0.2859,
-      "prob_btts": 0.5023,
-      "prob_home_scores": 0.8297,
-      "prob_away_scores": 0.6054,
-      "prob_score_matrix": [
-        {
-          "score": "1-0",
-          "prob": 0.119
-        },
-        {
-          "score": "1-1",
-          "prob": 0.1106
-        },
-        {
-          "score": "2-0",
-          "prob": 0.1053
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0979
-        },
-        {
-          "score": "0-0",
-          "prob": 0.0672
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Kazakhstan"
-    },
-    {
-      "home_team": "Ukraine",
-      "away_team": "Northern Ireland",
-      "league": "UEFA Nations League",
-      "time": "18h45",
-      "type": "grid",
-      "score": 5.5,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.5453,
-      "prob_x": 0.2411,
-      "prob_2": 0.2136,
-      "prob_over": 0.494,
-      "odd_1": 1.96,
-      "odd_x": 3.15,
-      "odd_2": 4.1,
-      "odd_over_25": null,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.69,
+      "lam_home": 1.78,
       "lam_away": 0.96,
-      "prob_over_05": 0.9293,
-      "prob_over_15": 0.7421,
-      "prob_over_25": 0.494,
-      "prob_over_35": 0.2749,
-      "prob_btts": 0.5032,
-      "prob_home_scores": 0.8155,
+      "prob_over_05": 0.9354,
+      "prob_over_15": 0.7585,
+      "prob_over_25": 0.5161,
+      "prob_over_35": 0.2947,
+      "prob_btts": 0.513,
+      "prob_home_scores": 0.8314,
       "prob_away_scores": 0.6171,
       "prob_score_matrix": [
         {
           "score": "1-0",
-          "prob": 0.1194
+          "prob": 0.1149
         },
         {
           "score": "1-1",
-          "prob": 0.1146
+          "prob": 0.1103
         },
         {
           "score": "2-0",
-          "prob": 0.1009
+          "prob": 0.1023
         },
         {
           "score": "2-1",
-          "prob": 0.0969
+          "prob": 0.0982
         },
         {
           "score": "0-0",
-          "prob": 0.0707
+          "prob": 0.0646
         }
       ],
       "live_watch": false,
-      "favori_team": "Ukraine"
+      "favori_team": "Gillingham"
     },
     {
-      "home_team": "Juventude",
-      "away_team": "Operario PR",
-      "league": "BRA-Serie B",
-      "time": "23h45",
+      "home_team": "Atletico Mineiro",
+      "away_team": "Bragantino-SP",
+      "league": "BRA-Brasileirao",
+      "time": "21h30",
       "type": "grid",
-      "score": 5.5,
+      "score": 5.6,
       "selection": null,
       "market": null,
       "odd": null,
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.5454,
-      "prob_x": 0.242,
-      "prob_2": 0.2126,
-      "prob_over": 0.4891,
+      "prob_1": 0.5571,
+      "prob_x": 0.2342,
+      "prob_2": 0.2087,
+      "prob_over": 0.5161,
       "odd_1": 1.88,
-      "odd_x": 2.95,
-      "odd_2": 3.9,
+      "odd_x": 3.65,
+      "odd_2": 3.95,
+      "odd_over_25": 1.78,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.76,
+      "lam_away": 0.98,
+      "prob_over_05": 0.9354,
+      "prob_over_15": 0.7585,
+      "prob_over_25": 0.5161,
+      "prob_over_35": 0.2947,
+      "prob_btts": 0.5172,
+      "prob_home_scores": 0.828,
+      "prob_away_scores": 0.6247,
+      "prob_score_matrix": [
+        {
+          "score": "1-0",
+          "prob": 0.1136
+        },
+        {
+          "score": "1-1",
+          "prob": 0.1114
+        },
+        {
+          "score": "2-0",
+          "prob": 0.1
+        },
+        {
+          "score": "2-1",
+          "prob": 0.098
+        },
+        {
+          "score": "0-0",
+          "prob": 0.0646
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Atletico Mineiro"
+    },
+    {
+      "home_team": "Sabadell FC",
+      "away_team": "Andorra CF",
+      "league": "ESP-La Liga 2",
+      "time": "16h30",
+      "type": "grid",
+      "score": 5.2,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.521,
+      "prob_x": 0.245,
+      "prob_2": 0.234,
+      "prob_over": 0.499,
+      "odd_1": 1.93,
+      "odd_x": 3.15,
+      "odd_2": 3.45,
+      "odd_over_25": 2.04,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.65,
+      "lam_away": 1.02,
+      "prob_over_05": 0.9307,
+      "prob_over_15": 0.7458,
+      "prob_over_25": 0.499,
+      "prob_over_35": 0.2793,
+      "prob_btts": 0.5166,
+      "prob_home_scores": 0.808,
+      "prob_away_scores": 0.6394,
+      "prob_score_matrix": [
+        {
+          "score": "1-1",
+          "prob": 0.1166
+        },
+        {
+          "score": "1-0",
+          "prob": 0.1143
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0962
+        },
+        {
+          "score": "2-0",
+          "prob": 0.0943
+        },
+        {
+          "score": "0-1",
+          "prob": 0.0706
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Sabadell FC"
+    },
+    {
+      "home_team": "Rochdale",
+      "away_team": "Swindon Town",
+      "league": "ENG-League Two",
+      "time": "14h00",
+      "type": "grid",
+      "score": 5.1,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.4705,
+      "prob_x": 0.2506,
+      "prob_2": 0.2789,
+      "prob_over": 0.5113,
+      "odd_1": 2.2,
+      "odd_x": 3.75,
+      "odd_2": 2.9,
       "odd_over_25": null,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.68,
-      "lam_away": 0.95,
-      "prob_over_05": 0.9279,
-      "prob_over_15": 0.7384,
-      "prob_over_25": 0.4891,
-      "prob_over_35": 0.2705,
-      "prob_btts": 0.499,
-      "prob_home_scores": 0.8136,
-      "prob_away_scores": 0.6133,
+      "lam_home": 1.57,
+      "lam_away": 1.15,
+      "prob_over_05": 0.9341,
+      "prob_over_15": 0.7549,
+      "prob_over_25": 0.5113,
+      "prob_over_35": 0.2903,
+      "prob_btts": 0.5412,
+      "prob_home_scores": 0.792,
+      "prob_away_scores": 0.6834,
       "prob_score_matrix": [
         {
-          "score": "1-0",
-          "prob": 0.1211
-        },
-        {
           "score": "1-1",
-          "prob": 0.115
+          "prob": 0.1189
         },
         {
-          "score": "2-0",
-          "prob": 0.1017
+          "score": "1-0",
+          "prob": 0.1034
         },
         {
           "score": "2-1",
-          "prob": 0.0966
-        },
-        {
-          "score": "0-0",
-          "prob": 0.0721
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Juventude"
-    },
-    {
-      "home_team": "Sao Paulo",
-      "away_team": "Santos",
-      "league": "BRA-Brasileirao",
-      "time": "23h00",
-      "type": "grid",
-      "score": 5.3,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.5283,
-      "prob_x": 0.2441,
-      "prob_2": 0.2276,
-      "prob_over": 0.4965,
-      "odd_1": 2.03,
-      "odd_x": 3.32,
-      "odd_2": 3.75,
-      "odd_over_25": 2.1,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.66,
-      "lam_away": 1.0,
-      "prob_over_05": 0.9301,
-      "prob_over_15": 0.744,
-      "prob_over_25": 0.4965,
-      "prob_over_35": 0.2771,
-      "prob_btts": 0.5119,
-      "prob_home_scores": 0.8099,
-      "prob_away_scores": 0.6321,
-      "prob_score_matrix": [
-        {
-          "score": "1-0",
-          "prob": 0.1161
-        },
-        {
-          "score": "1-1",
-          "prob": 0.1161
+          "prob": 0.0934
         },
         {
           "score": "2-0",
-          "prob": 0.0964
+          "prob": 0.0812
         },
         {
-          "score": "2-1",
-          "prob": 0.0964
-        },
-        {
-          "score": "0-0",
-          "prob": 0.0699
+          "score": "0-1",
+          "prob": 0.0758
         }
       ],
       "live_watch": false,
-      "favori_team": "Sao Paulo"
+      "favori_team": "Rochdale"
     },
     {
-      "home_team": "Hungary",
-      "away_team": "Georgia",
-      "league": "UEFA Nations League",
-      "time": "18h45",
+      "home_team": "Reading",
+      "away_team": "Bradford City",
+      "league": "ENG-League One",
+      "time": "14h00",
       "type": "grid",
       "score": 5.0,
       "selection": null,
@@ -436,27 +1091,27 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.5038,
-      "prob_x": 0.2497,
-      "prob_2": 0.2466,
-      "prob_over": 0.4916,
-      "odd_1": 2.1,
-      "odd_x": 3.2,
+      "prob_1": 0.5014,
+      "prob_x": 0.2495,
+      "prob_2": 0.2491,
+      "prob_over": 0.494,
+      "odd_1": 2.12,
+      "odd_x": 3.25,
       "odd_2": 3.4,
-      "odd_over_25": 2.1,
+      "odd_over_25": 1.88,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
       "lam_home": 1.6,
-      "lam_away": 1.04,
-      "prob_over_05": 0.9286,
-      "prob_over_15": 0.7402,
-      "prob_over_25": 0.4916,
-      "prob_over_35": 0.2727,
-      "prob_btts": 0.516,
+      "lam_away": 1.05,
+      "prob_over_05": 0.9293,
+      "prob_over_15": 0.7421,
+      "prob_over_25": 0.494,
+      "prob_over_35": 0.2749,
+      "prob_btts": 0.5188,
       "prob_home_scores": 0.7981,
-      "prob_away_scores": 0.6465,
+      "prob_away_scores": 0.6501,
       "prob_score_matrix": [
         {
           "score": "1-1",
@@ -464,7 +1119,7 @@
         },
         {
           "score": "1-0",
-          "prob": 0.1142
+          "prob": 0.113
         },
         {
           "score": "2-1",
@@ -472,7 +1127,7 @@
         },
         {
           "score": "2-0",
-          "prob": 0.0913
+          "prob": 0.0904
         },
         {
           "score": "0-1",
@@ -480,70 +1135,306 @@
         }
       ],
       "live_watch": false,
-      "favori_team": "Hungary"
+      "favori_team": "Reading"
     },
     {
-      "home_team": "Universidad de Concepción",
-      "away_team": "Huachipato",
-      "league": "CHI-Primera Division",
-      "time": "23h00",
+      "home_team": "Leyton Orient",
+      "away_team": "Plymouth Argyle",
+      "league": "ENG-League One",
+      "time": "14h00",
       "type": "grid",
-      "score": 5.0,
+      "score": 4.9,
       "selection": null,
       "market": null,
       "odd": null,
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.4869,
-      "prob_x": 0.2508,
-      "prob_2": 0.2622,
-      "prob_over": 0.499,
-      "odd_1": 2.16,
-      "odd_x": 3.45,
-      "odd_2": 3.15,
-      "odd_over_25": 1.76,
+      "prob_1": 0.3273,
+      "prob_x": 0.2615,
+      "prob_2": 0.4112,
+      "prob_over": 0.4866,
+      "odd_1": 3.25,
+      "odd_x": 3.55,
+      "odd_2": 2.08,
+      "odd_over_25": 1.64,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.58,
-      "lam_away": 1.09,
-      "prob_over_05": 0.9307,
-      "prob_over_15": 0.7458,
-      "prob_over_25": 0.499,
-      "prob_over_35": 0.2793,
-      "prob_btts": 0.5271,
-      "prob_home_scores": 0.794,
-      "prob_away_scores": 0.6638,
+      "lam_home": 1.22,
+      "lam_away": 1.4,
+      "prob_over_05": 0.9272,
+      "prob_over_15": 0.7365,
+      "prob_over_25": 0.4866,
+      "prob_over_35": 0.2684,
+      "prob_btts": 0.531,
+      "prob_home_scores": 0.7048,
+      "prob_away_scores": 0.7534,
       "prob_score_matrix": [
         {
           "score": "1-1",
-          "prob": 0.1193
-        },
-        {
-          "score": "1-0",
-          "prob": 0.1094
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0942
-        },
-        {
-          "score": "2-0",
-          "prob": 0.0864
+          "prob": 0.1243
         },
         {
           "score": "0-1",
-          "prob": 0.0755
+          "prob": 0.1019
+        },
+        {
+          "score": "1-0",
+          "prob": 0.0888
+        },
+        {
+          "score": "1-2",
+          "prob": 0.087
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0759
         }
       ],
       "live_watch": false,
-      "favori_team": "Universidad de Concepción"
+      "favori_team": "Plymouth Argyle"
     },
     {
-      "home_team": "Cyprus",
-      "away_team": "Armenia",
+      "home_team": "Accrington Stanley",
+      "away_team": "Cheltenham Town",
+      "league": "ENG-League Two",
+      "time": "14h00",
+      "type": "grid",
+      "score": 4.9,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.4143,
+      "prob_x": 0.2596,
+      "prob_2": 0.3261,
+      "prob_over": 0.494,
+      "odd_1": 2.55,
+      "odd_x": 3.5,
+      "odd_2": 2.55,
+      "odd_over_25": 1.78,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.42,
+      "lam_away": 1.23,
+      "prob_over_05": 0.9293,
+      "prob_over_15": 0.7421,
+      "prob_over_25": 0.494,
+      "prob_over_35": 0.2749,
+      "prob_btts": 0.5366,
+      "prob_home_scores": 0.7583,
+      "prob_away_scores": 0.7077,
+      "prob_score_matrix": [
+        {
+          "score": "1-1",
+          "prob": 0.1234
+        },
+        {
+          "score": "1-0",
+          "prob": 0.1003
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0876
+        },
+        {
+          "score": "0-1",
+          "prob": 0.0869
+        },
+        {
+          "score": "1-2",
+          "prob": 0.0759
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Accrington Stanley"
+    },
+    {
+      "home_team": "Crewe Alexandra",
+      "away_team": "Bristol Rovers",
+      "league": "ENG-League Two",
+      "time": "14h00",
+      "type": "grid",
+      "score": 4.9,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.3853,
+      "prob_x": 0.262,
+      "prob_2": 0.3527,
+      "prob_over": 0.4891,
+      "odd_1": 2.75,
+      "odd_x": 3.5,
+      "odd_2": 2.4,
+      "odd_over_25": 1.8,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.35,
+      "lam_away": 1.28,
+      "prob_over_05": 0.9279,
+      "prob_over_15": 0.7384,
+      "prob_over_25": 0.4891,
+      "prob_over_35": 0.2705,
+      "prob_btts": 0.5348,
+      "prob_home_scores": 0.7408,
+      "prob_away_scores": 0.722,
+      "prob_score_matrix": [
+        {
+          "score": "1-1",
+          "prob": 0.1246
+        },
+        {
+          "score": "1-0",
+          "prob": 0.0973
+        },
+        {
+          "score": "0-1",
+          "prob": 0.0923
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0841
+        },
+        {
+          "score": "1-2",
+          "prob": 0.0797
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Bristol Rovers"
+    },
+    {
+      "home_team": "Exeter City",
+      "away_team": "Rotherham United",
+      "league": "ENG-League Two",
+      "time": "14h00",
+      "type": "grid",
+      "score": 4.9,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.4431,
+      "prob_x": 0.2573,
+      "prob_2": 0.2996,
+      "prob_over": 0.494,
+      "odd_1": 2.4,
+      "odd_x": 3.4,
+      "odd_2": 2.8,
+      "odd_over_25": 1.89,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.48,
+      "lam_away": 1.17,
+      "prob_over_05": 0.9293,
+      "prob_over_15": 0.7421,
+      "prob_over_25": 0.494,
+      "prob_over_35": 0.2749,
+      "prob_btts": 0.5326,
+      "prob_home_scores": 0.7724,
+      "prob_away_scores": 0.6896,
+      "prob_score_matrix": [
+        {
+          "score": "1-1",
+          "prob": 0.1223
+        },
+        {
+          "score": "1-0",
+          "prob": 0.1046
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0905
+        },
+        {
+          "score": "0-1",
+          "prob": 0.0827
+        },
+        {
+          "score": "2-0",
+          "prob": 0.0774
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Exeter City"
+    },
+    {
+      "home_team": "Albacete",
+      "away_team": "SD Eibar",
+      "league": "ESP-La Liga 2",
+      "time": "12h00",
+      "type": "grid",
+      "score": 4.9,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.416,
+      "prob_x": 0.2612,
+      "prob_2": 0.3228,
+      "prob_over": 0.4866,
+      "odd_1": 2.45,
+      "odd_x": 3.15,
+      "odd_2": 2.5,
+      "odd_over_25": 1.81,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.41,
+      "lam_away": 1.21,
+      "prob_over_05": 0.9272,
+      "prob_over_15": 0.7365,
+      "prob_over_25": 0.4866,
+      "prob_over_35": 0.2684,
+      "prob_btts": 0.5305,
+      "prob_home_scores": 0.7559,
+      "prob_away_scores": 0.7018,
+      "prob_score_matrix": [
+        {
+          "score": "1-1",
+          "prob": 0.1242
+        },
+        {
+          "score": "1-0",
+          "prob": 0.1027
+        },
+        {
+          "score": "0-1",
+          "prob": 0.0881
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0876
+        },
+        {
+          "score": "1-2",
+          "prob": 0.0751
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Albacete"
+    },
+    {
+      "home_team": "Croatia",
+      "away_team": "England",
       "league": "UEFA Nations League",
       "time": "16h00",
       "type": "grid",
@@ -554,116 +1445,57 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.4891,
-      "prob_x": 0.252,
-      "prob_2": 0.2588,
-      "prob_over": 0.4916,
-      "odd_1": 2.2,
-      "odd_x": 3.3,
-      "odd_2": 3.3,
-      "odd_over_25": 2.04,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.57,
-      "lam_away": 1.07,
-      "prob_over_05": 0.9286,
-      "prob_over_15": 0.7402,
-      "prob_over_25": 0.4916,
-      "prob_over_35": 0.2727,
-      "prob_btts": 0.5203,
-      "prob_home_scores": 0.792,
-      "prob_away_scores": 0.657,
-      "prob_score_matrix": [
-        {
-          "score": "1-1",
-          "prob": 0.1199
-        },
-        {
-          "score": "1-0",
-          "prob": 0.112
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0941
-        },
-        {
-          "score": "2-0",
-          "prob": 0.0879
-        },
-        {
-          "score": "0-1",
-          "prob": 0.0764
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Cyprus"
-    },
-    {
-      "home_team": "Bosnia & Herzegovina",
-      "away_team": "Sweden",
-      "league": "UEFA Nations League",
-      "time": "18h45",
-      "type": "grid",
-      "score": 4.9,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.3859,
-      "prob_x": 0.2608,
-      "prob_2": 0.3533,
-      "prob_over": 0.494,
-      "odd_1": 2.83,
-      "odd_x": 3.68,
-      "odd_2": 2.46,
+      "prob_1": 0.24,
+      "prob_x": 0.2489,
+      "prob_2": 0.5111,
+      "prob_over": 0.4891,
+      "odd_1": 4.7,
+      "odd_x": 4.05,
+      "odd_2": 1.75,
       "odd_over_25": 1.68,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.36,
-      "lam_away": 1.29,
-      "prob_over_05": 0.9293,
-      "prob_over_15": 0.7421,
-      "prob_over_25": 0.494,
-      "prob_over_35": 0.2749,
-      "prob_btts": 0.5387,
-      "prob_home_scores": 0.7433,
-      "prob_away_scores": 0.7247,
+      "lam_home": 1.02,
+      "lam_away": 1.61,
+      "prob_over_05": 0.9279,
+      "prob_over_15": 0.7384,
+      "prob_over_25": 0.4891,
+      "prob_over_35": 0.2705,
+      "prob_btts": 0.5116,
+      "prob_home_scores": 0.6394,
+      "prob_away_scores": 0.8001,
       "prob_score_matrix": [
         {
           "score": "1-1",
-          "prob": 0.124
-        },
-        {
-          "score": "1-0",
-          "prob": 0.0961
+          "prob": 0.1184
         },
         {
           "score": "0-1",
-          "prob": 0.0911
-        },
-        {
-          "score": "2-1",
-          "prob": 0.0843
+          "prob": 0.116
         },
         {
           "score": "1-2",
-          "prob": 0.0799
+          "prob": 0.0953
+        },
+        {
+          "score": "0-2",
+          "prob": 0.0934
+        },
+        {
+          "score": "1-0",
+          "prob": 0.0735
         }
       ],
       "live_watch": false,
-      "favori_team": "Sweden"
+      "favori_team": "England"
     },
     {
-      "home_team": "CD Eldense",
-      "away_team": "Oviedo",
-      "league": "ESP-La Liga 2",
-      "time": "18h30",
+      "home_team": "Burton Albion",
+      "away_team": "Huddersfield Town",
+      "league": "ENG-League One",
+      "time": "14h00",
       "type": "grid",
       "score": 4.8,
       "selection": null,
@@ -672,27 +1504,86 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.4323,
-      "prob_x": 0.2616,
-      "prob_2": 0.306,
-      "prob_over": 0.4791,
-      "odd_1": 2.4,
-      "odd_x": 2.95,
-      "odd_2": 2.7,
-      "odd_over_25": 2.3,
+      "prob_1": 0.2936,
+      "prob_x": 0.2591,
+      "prob_2": 0.4473,
+      "prob_over": 0.4841,
+      "odd_1": 3.65,
+      "odd_x": 3.6,
+      "odd_2": 1.94,
+      "odd_over_25": 1.72,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.43,
-      "lam_away": 1.16,
-      "prob_over_05": 0.925,
-      "prob_over_15": 0.7307,
-      "prob_over_25": 0.4791,
-      "prob_over_35": 0.2618,
-      "prob_btts": 0.5222,
-      "prob_home_scores": 0.7607,
-      "prob_away_scores": 0.6865,
+      "lam_home": 1.14,
+      "lam_away": 1.47,
+      "prob_over_05": 0.9265,
+      "prob_over_15": 0.7345,
+      "prob_over_25": 0.4841,
+      "prob_over_35": 0.2662,
+      "prob_btts": 0.5238,
+      "prob_home_scores": 0.6802,
+      "prob_away_scores": 0.7701,
+      "prob_score_matrix": [
+        {
+          "score": "1-1",
+          "prob": 0.1232
+        },
+        {
+          "score": "0-1",
+          "prob": 0.1081
+        },
+        {
+          "score": "1-2",
+          "prob": 0.0906
+        },
+        {
+          "score": "1-0",
+          "prob": 0.0838
+        },
+        {
+          "score": "0-2",
+          "prob": 0.0795
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Huddersfield Town"
+    },
+    {
+      "home_team": "Avai",
+      "away_team": "Ceará",
+      "league": "BRA-Serie B",
+      "time": "14h00",
+      "type": "grid",
+      "score": 4.8,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.4395,
+      "prob_x": 0.2615,
+      "prob_2": 0.299,
+      "prob_over": 0.4765,
+      "odd_1": 2.45,
+      "odd_x": 3.05,
+      "odd_2": 2.9,
+      "odd_over_25": 2.4,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.44,
+      "lam_away": 1.14,
+      "prob_over_05": 0.9242,
+      "prob_over_15": 0.7287,
+      "prob_over_25": 0.4765,
+      "prob_over_35": 0.2597,
+      "prob_btts": 0.519,
+      "prob_home_scores": 0.7631,
+      "prob_away_scores": 0.6802,
       "prob_score_matrix": [
         {
           "score": "1-1",
@@ -700,29 +1591,29 @@
         },
         {
           "score": "1-0",
-          "prob": 0.1073
+          "prob": 0.1091
         },
         {
           "score": "2-1",
-          "prob": 0.089
+          "prob": 0.0896
         },
         {
           "score": "0-1",
-          "prob": 0.087
+          "prob": 0.0864
         },
         {
           "score": "2-0",
-          "prob": 0.0767
+          "prob": 0.0786
         }
       ],
       "live_watch": false,
-      "favori_team": "CD Eldense"
+      "favori_team": "Avai"
     },
     {
-      "home_team": "Latvia",
-      "away_team": "Montenegro",
-      "league": "UEFA Nations League",
-      "time": "16h00",
+      "home_team": "Botafogo-SP",
+      "away_team": "Vila Nova",
+      "league": "BRA-Serie B",
+      "time": "21h30",
       "type": "grid",
       "score": 4.8,
       "selection": null,
@@ -731,175 +1622,57 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.2316,
-      "prob_x": 0.2501,
-      "prob_2": 0.5183,
+      "prob_1": 0.4395,
+      "prob_x": 0.2615,
+      "prob_2": 0.299,
       "prob_over": 0.4765,
-      "odd_1": 5.2,
-      "odd_x": 3.85,
-      "odd_2": 1.81,
-      "odd_over_25": null,
+      "odd_1": 2.48,
+      "odd_x": 3.05,
+      "odd_2": 2.9,
+      "odd_over_25": 2.32,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 0.98,
-      "lam_away": 1.6,
+      "lam_home": 1.44,
+      "lam_away": 1.14,
       "prob_over_05": 0.9242,
       "prob_over_15": 0.7287,
       "prob_over_25": 0.4765,
       "prob_over_35": 0.2597,
-      "prob_btts": 0.4986,
-      "prob_home_scores": 0.6247,
-      "prob_away_scores": 0.7981,
-      "prob_score_matrix": [
-        {
-          "score": "0-1",
-          "prob": 0.1212
-        },
-        {
-          "score": "1-1",
-          "prob": 0.1188
-        },
-        {
-          "score": "0-2",
-          "prob": 0.097
-        },
-        {
-          "score": "1-2",
-          "prob": 0.0951
-        },
-        {
-          "score": "0-0",
-          "prob": 0.0758
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Montenegro"
-    },
-    {
-      "home_team": "Faroe Islands",
-      "away_team": "Slovakia",
-      "league": "UEFA Nations League",
-      "time": "18h45",
-      "type": "grid",
-      "score": 4.8,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.1819,
-      "prob_x": 0.2335,
-      "prob_2": 0.5846,
-      "prob_over": 0.4841,
-      "odd_1": 6.73,
-      "odd_x": 4.2,
-      "odd_2": 1.55,
-      "odd_over_25": 2.1,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 0.86,
-      "lam_away": 1.75,
-      "prob_over_05": 0.9265,
-      "prob_over_15": 0.7345,
-      "prob_over_25": 0.4841,
-      "prob_over_35": 0.2662,
-      "prob_btts": 0.4766,
-      "prob_home_scores": 0.5768,
-      "prob_away_scores": 0.8262,
-      "prob_score_matrix": [
-        {
-          "score": "0-1",
-          "prob": 0.1287
-        },
-        {
-          "score": "0-2",
-          "prob": 0.1126
-        },
-        {
-          "score": "1-1",
-          "prob": 0.1107
-        },
-        {
-          "score": "1-2",
-          "prob": 0.0968
-        },
-        {
-          "score": "0-0",
-          "prob": 0.0735
-        }
-      ],
-      "live_watch": false,
-      "favori_team": "Slovakia"
-    },
-    {
-      "home_team": "São Bernardo",
-      "away_team": "Clube de Regatas Brasil",
-      "league": "BRA-Serie B",
-      "time": "22h30",
-      "type": "grid",
-      "score": 4.8,
-      "selection": null,
-      "market": null,
-      "odd": null,
-      "model_prob": null,
-      "stake_pct": 0.02,
-      "tags": [],
-      "prob_1": 0.3843,
-      "prob_x": 0.2643,
-      "prob_2": 0.3514,
-      "prob_over": 0.4791,
-      "odd_1": 2.8,
-      "odd_x": 3.25,
-      "odd_2": 2.45,
-      "odd_over_25": 2.02,
-      "priority": false,
-      "data_source": "odds_only",
-      "score_breakdown": null,
-      "score_breakdown_notes": null,
-      "lam_home": 1.33,
-      "lam_away": 1.26,
-      "prob_over_05": 0.925,
-      "prob_over_15": 0.7307,
-      "prob_over_25": 0.4791,
-      "prob_over_35": 0.2618,
-      "prob_btts": 0.5269,
-      "prob_home_scores": 0.7355,
-      "prob_away_scores": 0.7163,
+      "prob_btts": 0.519,
+      "prob_home_scores": 0.7631,
+      "prob_away_scores": 0.6802,
       "prob_score_matrix": [
         {
           "score": "1-1",
-          "prob": 0.1257
+          "prob": 0.1244
         },
         {
           "score": "1-0",
-          "prob": 0.0998
-        },
-        {
-          "score": "0-1",
-          "prob": 0.0945
+          "prob": 0.1091
         },
         {
           "score": "2-1",
-          "prob": 0.0836
+          "prob": 0.0896
         },
         {
-          "score": "1-2",
-          "prob": 0.0792
+          "score": "0-1",
+          "prob": 0.0864
+        },
+        {
+          "score": "2-0",
+          "prob": 0.0786
         }
       ],
       "live_watch": false,
-      "favori_team": "Clube de Regatas Brasil"
+      "favori_team": "Botafogo-SP"
     },
     {
-      "home_team": "Londrina",
-      "away_team": "Criciuma",
-      "league": "BRA-Serie B",
-      "time": "23h30",
+      "home_team": "Cádiz CF",
+      "away_team": "Leganés",
+      "league": "ESP-La Liga 2",
+      "time": "16h30",
       "type": "grid",
       "score": 4.7,
       "selection": null,
@@ -908,27 +1681,27 @@
       "model_prob": null,
       "stake_pct": 0.02,
       "tags": [],
-      "prob_1": 0.3837,
+      "prob_1": 0.4002,
       "prob_x": 0.2655,
-      "prob_2": 0.3508,
-      "prob_over": 0.474,
-      "odd_1": 2.85,
-      "odd_x": 3.15,
-      "odd_2": 2.48,
-      "odd_over_25": 2.23,
+      "prob_2": 0.3342,
+      "prob_over": 0.4715,
+      "odd_1": 2.75,
+      "odd_x": 3.05,
+      "odd_2": 2.65,
+      "odd_over_25": 2.18,
       "priority": false,
       "data_source": "odds_only",
       "score_breakdown": null,
       "score_breakdown_notes": null,
-      "lam_home": 1.32,
-      "lam_away": 1.25,
-      "prob_over_05": 0.9235,
-      "prob_over_15": 0.7268,
-      "prob_over_25": 0.474,
-      "prob_over_35": 0.2575,
-      "prob_btts": 0.5229,
-      "prob_home_scores": 0.7329,
-      "prob_away_scores": 0.7135,
+      "lam_home": 1.35,
+      "lam_away": 1.21,
+      "prob_over_05": 0.9227,
+      "prob_over_15": 0.7248,
+      "prob_over_25": 0.4715,
+      "prob_over_35": 0.2553,
+      "prob_btts": 0.5199,
+      "prob_home_scores": 0.7408,
+      "prob_away_scores": 0.7018,
       "prob_score_matrix": [
         {
           "score": "1-1",
@@ -936,29 +1709,29 @@
         },
         {
           "score": "1-0",
-          "prob": 0.101
+          "prob": 0.1044
         },
         {
           "score": "0-1",
-          "prob": 0.0957
+          "prob": 0.0935
         },
         {
           "score": "2-1",
-          "prob": 0.0833
+          "prob": 0.0852
         },
         {
-          "score": "1-2",
-          "prob": 0.0789
+          "score": "0-0",
+          "prob": 0.0773
         }
       ],
       "live_watch": false,
-      "favori_team": "Criciuma"
+      "favori_team": "Leganés"
     },
     {
-      "home_team": "Independiente",
-      "away_team": "Instituto de Córdoba",
-      "league": "ARG-Primera Division",
-      "time": "22h15",
+      "home_team": "Finland",
+      "away_team": "Albania",
+      "league": "UEFA Nations League",
+      "time": "13h00",
       "type": "grid",
       "score": 4.7,
       "selection": null,
@@ -971,9 +1744,9 @@
       "prob_x": 0.2603,
       "prob_2": 0.2832,
       "prob_over": 0.474,
-      "odd_1": 2.44,
-      "odd_x": 3.03,
-      "odd_2": 3.19,
+      "odd_1": 2.35,
+      "odd_x": 2.95,
+      "odd_2": 3.05,
       "odd_over_25": null,
       "priority": false,
       "data_source": "odds_only",
@@ -1011,7 +1784,125 @@
         }
       ],
       "live_watch": false,
-      "favori_team": "Independiente"
+      "favori_team": "Finland"
+    },
+    {
+      "home_team": "North Macedonia",
+      "away_team": "Scotland",
+      "league": "UEFA Nations League",
+      "time": "18h45",
+      "type": "grid",
+      "score": 4.7,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.2137,
+      "prob_x": 0.2482,
+      "prob_2": 0.5381,
+      "prob_over": 0.4664,
+      "odd_1": 5.5,
+      "odd_x": 3.4,
+      "odd_2": 1.65,
+      "odd_over_25": null,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 0.92,
+      "lam_away": 1.62,
+      "prob_over_05": 0.9211,
+      "prob_over_15": 0.7208,
+      "prob_over_25": 0.4664,
+      "prob_over_35": 0.251,
+      "prob_btts": 0.4824,
+      "prob_home_scores": 0.6015,
+      "prob_away_scores": 0.8021,
+      "prob_score_matrix": [
+        {
+          "score": "0-1",
+          "prob": 0.1278
+        },
+        {
+          "score": "1-1",
+          "prob": 0.1175
+        },
+        {
+          "score": "0-2",
+          "prob": 0.1035
+        },
+        {
+          "score": "1-2",
+          "prob": 0.0952
+        },
+        {
+          "score": "0-0",
+          "prob": 0.0789
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Scotland"
+    },
+    {
+      "home_team": "Estonia",
+      "away_team": "Luxembourg",
+      "league": "UEFA Nations League",
+      "time": "16h00",
+      "type": "grid",
+      "score": 4.6,
+      "selection": null,
+      "market": null,
+      "odd": null,
+      "model_prob": null,
+      "stake_pct": 0.02,
+      "tags": [],
+      "prob_1": 0.3842,
+      "prob_x": 0.2698,
+      "prob_2": 0.346,
+      "prob_over": 0.4562,
+      "odd_1": 2.99,
+      "odd_x": 2.89,
+      "odd_2": 2.67,
+      "odd_over_25": null,
+      "priority": false,
+      "data_source": "odds_only",
+      "score_breakdown": null,
+      "score_breakdown_notes": null,
+      "lam_home": 1.29,
+      "lam_away": 1.21,
+      "prob_over_05": 0.9179,
+      "prob_over_15": 0.7127,
+      "prob_over_25": 0.4562,
+      "prob_over_35": 0.2424,
+      "prob_btts": 0.5086,
+      "prob_home_scores": 0.7247,
+      "prob_away_scores": 0.7018,
+      "prob_score_matrix": [
+        {
+          "score": "1-1",
+          "prob": 0.1281
+        },
+        {
+          "score": "1-0",
+          "prob": 0.1059
+        },
+        {
+          "score": "0-1",
+          "prob": 0.0993
+        },
+        {
+          "score": "2-1",
+          "prob": 0.0826
+        },
+        {
+          "score": "0-0",
+          "prob": 0.0821
+        }
+      ],
+      "live_watch": false,
+      "favori_team": "Luxembourg"
     }
   ]
 }
